@@ -1,0 +1,47 @@
+.action-buttons {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 5px;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+
+  &_shadow {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.15);
+  }
+
+  &__item {
+    margin: 0 5px;
+    transition: opacity $duration $easing;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .action-buttons {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .action-buttons {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .action-buttons {
+
+  }
+}
+@media (min-width: $desktop) {
+  .action-buttons {
+
+  }
+}
+

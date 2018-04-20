@@ -1,0 +1,147 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  width: 100%;
+  padding: 0 75px;
+  background-color: rgb(255, 255, 255);
+
+  .sidebar {
+    display: block;
+  }
+
+  &.active {
+
+    .header__layout {
+      transform: translate(0,0);
+    }
+  }
+
+  &__layout {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    padding: 20px 20px 85px;
+    background-color: #fff;
+    transform: translate(100%, 0);
+    transition: transform $duration $easing;
+
+    .icon-link,
+    .social {
+      display: none;
+    }
+
+    .search {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  &__btn {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 35px;
+    height: 25px;
+    transform: translate(0,-50%);
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      transform: translate(9px,-50%);
+      background-color: rgb(33,33,33);
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: rgb(33,33,33);
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: rgb(33,33,33);
+      content: '';
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .header {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .header {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .header {
+    height: 90px;
+    padding: 0;
+    margin-bottom: 2px;
+
+    .sidebar,
+    > .icon-link {
+      display: none;
+    }
+
+    &__layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      width: calc(100% - 110px);
+      height: auto;
+      top: 0;
+      left: auto;
+      transform: none;
+      padding: 20px 25px;
+
+      .icon-link,
+      .social {
+        display: flex;
+      }
+
+      .user,
+      .sign {
+        order: 1;
+      }
+
+      .search {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: auto;
+      }
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .header {
+
+  }
+}
+

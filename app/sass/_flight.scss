@@ -1,0 +1,40 @@
+.flight {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-family: 'Solomon-Sans-Normal';
+  color: rgb(33, 33, 33);
+
+  a,
+  a:visited {
+    color: rgb(33, 33, 33);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .flight {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .flight {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .flight {
+
+  }
+}
+@media (min-width: $desktop) {
+  .flight {
+
+  }
+}
+

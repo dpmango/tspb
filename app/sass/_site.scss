@@ -1,0 +1,72 @@
+// vars
+$easing: ease-in-out;
+$duration: .2s;
+
+body {
+  background-color: #f5f5f5;
+}
+
+.on-mobile {
+  display: block;
+}
+
+.on-desktop {
+  display: none;
+}
+
+.site {
+  overflow: hidden;
+  width: 100%;
+  min-width: 320px;
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+
+  &__container {
+    padding: 20px 10px 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .site {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .sidebar {
+      display: block;
+    }
+
+    .sidebar + .site__container {
+      width: calc(100% - 110px);
+      padding: 25px;
+    }
+  }
+
+  .on-mobile {
+    display: none;
+  }
+
+  .on-desktop {
+    display: block;
+  }
+
+}
+@media (min-width: $desktop) {
+  .site {
+
+  }
+}
+

@@ -1,0 +1,108 @@
+.table {
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+  font-size: 12px;
+  color: rgb(167, 167, 167);
+  line-height: 1.083;
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid #e7e7e7;
+
+    &:last-child {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__item {
+    width: calc(50% - 10px);
+    padding: 15px 0;
+
+    time {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-family: 'Solomon-Sans-Bold', sans-serif;
+      color: rgb(33, 33, 33);
+
+      span {
+        font-size: 14px;
+        font-family: 'Solomon-Sans-Normal', sans-serif;
+        color: rgb(33, 33, 33);
+        line-height: 0.929;
+      }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .table {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .table {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .table {
+    display: table;
+    width: 100%;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+    font-size: 12px;
+    color: rgb(167, 167, 167);
+    line-height: 1.083;
+
+    &__head {
+      display: table-row;
+      font-size: 16px;
+    }
+
+    &__row {
+      display: table-row;
+
+      &.sent {
+        background-color: #f8f8f8;
+
+        .btn_blue-border {
+          border-color: rgb(172, 172, 172);
+          color: rgb(172, 172, 172);
+          pointer-events: none;
+        }
+      }
+    }
+
+    &__item {
+      display: table-cell;
+      padding: 15px 20px;
+
+      time {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-family: 'Solomon-Sans-Bold', sans-serif;
+        color: rgb(33, 33, 33);
+
+        span {
+          font-size: 14px;
+          font-family: 'Solomon-Sans-Normal', sans-serif;
+          color: rgb(33, 33, 33);
+          line-height: 0.929;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .table {
+
+  }
+}
+

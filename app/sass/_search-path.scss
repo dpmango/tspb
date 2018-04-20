@@ -1,0 +1,49 @@
+.search-path {
+  padding: 20px 15px;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  background-color: rgb(80, 164, 212);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+
+  h2,
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+    color: rgb(254, 254, 254);
+  }
+
+  time {
+    color: #fecc35;
+  }
+
+  &__form {
+    padding: 20px 0;
+
+    button[type=submit] {
+      min-width: 200px;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .search-path {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .search-path {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .search-path {
+
+  }
+}
+@media (min-width: $desktop) {
+  .search-path {
+
+  }
+}
+

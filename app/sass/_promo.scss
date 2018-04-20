@@ -1,0 +1,61 @@
+.promo {
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgb(80, 164, 212);
+    height: 80px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    transition: background $duration $easing;
+
+    i {
+      display: block;
+      margin: 0 10px;
+
+      svg {
+
+      }
+    }
+
+    &_green {
+      background-color: rgb(85, 186, 74);
+    }
+    
+    &:hover {
+      background-color: #fe4535;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .promo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .promo {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .promo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &__item {
+      width: calc(25% - 1px);
+      margin-bottom: 0;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .promo {
+
+  }
+}
+

@@ -1,0 +1,161 @@
+.footer {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+
+  .icon-link {
+    font-size: 10px;
+    line-height: 0.65;
+
+    &_black {
+      color: rgb(33, 33, 33);
+    }
+
+    i {
+      position: relative;
+      top: -1px;
+      margin-right: 5px;
+
+      img,
+      svg {
+        display: block;
+        width: 10px;
+        height: 12px;
+      }
+    }
+
+    &:hover {
+      color: #fe4535;
+    }
+  }
+
+  &__left {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0 15px 0 0;
+
+    &-title {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-family: 'Solomon-Sans-Bold', sans-serif;
+      color: rgb(33, 33, 33);
+    }
+
+    &-item {
+      font-size: 11px;
+      color: rgb(154, 154, 154);
+      line-height: 1.545;
+      transition: color $duration $easing;
+
+      &:hover {
+        color: #fe4535;
+      }
+    }
+
+    .icon-link {
+      margin-top: 10px;
+    }
+  }
+
+  &__copyright {
+    display: block;
+    width: 50%;
+    font-size: 8px;
+    color: rgb(154, 154, 154);
+    line-height: 1.333;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .footer {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .footer {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .footer {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 0;
+    padding: 20px;
+
+    .icon-link {
+      font-size: 16px;
+      line-height: 0.813;
+
+      i {
+        top: -2px;
+        margin-right: 10px;
+
+        img,
+        svg {
+          width: 20px;
+          height: 24px;
+        }
+      }
+    }
+
+    &__left {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    &__right {
+      width: 50%;
+
+      .icon-link {
+        display: flex;
+      }
+    }
+
+    &__links {
+      padding: 0 10px;
+
+      &-title {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      &-item {
+        font-size: 14px;
+        line-height: 1.714;
+      }
+    }
+
+    &__copyright {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      width: auto;
+      font-size: 14px;
+      color: rgb(154, 154, 154);
+      line-height: 1.714;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .footer {
+
+  }
+}
+

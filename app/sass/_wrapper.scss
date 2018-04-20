@@ -1,0 +1,29 @@
+.wrapper {
+  display: block;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+}
+@media (min-width: $phone-landscape) {
+  .wrapper {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .wrapper {
+    padding: 20px;
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .wrapper {
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: $desktop) {
+  .wrapper {
+
+  }
+}
+

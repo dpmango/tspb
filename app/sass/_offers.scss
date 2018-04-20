@@ -1,0 +1,55 @@
+.offers {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    display: none;
+    overflow: hidden;
+    border-radius: 5px;
+    background: rgb(0,0,0);
+
+    &:first-child {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      will-change: opacity;
+      transition: opacity $duration $easing;
+    }
+
+    &:hover {
+
+      img {
+        opacity: .8;
+      }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .offers {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .offers {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .offers {
+    justify-content: space-between;
+
+    &__item {
+      display: block;
+      width: calc(100%/3 - 4px);
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .offers {
+
+  }
+}
+

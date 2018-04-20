@@ -1,0 +1,45 @@
+.breadcrumbs {
+  display: none;
+}
+@media (min-width: $phone-landscape) {
+  .breadcrumbs {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .breadcrumbs {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: rgb(154, 154, 154);
+    line-height: 1;
+
+    a,
+    a:visited {
+      color: rgb(154, 154, 154);
+      transition: color $duration $easing;
+
+      &:hover {
+        color: #fe4535;
+      }
+
+      &:after {
+        margin: 0 10px;
+        color: rgb(154, 154, 154);
+        content: '/';
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .breadcrumbs {
+
+  }
+}
+

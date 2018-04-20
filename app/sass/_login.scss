@@ -1,0 +1,30 @@
+.login {
+  position: relative;
+
+  &__item {
+    font-size: 16px;
+    color: rgb(29, 29, 29);
+    line-height: 0.813;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .login {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .login {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .login {
+
+  }
+}
+@media (min-width: $desktop) {
+  .login {
+
+  }
+}
+
