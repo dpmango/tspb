@@ -1,12 +1,10 @@
 .form {
 
   &_points {
-    display: flex;
-    flex-wrap: wrap;
 
-    .form__row,
     button[type=submit] {
-      margin-right: 20px;
+      display: block;
+      margin: 0 auto;
     }
   }
 
@@ -23,20 +21,17 @@
   }
 
   &__row {
-    display: flex;
-    flex-wrap: wrap;
-    height: 50px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
 
     .form__field {
-      margin-bottom: 0;
 
       input {
         height: 50px;
         border: none;
       }
+    }
+
+    .separator {
+      margin: 0 auto 15px;
     }
   }
 
@@ -176,6 +171,40 @@
 @media (min-width: $tablet-landscape) {
   .form {
 
+    &_points {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form__row {
+        margin-right: 20px;
+      }
+
+      button[type=submit] {
+        margin: 0 20px 0 0;
+      }
+    }
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      height: 50px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+
+      .form__field {
+        margin-bottom: 0;
+
+        input {
+          height: 50px;
+          border: none;
+        }
+      }
+
+      .separator {
+        margin: 0;
+      }
+    }
   }
 }
 @media (min-width: $desktop) {

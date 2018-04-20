@@ -40,6 +40,10 @@
       }
     }
   }
+
+  &__footer {
+
+  }
 }
 @media (min-width: $phone-landscape) {
   .table {
@@ -81,6 +85,8 @@
 
     &__item {
       display: table-cell;
+      vertical-align: top;
+      width: auto;
       padding: 15px 20px;
 
       time {
@@ -95,6 +101,24 @@
           font-family: 'Solomon-Sans-Normal', sans-serif;
           color: rgb(33, 33, 33);
           line-height: 0.929;
+        }
+      }
+    }
+
+    &__line {
+
+      .table__item {
+        position: relative;
+        padding: 45px 20px 15px;
+
+        &:before {
+          position: absolute;
+          top: 14px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #e7e7e7;
+          content: '';
         }
       }
     }
