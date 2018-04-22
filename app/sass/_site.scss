@@ -7,11 +7,11 @@ body {
 }
 
 .on-mobile {
-  display: block;
+  display: block !important;
 }
 
 .on-desktop {
-  display: none;
+  display: none !important;
 }
 
 .blue-text {
@@ -60,11 +60,11 @@ body {
   }
 
   .on-mobile {
-    display: none;
+    display: none !important;
   }
 
   .on-desktop {
-    display: block;
+    display: block !important;
   }
 
 }

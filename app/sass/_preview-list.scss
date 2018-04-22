@@ -21,13 +21,17 @@
 
   &__info {
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Solomon-Sans-Normal', sans-serif;
     color: rgb(33, 33, 33);
     line-height: 1.2;
 
+    p {
+      text-decoration: underline;
+    }
+
     time {
-      font-size: 13px;
+      font-size: 10px;
       color: rgb(158, 158, 158);
     }
   }
@@ -45,6 +49,17 @@
 @media (min-width: $tablet-landscape) {
   .preview-list {
 
+    &__info {
+      font-size: 16px;
+
+      p {
+        text-decoration: none;
+      }
+
+      time {
+        font-size: 13px;
+      }
+    }
   }
 }
 @media (min-width: $desktop) {

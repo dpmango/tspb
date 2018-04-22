@@ -5,6 +5,46 @@
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: rgb(33, 33, 33);
+
+    a,
+    a:visited {
+      font-size: 10px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      color: rgb(183, 183, 183);
+      text-decoration: underline;
+      line-height: 1.2;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &_buy-service {
+    padding-top: 30px;
+
+    svg,
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .wrapper__title {
+      padding: 20px 0;
+      margin-bottom: 0;
+    }
+  }
 }
 @media (min-width: $phone-landscape) {
   .wrapper {
@@ -13,12 +53,27 @@
 }
 @media (min-width: $tablet-portrait) {
   .wrapper {
-    padding: 20px;
+
   }
 }
 @media (min-width: $tablet-landscape) {
   .wrapper {
+    padding: 20px;
     margin-bottom: 24px;
+
+    &_buy-service {
+      padding-top: 50px;
+
+      .wrapper__title {
+        padding: 30px 0;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-family: 'Solomon-Sans-Bold', sans-serif;
+    }
   }
 }
 @media (min-width: $desktop) {
