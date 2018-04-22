@@ -74,4 +74,13 @@ button.btn {
       color: rgb(255, 255, 255);
     }
   }
+  
+  &_white {
+    color: rgb(33, 33, 33);
+    background-color: rgb(255, 255, 255);
+    
+    &:hover {
+      background-color: #b0b0b0;
+    }
+  }
 }

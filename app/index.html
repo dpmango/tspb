@@ -15,6 +15,12 @@
 </head>
 <body>
 
+    <!-- ticket -->
+    <div class="ticket">
+        
+    </div>
+    <!-- /ticket -->
+
     <!-- site -->
     <div class="site">
 
@@ -497,506 +503,208 @@
         <!-- site__container -->
         <div class="site__container">
 
-            <!-- breadcrumbs -->
-            <div class="breadcrumbs">
-                <a href="#">Главная</a>
-                <a href="#">Расписание электричек</a>
-                <span>Расписание электричек Санкт-Петербург - Сосновая Поляна</span>
-            </div>
-            <!-- /breadcrumbs -->
+            <!-- grid -->
+            <div class="grid">
 
-            <!-- search-path -->
-            <div class="search-path">
-                <h2 class="search-path__title">Расписание электричек Санкт-Петербург - Сосновая Поляна <time datetime="2018-03-27">27 марта 2018</time></h2>
-
-                <form action="#" class="form form_points">
-
-                    <!-- form__row -->
-                    <div class="form__row">
-                        <div class="form__field form__field_icon" data-placeholder="Точка отправки">
-                             <span class="form__icon">
-                                <svg viewBox="0 0 19 28"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     width="19px" height="28px">
-                                <path fill-rule="evenodd"  fill="rgb(80, 164, 212)"
-                                      d="M18.169,14.516 C15.793,20.156 11.240,26.109 9.900,27.799 C9.800,27.926 9.654,27.998 9.500,27.998 C9.346,27.998 9.200,27.926 9.099,27.799 C7.760,26.109 3.206,20.155 0.831,14.516 C0.280,13.206 0.000,11.790 0.000,10.308 C0.000,4.624 4.262,-0.000 9.500,-0.000 C14.738,-0.000 18.999,4.624 19.000,10.308 C19.000,11.790 18.720,13.206 18.169,14.516 Z"/>
-                                </svg>
-                            </span>
-                            <input type="text" name="start-point" placeholder="">
-                        </div>
-
-                        <div class="separator">
-                            <svg viewBox="0 0 18 18"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="18px" height="18px">
-                                <path fill-rule="evenodd"  fill="rgb(33, 33, 33)"
-                                      d="M16.862,3.509 L12.976,6.359 C12.764,6.514 12.479,6.352 12.479,6.072 L12.479,4.529 L2.613,4.529 L2.613,10.170 L0.210,10.170 L0.210,3.218 C0.210,2.496 0.748,1.910 1.411,1.910 L12.482,1.910 L12.482,0.371 C12.482,0.095 12.767,-0.071 12.979,0.084 L16.865,2.930 C17.052,3.070 17.052,3.373 16.862,3.509 ZM4.526,11.928 L4.526,13.466 L14.389,13.466 L14.389,7.826 L16.792,7.826 L16.792,14.778 C16.792,15.500 16.254,16.086 15.591,16.086 L4.523,16.086 L4.523,17.629 C4.523,17.905 4.238,18.071 4.026,17.916 L0.140,15.066 C-0.047,14.926 -0.047,14.623 0.140,14.487 L4.030,11.640 C4.242,11.485 4.526,11.648 4.526,11.928 Z"/>
-                            </svg>
-                        </div>
-
-                        <div class="form__field form__field_icon" data-placeholder="Точка прибытия">
-                            <span class="form__icon">
-                                <svg viewBox="0 0 19 28"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     width="19px" height="28px">
-                                <path fill-rule="evenodd"  fill="rgb(255, 147, 0)"
-                                      d="M18.169,14.516 C15.793,20.156 11.239,26.109 9.900,27.799 C9.800,27.926 9.654,27.998 9.500,27.998 C9.346,27.998 9.199,27.926 9.099,27.799 C7.760,26.109 3.206,20.155 0.831,14.516 C0.280,13.206 -0.000,11.790 -0.000,10.308 C-0.000,4.624 4.261,-0.000 9.499,-0.000 C14.738,-0.000 18.999,4.624 19.000,10.308 C19.000,11.790 18.720,13.206 18.169,14.516 Z"/>
-                                </svg>
-                            </span>
-                            <input type="text" name="finish-point" placeholder="">
-                        </div>
-                    </div>
-                    <!-- /form__row -->
-
-                    <!-- form__row -->
-                    <div class="form__row">
-                        <div class="form__field form__field_icon" data-placeholder="Дата отправления">
-                         <span class="form__icon">
-                            <svg viewBox="0 0 23 24"
+                <div class="grid__col">
+                    <!-- card -->
+                    <a href="#" class="card card_green">
+                        <i class="card__icon">
+                            <svg viewBox="0 0 56 61"
                                  xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="23px" height="24px">
-                            <path fill-rule="evenodd"  fill="rgb(214, 214, 214)"
-                                  d="M19.531,23.998 L3.470,23.998 C1.547,23.998 -0.006,22.438 -0.006,20.495 L-0.006,4.851 C-0.006,3.295 0.980,1.975 2.377,1.512 L2.377,2.693 C2.377,3.902 3.350,4.903 4.547,4.903 L4.658,4.903 C5.855,4.903 6.815,3.902 6.815,2.693 L6.815,1.334 L9.239,1.334 L9.239,2.693 C9.239,3.902 10.221,4.903 11.419,4.903 L11.529,4.903 C12.726,4.903 13.718,3.902 13.718,2.693 L13.718,1.334 L16.101,1.334 L16.101,2.693 C16.101,3.902 17.093,4.904 18.290,4.904 L18.401,4.904 C19.598,4.904 20.580,3.903 20.580,2.693 L20.580,1.493 C21.977,1.940 23.004,3.275 23.002,4.851 L23.002,20.495 C23.002,22.438 21.453,23.998 19.531,23.998 ZM21.279,9.058 C21.279,8.292 20.673,7.684 19.915,7.684 L3.089,7.684 C2.331,7.684 1.721,8.292 1.721,9.058 L1.721,20.172 C1.721,21.297 2.619,22.213 3.732,22.213 L19.271,22.213 C20.384,22.213 21.278,21.297 21.278,20.172 L21.279,20.172 L21.279,9.058 ZM16.729,14.061 C17.463,14.560 17.911,15.377 17.912,16.526 C17.912,18.355 16.355,19.973 13.736,19.973 C12.554,19.973 11.566,19.701 11.026,19.414 L11.431,17.690 C11.865,17.901 12.748,18.173 13.631,18.173 C14.573,18.173 15.576,17.719 15.576,16.676 C15.576,15.663 14.784,15.041 12.837,15.041 C12.299,15.041 11.925,15.068 11.521,15.129 L12.164,9.968 L17.539,9.968 L17.539,11.877 L13.750,11.877 L13.540,13.385 C13.750,13.355 13.931,13.351 14.170,13.351 C15.098,13.351 16.041,13.562 16.729,14.061 ZM7.350,12.001 L7.322,12.001 L5.465,12.900 L5.091,11.183 L7.666,9.968 L9.569,9.968 L9.569,19.805 L7.350,19.805 L7.350,12.001 ZM18.401,3.824 L18.291,3.824 C17.663,3.824 17.169,3.327 17.170,2.693 L17.170,1.136 C17.170,0.562 17.580,0.094 18.126,0.010 C18.182,0.001 18.232,0.005 18.291,0.005 L18.401,0.005 C18.519,0.005 18.633,0.015 18.739,0.048 C18.751,0.052 18.763,0.048 18.775,0.052 C18.781,0.054 18.786,0.056 18.792,0.058 C18.803,0.062 18.813,0.066 18.823,0.070 C18.831,0.073 18.837,0.076 18.845,0.078 C18.849,0.080 18.854,0.082 18.859,0.084 C18.888,0.098 18.919,0.111 18.947,0.127 C18.948,0.127 18.953,0.128 18.956,0.130 C19.307,0.325 19.554,0.703 19.554,1.137 L19.554,2.693 C19.554,2.979 19.442,3.232 19.271,3.433 C19.061,3.677 18.746,3.824 18.401,3.824 ZM12.075,3.693 C12.071,3.696 12.076,3.696 12.072,3.698 C12.070,3.699 12.069,3.695 12.067,3.696 C11.908,3.783 11.725,3.824 11.530,3.824 L11.420,3.824 L11.420,3.824 C11.188,3.824 10.972,3.762 10.792,3.643 C10.790,3.641 10.784,3.647 10.780,3.645 C10.779,3.644 10.773,3.642 10.771,3.641 C10.472,3.434 10.267,3.087 10.267,2.693 L10.267,1.137 C10.267,0.803 10.416,0.505 10.642,0.295 C10.644,0.293 10.654,0.293 10.656,0.291 C10.656,0.291 10.657,0.294 10.657,0.294 C10.859,0.110 11.126,0.005 11.420,0.005 L11.530,0.005 C11.786,0.005 12.019,0.081 12.208,0.225 L12.206,0.216 C12.208,0.218 12.206,0.220 12.208,0.221 C12.482,0.431 12.651,0.763 12.651,1.136 L12.651,2.693 C12.651,3.124 12.423,3.497 12.075,3.693 ZM4.659,3.824 L4.549,3.824 C4.204,3.824 3.892,3.678 3.684,3.433 C3.513,3.232 3.406,2.978 3.406,2.693 L3.406,1.136 C3.406,0.822 3.534,0.540 3.737,0.332 C3.739,0.331 3.743,0.331 3.745,0.329 C3.747,0.328 3.748,0.331 3.748,0.330 C3.954,0.124 4.236,0.005 4.548,0.005 L4.659,0.005 C4.971,0.005 5.252,0.124 5.458,0.330 C5.459,0.331 5.459,0.323 5.461,0.325 C5.462,0.326 5.462,0.329 5.464,0.331 C5.667,0.538 5.789,0.823 5.789,1.137 L5.789,2.693 C5.789,2.979 5.688,3.232 5.517,3.433 C5.309,3.677 5.003,3.824 4.659,3.824 Z"/>
+                                 width="56px" height="61px">
+                                <path fill-rule="evenodd"
+                                      d="M54.340,12.094 L52.057,12.094 L52.057,8.014 C52.057,3.588 48.489,-0.001 44.087,-0.001 L11.913,-0.001 C7.511,-0.001 3.942,3.588 3.942,8.014 L3.942,12.094 L1.659,12.094 C0.743,12.094 -0.000,12.841 -0.000,13.763 L-0.000,23.007 C-0.000,23.929 0.743,24.676 1.659,24.676 L3.942,24.676 L3.942,44.603 C3.054,45.403 2.495,46.565 2.495,47.858 L2.495,50.947 C2.495,53.361 4.442,55.318 6.843,55.318 L7.381,55.318 L7.381,59.713 C7.381,60.423 7.954,61.000 8.660,61.000 L14.542,61.000 C15.248,61.000 15.820,60.423 15.820,59.713 L15.820,55.318 L40.179,55.318 L40.179,59.713 C40.179,60.423 40.752,61.000 41.458,61.000 L47.340,61.000 C48.046,61.000 48.619,60.423 48.619,59.713 L48.619,55.318 L49.157,55.318 C51.558,55.318 53.505,53.361 53.505,50.947 L53.505,47.858 C53.505,46.565 52.945,45.403 52.057,44.603 L52.057,24.676 L54.340,24.676 C55.257,24.676 56.000,23.929 56.000,23.007 L56.000,13.763 C56.000,12.841 55.257,12.094 54.340,12.094 ZM47.129,12.746 L47.129,32.467 L30.174,32.467 L30.174,12.746 L47.129,12.746 ZM19.546,4.178 L36.453,4.178 C37.627,4.178 38.579,5.135 38.579,6.315 C38.579,7.495 37.627,8.453 36.453,8.453 L19.546,8.453 C18.373,8.453 17.421,7.495 17.421,6.315 C17.421,5.135 18.373,4.178 19.546,4.178 ZM8.871,12.746 L25.826,12.746 L25.826,32.467 L8.871,32.467 L8.871,12.746 ZM16.460,41.265 C16.460,42.427 15.520,43.372 14.364,43.372 L10.907,43.372 C9.753,43.372 8.814,42.427 8.814,41.265 L8.814,38.922 C8.814,37.759 9.753,36.815 10.907,36.815 L14.364,36.815 C15.520,36.815 16.460,37.759 16.460,38.922 L16.460,41.265 ZM39.540,41.265 L39.540,38.922 C39.540,37.759 40.480,36.815 41.636,36.815 L45.093,36.815 C46.247,36.815 47.186,37.759 47.186,38.922 L47.186,41.265 C47.186,42.427 46.247,43.372 45.093,43.372 L41.636,43.372 C40.480,43.372 39.540,42.427 39.540,41.265 Z"/>
                             </svg>
-                        </span>
-                            <input type="text" class="datepicker-here" name="calendar" placeholder="">
-                        </div>
-                    </div>
-                    <!-- /form__row -->
-
-                    <button type="submit" class="btn btn_big btn_yellow">Найти</button>
-                </form>
-
-                <!-- uSocial -->
-                <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
-                <div class="uSocial-Share" data-pid="b1b391087a815ef77c9d6f2c6071e816" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size24,eachCounter1,counter0" data-social="vk,fb,ok,gPlus,twi,telegram" data-mobile="vi,wa,sms"></div>
-                <!-- /uSocial -->
-            </div>
-            <!-- /search-path -->
-
-            <!-- wrapper -->
-            <div class="wrapper">
-                <!-- sheet -->
-                <div class="sheet">
-                    <div class="sheet__head">
-                        <div class="sheet__info">
-                            <dl>
-                                <dt>Найдено</dt>
-                                <dd>
-                                    <a href="#">27 маршрутов</a>
-                                    <span class="on-mobile"><a href="#">Местное время</a></span>
-                                </dd>
-                            </dl>
-
-                            <div class="on-desktop">
-                                <!-- icon-link -->
-                                <a href="#" class="icon-link">
-                                    <i>
-                                        <svg viewBox="0 0 14 26"
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <image  x="0px" y="0px" width="14px" height="26px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAaCAMAAACw0Z1uAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA2FBMVEX////+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX///8R2SBPAAAARnRSTlMAn+0/Lvyoo+sbKvhnnsMCJfb5MpiKIvTXCJP9ZRQXHB7y/uzw94GMuxrvFZVjcnZPNPuqIPUJfeLcO1FguYexmd0Q1lQzFgfVSAAAAAFiS0dEAIgFHUgAAAAHdElNRQfiBBMQDjSDZTTTAAAAsElEQVQY01XO5xKCMBAE4EOxYUGsYAELNhSwYu967/9IkhBj3H/f7M3OAdBIMZp4JDmBJMlIkKJKZyIpWcocK/NUBTVSUSMqlVlZoWWVqVYn0g3GBlGz1TZN0wLodAl7fdu2B0OAEfKMDZg4XPoUYMblyOGQ63meTy6aczYNi2VI/ytYhZK41pvw4YBzi7izuII9agcuOCKefoIzXgQpeFUF3u4PQeZTFgTuSxS8//QB/Fgj1EVpGjoAAAAASUVORK5CYII=" />
-                                        </svg>
-                                    </i>
-                                    16 электричек-молний
-                                </a>
-                                <!-- /icon-link -->
-                            </div>
-
-                            <div class="on-mobile">
-                                <!-- action-buttons -->
-                                <div class="action-buttons">
-                                    <a href="#" class="action-buttons__item">
-                                        <svg viewBox="0 0 29 29"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                width="29px" height="29px">
-                                            <path fill-rule="evenodd"  fill="rgb(194, 194, 194)"
-                                                  d="M27.772,5.622 L21.372,10.231 C21.023,10.481 20.553,10.218 20.553,9.766 L20.553,7.272 L4.303,7.272 L4.303,16.391 L0.345,16.391 L0.345,5.151 C0.345,3.984 1.232,3.037 2.324,3.037 L20.559,3.037 L20.559,0.549 C20.559,0.103 21.028,-0.166 21.377,0.085 L27.778,4.687 C28.087,4.913 28.087,5.402 27.772,5.622 ZM7.455,19.233 L7.455,21.721 L23.699,21.721 L23.699,12.602 L27.658,12.602 L27.658,23.842 C27.658,25.009 26.771,25.956 25.679,25.956 L7.449,25.956 L7.449,28.450 C7.449,28.896 6.980,29.165 6.631,28.914 L0.231,24.306 C-0.078,24.080 -0.078,23.591 0.231,23.371 L6.637,18.769 C6.986,18.518 7.455,18.781 7.455,19.233 Z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="action-buttons__item">
-                                        <svg viewBox="0 0 22 22"
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <path fill-rule="evenodd"  fill="rgb(254, 204, 53)"
-                                                  d="M11.590,0.352 L14.370,6.981 L21.486,7.598 C21.980,7.640 22.181,8.261 21.806,8.588 L16.408,13.300 L18.026,20.311 C18.138,20.798 17.614,21.181 17.190,20.923 L11.074,17.206 L4.959,20.923 C4.534,21.180 4.011,20.797 4.123,20.311 L5.741,13.300 L0.342,8.586 C-0.033,8.260 0.167,7.639 0.662,7.596 L7.778,6.980 L10.557,0.352 C10.750,-0.110 11.398,-0.110 11.590,0.352 Z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <!-- /action-buttons -->
-                            </div>
-                        </div>
-                        <div class="sheet__filter">
-                            <div class="sheet__filter-action">
-                                <a href="#" class="btn btn_green btn_small">
-                                    <i>
-                                        <svg viewBox="0 0 35 38"
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             width="35px" height="38px">
-                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                                                  d="M34.024,24.814 L31.190,22.066 L32.232,19.800 C32.309,19.634 32.313,19.442 32.243,19.269 C32.173,19.097 32.035,18.959 31.861,18.887 L30.424,18.293 C30.251,18.221 30.056,18.222 29.884,18.295 C29.713,18.367 29.581,18.506 29.517,18.679 L29.039,19.979 L28.438,19.396 L29.384,17.341 C29.460,17.174 29.464,16.982 29.394,16.810 C29.324,16.638 29.187,16.500 29.013,16.428 L27.576,15.834 C27.402,15.762 27.207,15.763 27.036,15.835 C26.865,15.908 26.732,16.047 26.668,16.219 L26.272,17.296 L24.005,15.097 C24.782,13.296 25.511,11.474 26.213,9.643 C26.588,8.664 26.943,7.676 27.282,6.683 C27.492,6.070 27.698,5.454 27.878,4.831 C28.007,4.387 28.059,3.923 28.034,3.469 C27.948,1.915 26.940,0.613 25.539,0.254 C24.187,-0.094 22.671,0.499 21.770,1.727 C21.628,1.921 21.508,2.127 21.395,2.339 C21.212,2.680 21.036,3.025 20.863,3.372 C20.415,4.268 19.986,5.174 19.571,6.086 C18.668,8.067 17.822,10.072 17.016,12.094 C17.003,12.127 16.990,12.160 16.977,12.193 L13.819,12.149 L14.298,11.107 C14.375,10.940 14.379,10.748 14.309,10.576 C14.239,10.404 14.101,10.266 13.928,10.194 L12.491,9.600 C12.317,9.528 12.122,9.529 11.951,9.602 C11.780,9.674 11.647,9.813 11.583,9.985 L10.802,12.108 L9.966,12.097 L10.545,10.838 C10.622,10.671 10.625,10.479 10.555,10.307 C10.485,10.135 10.348,9.997 10.174,9.925 L8.737,9.331 C8.563,9.259 8.368,9.260 8.197,9.332 C8.026,9.405 7.893,9.543 7.830,9.716 L6.969,12.056 L3.021,12.003 C2.670,11.998 2.354,12.203 2.223,12.521 L1.002,15.474 C0.906,15.708 0.921,15.973 1.045,16.198 C1.168,16.423 1.387,16.584 1.640,16.635 L14.347,19.246 C13.723,21.021 13.120,22.803 12.554,24.597 C12.180,25.783 11.818,26.972 11.473,28.165 L5.687,28.087 C5.336,28.082 5.020,28.287 4.889,28.605 L4.307,30.013 C4.128,30.445 4.342,30.943 4.784,31.126 L10.548,33.508 C10.744,34.020 11.102,34.444 11.570,34.694 C12.159,35.009 12.877,35.019 13.512,34.732 L19.276,37.114 C19.718,37.297 20.220,37.095 20.399,36.663 L20.981,35.255 C21.112,34.937 21.034,34.569 20.782,34.324 L16.631,30.298 C17.107,29.430 17.572,28.555 18.029,27.678 C19.014,25.785 19.968,23.875 20.886,21.948 L31.732,29.071 C31.779,29.102 31.828,29.129 31.880,29.150 C32.064,29.226 32.269,29.238 32.462,29.181 C32.708,29.109 32.907,28.932 33.003,28.698 L34.224,25.745 C34.355,25.427 34.276,25.059 34.024,24.814 Z"/>
-                                        </svg>
-                                    </i>
-                                    Купить билет
-                                </a>
-
-                                <!-- nice-toggle -->
-                                <div class="nice-toggle">
-                                    <input type="radio" id="show-all-true" name="show-all" checked>
-                                    <label for="show-all-true">Показывать все</label>
-                                    <span class="nice-toggle__slider"></span>
-                                    <input type="radio" id="show-all-false" name="show-all">
-                                    <label for="show-all-false">скрыть ушедшие</label>
-                                </div>
-                                <!-- /nice-toggle -->
-
-                                <div class="on-desktop">
-                                    <!-- icon-link -->
-                                    <a href="#" class="icon-link icon-link_black">
-                                        <i>
-                                            <svg viewBox="0 0 18 18"
-                                                 xmlns="http://www.w3.org/2000/svg"
-                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                 width="18px" height="18px">
-                                                <path fill-rule="evenodd"  fill="rgb(176, 176, 176)"
-                                                      d="M16.862,3.509 L12.976,6.359 C12.764,6.514 12.479,6.352 12.479,6.072 L12.479,4.529 L2.613,4.529 L2.613,10.170 L0.210,10.170 L0.210,3.218 C0.210,2.496 0.748,1.910 1.411,1.910 L12.482,1.910 L12.482,0.371 C12.482,0.095 12.767,-0.071 12.979,0.084 L16.865,2.930 C17.053,3.070 17.053,3.373 16.862,3.509 ZM4.526,11.928 L4.526,13.466 L14.389,13.466 L14.389,7.826 L16.792,7.826 L16.792,14.778 C16.792,15.500 16.254,16.086 15.591,16.086 L4.523,16.086 L4.523,17.629 C4.523,17.905 4.238,18.071 4.026,17.916 L0.140,15.065 C-0.047,14.926 -0.047,14.623 0.140,14.487 L4.030,11.640 C4.242,11.485 4.526,11.648 4.526,11.928 Z"/>
-                                            </svg>
-                                        </i>
-                                        Обратное направление
-                                    </a>
-                                    <!-- /icon-link -->
-                                </div>
-                            </div>
-
-                            <div class="on-desktop">
-                                <!-- action-buttons -->
-                                <div class="action-buttons action-buttons_shadow">
-                                    <a href="#" class="action-buttons__item">
-                                        <svg viewBox="0 0 21 20"
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             width="21px" height="20px">
-                                            <path fill-rule="evenodd"  fill="rgb(80, 164, 212)"
-                                                  d="M20.055,9.133 C19.585,8.644 19.022,8.400 18.364,8.400 L17.566,8.400 L17.566,5.084 C17.566,4.739 17.483,4.359 17.316,3.944 C17.150,3.530 16.951,3.202 16.718,2.960 L14.821,0.991 C14.588,0.749 14.272,0.542 13.873,0.369 C13.474,0.196 13.108,0.110 12.775,0.110 L4.391,0.110 C4.058,0.110 3.775,0.231 3.543,0.473 C3.310,0.714 3.193,1.008 3.193,1.354 L3.193,8.400 L2.395,8.400 C1.738,8.400 1.174,8.645 0.704,9.133 C0.234,9.621 -0.001,10.205 -0.001,10.888 L-0.001,16.277 C-0.001,16.389 0.039,16.486 0.118,16.569 C0.197,16.650 0.290,16.691 0.398,16.691 L3.193,16.691 L3.193,18.764 C3.193,19.109 3.310,19.403 3.543,19.645 C3.775,19.886 4.058,20.008 4.391,20.008 L16.368,20.008 C16.701,20.008 16.984,19.886 17.217,19.645 C17.450,19.403 17.566,19.109 17.566,18.764 L17.566,16.691 L20.361,16.691 C20.469,16.691 20.562,16.650 20.641,16.569 C20.720,16.486 20.760,16.389 20.760,16.277 L20.760,10.888 C20.760,10.205 20.525,9.621 20.055,9.133 ZM15.969,18.349 L4.790,18.349 L4.790,15.033 L15.969,15.033 L15.969,18.349 ZM15.969,10.059 L4.790,10.059 L4.790,1.768 L12.775,1.768 L12.775,3.841 C12.775,4.186 12.892,4.480 13.124,4.722 C13.357,4.964 13.640,5.084 13.973,5.084 L15.969,5.084 L15.969,10.059 ZM18.926,11.471 C18.768,11.635 18.581,11.717 18.364,11.717 C18.148,11.717 17.961,11.635 17.803,11.471 C17.645,11.307 17.566,11.112 17.566,10.888 C17.566,10.663 17.645,10.469 17.803,10.305 C17.961,10.141 18.148,10.059 18.364,10.059 C18.581,10.059 18.768,10.141 18.926,10.305 C19.084,10.469 19.163,10.663 19.163,10.888 C19.163,11.112 19.084,11.307 18.926,11.471 Z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="action-buttons__item">
-                                        <svg viewBox="0 0 22 22"
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             width="22px" height="22px">
-                                            <path fill-rule="evenodd"  fill="rgb(254, 204, 53)"
-                                                  d="M11.590,0.352 L14.370,6.981 L21.486,7.598 C21.980,7.640 22.181,8.261 21.806,8.588 L16.408,13.300 L18.026,20.311 C18.138,20.798 17.614,21.181 17.190,20.923 L11.074,17.206 L4.959,20.923 C4.534,21.180 4.011,20.797 4.123,20.311 L5.741,13.300 L0.342,8.586 C-0.033,8.260 0.167,7.639 0.662,7.596 L7.778,6.980 L10.557,0.352 C10.750,-0.110 11.398,-0.110 11.590,0.352 Z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <!-- /action-buttons -->
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="sheet__result">
-
-                        <div class="on-mobile">
-                            <!-- table -->
-                            <div class="table">
-
-                                <div class="table__row sent">
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время отправления</h2>
-                                        <time datetime="07:00">07:00</time>
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время прибытия</h2>
-                                        <time datetime="18:00">18:00</time>
-                                        <p>Сосновая Поляна</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <span class="status">Отправлена</span>
-                                    </div>
-                                </div>
-                                <div class="table__row sent">
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время отправления</h2>
-                                        <time datetime="07:00">07:00</time>
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время прибытия</h2>
-                                        <time datetime="18:00">18:00</time>
-                                        <p>Сосновая Поляна</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <span class="status">Отправлена</span>
-                                    </div>
-                                </div>
-                                <div class="table__row waiting">
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время отправления</h2>
-                                        <time datetime="07:00">07:00</time>
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время прибытия</h2>
-                                        <time datetime="18:00">18:00</time>
-                                        <p>Сосновая Поляна</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>&nbsp;<svg viewBox="0 0 10 18"
-                                                                                   xmlns="http://www.w3.org/2000/svg"
-                                                                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                   width="10px" height="18px">
-                                            <image  x="0px" y="0px" width="10px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAMAAABVab95AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEX////+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX////XYksPAAAAOnRSTlMAhezp6O5XJrcMjC4k7XaQvgknNgeS78DB0Hwt69mZ/eROT53xR7T8ZUGBp6UDKPvCEY4jIs5DYzUEaDdRQgAAAAFiS0dEAIgFHUgAAAAHdElNRQfiBBQNJh6Mqls1AAAAfElEQVQI1zXM1xKCUBAD0IgUe+9YAHvvovn/D3OXe8nTmWQmgKTgFF3PVwUuyVJZWRE5VVWtLmyo0BS12qqOJ3MX6AF9KQfD0XiCcMosswBzciGKQiD2kyW5WmcP2HC7M9qTByMceTobXa63uy0f0dPq9f5YIU1z4fvL9Qf5lw62Tz0GFAAAAABJRU5ErkJggg==" />
-                                        </svg>
-                                        </div>
-                                        <!-- /flight -->
-                                        <span class="status">Ждет отправления</span>
-                                    </div>
-                                </div>
-                                <div class="table__row waiting">
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время отправления</h2>
-                                        <time datetime="07:00">07:00</time>
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <h2 class="table__title">Время прибытия</h2>
-                                        <time datetime="18:00">18:00</time>
-                                        <p>Сосновая Поляна</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <span class="status">Ждет отправления</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- /table -->
-                        </div>
-
-                        <div class="on-desktop">
-                            <!-- table -->
-                            <div class="table">
-
-                                <div class="table__head">
-                                    <div class="table__item">Статус</div>
-                                    <div class="table__item">Рейс</div>
-                                    <div class="table__item">Время отправления</div>
-                                    <div class="table__item">Время прибытия</div>
-                                </div>
-
-                                <div class="table__row sent">
-                                    <div class="table__item"><span class="status">Отправлена</span></div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="07:00">07:00</time>
-                                        <p>м. "Купчино"/Витебский проспект</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="18:00">18:00</time>
-                                        <p>ул. Советской Армии, д. 8</p>
-                                    </div>
-                                </div>
-                                <div class="table__row sent">
-                                    <div class="table__item"><span class="status">Отправлена</span></div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="07:00">07:00</time>
-                                        <p>м. "Купчино"/Витебский проспект</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="18:00">18:00</time>
-                                        <p>ул. Советской Армии, д. 8</p>
-                                    </div>
-                                </div>
-                                <div class="table__row sent">
-                                    <div class="table__item"><span class="status">Отправлена</span></div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="07:00">07:00</time>
-                                        <p>м. "Купчино"/Витебский проспект</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="18:00">18:00</time>
-                                        <p>ул. Советской Армии, д. 8</p>
-                                    </div>
-                                </div>
-                                <div class="table__row waiting">
-                                    <div class="table__item"><span class="status">Ожидает</span></div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="07:00">07:00</time>
-                                        <p>м. "Купчино"/Витебский проспект</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="18:00">18:00</time>
-                                        <p>ул. Советской Армии, д. 8</p>
-                                    </div>
-                                </div>
-                                <div class="table__row waiting">
-                                    <div class="table__item"><span class="status">Ожидает</span></div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6553</a>&nbsp;<svg viewBox="0 0 10 18"
-                                                                                   xmlns="http://www.w3.org/2000/svg"
-                                                                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                   width="10px" height="18px">
-                                            <image  x="0px" y="0px" width="10px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAMAAABVab95AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEX////+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX+zDX////XYksPAAAAOnRSTlMAhezp6O5XJrcMjC4k7XaQvgknNgeS78DB0Hwt69mZ/eROT53xR7T8ZUGBp6UDKPvCEY4jIs5DYzUEaDdRQgAAAAFiS0dEAIgFHUgAAAAHdElNRQfiBBQNJh6Mqls1AAAAfElEQVQI1zXM1xKCUBAD0IgUe+9YAHvvovn/D3OXe8nTmWQmgKTgFF3PVwUuyVJZWRE5VVWtLmyo0BS12qqOJ3MX6AF9KQfD0XiCcMosswBzciGKQiD2kyW5WmcP2HC7M9qTByMceTobXa63uy0f0dPq9f5YIU1z4fvL9Qf5lw62Tz0GFAAAAABJRU5ErkJggg==" />
-                                        </svg>
-                                        </div>
-                                        <!-- /flight -->
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="07:00">07:00</time>
-                                        <p>м. "Купчино"/Витебский проспект</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="2018-03-24 18:00">18:00 <span>24 марта</span></time>
-                                        <p>ул. Советской Армии, д. 8</p>
-                                    </div>
-                                </div>
-                                <div class="table__row waiting">
-                                    <div class="table__item"><span class="status">Ожидает</span></div>
-                                    <div class="table__item">
-                                        <!-- flight -->
-                                        <div class="flight">
-                                            No&nbsp;<a href="#">6513</a>
-                                        </div>
-                                        <!-- /flight -->
-                                        <p>СПб-Балт. — Калище</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="07:00">07:00</time>
-                                        <p>м. "Купчино"/Витебский проспект</p>
-                                    </div>
-                                    <div class="table__item">
-                                        <time datetime="2018-03-24 18:00">18:00 <span>24 марта</span></time>
-                                        <p>ул. Советской Армии, д. 8</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- /table -->
-                        </div>
-
-                    </div>
-
-                    <div class="sheet__footer">
-                        <div class="on-mobile">
-                            <a href="#">Развернуть список</a>
-                        </div>
-                        <div class="on-desktop">
-                            <a href="#" class="btn btn_gray">Загрузить еще</a>
-                        </div>
-                    </div>
+                        </i>
+                        <dl>
+                            <dt>Маршруты <br> наземного транспорта</dt>
+                            <dd>
+                                <p class="card__preview">Карта проезда  и расписание городского транспорта</p>
+                                <p class="card__description">В данном разделе представлено универсальное расписание пригородных электричек и поездов на 2018 год. В нашем сервисе представлено актуальное расписание с вокзалов.</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <!-- /card -->
                 </div>
-                <!-- /sheet -->
-            </div>
-            <!-- /wrapper -->
 
-            <!-- promo -->
-            <div class="promo">
-                <a href="#" class="promo__item">
-                    <i>
-                        <svg viewBox="0 0 32 46"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="32px" height="46px">
-                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                                  d="M31.965,26.097 L30.439,10.998 C30.086,7.501 27.247,4.846 23.862,4.846 L20.055,4.846 L20.055,2.903 L21.486,2.903 C21.825,2.903 22.143,3.077 22.336,3.368 C22.607,3.776 23.044,3.996 23.488,3.996 C23.762,3.996 24.038,3.913 24.280,3.739 C24.916,3.284 25.076,2.380 24.638,1.720 C23.923,0.642 22.744,-0.001 21.486,-0.001 L18.657,-0.001 L13.346,-0.001 L10.517,-0.001 C9.259,-0.001 8.080,0.642 7.365,1.720 C6.927,2.380 7.087,3.284 7.723,3.739 C8.358,4.194 9.229,4.028 9.667,3.368 C9.860,3.076 10.178,2.903 10.517,2.903 L11.949,2.903 L11.949,4.846 L8.142,4.846 C4.756,4.846 1.917,7.502 1.564,11.000 L0.038,26.125 C-0.046,26.959 0.017,27.802 0.225,28.612 L1.752,34.553 C2.370,36.961 4.176,38.781 6.409,39.410 L4.837,44.067 C4.582,44.823 4.965,45.652 5.693,45.917 C5.847,45.973 6.002,45.999 6.156,45.999 C6.733,45.999 7.273,45.625 7.475,45.027 L9.289,39.651 L22.713,39.651 L24.528,45.027 C24.730,45.625 25.270,45.999 25.847,45.999 C26.000,45.999 26.157,45.973 26.310,45.917 C27.038,45.652 27.421,44.823 27.166,44.067 L25.594,39.410 C27.830,38.780 29.636,36.957 30.253,34.545 L31.779,28.578 C31.986,27.770 32.049,26.929 31.965,26.097 ZM14.744,2.903 L17.259,2.903 L17.259,4.846 L14.744,4.846 L14.744,2.903 L14.744,2.903 ZM11.725,33.585 C11.725,33.937 11.450,34.223 11.111,34.223 L6.718,34.223 C6.425,34.223 6.172,34.008 6.115,33.709 L5.624,31.135 C5.588,30.947 5.635,30.753 5.751,30.606 C5.868,30.458 6.043,30.373 6.226,30.373 L11.111,30.373 C11.450,30.373 11.725,30.658 11.725,31.010 L11.725,33.585 L11.725,33.585 ZM26.380,31.135 L25.888,33.709 C25.831,34.008 25.579,34.223 25.286,34.223 L20.893,34.223 C20.553,34.223 20.278,33.937 20.278,33.585 L20.278,31.010 C20.278,30.658 20.553,30.373 20.893,30.373 L25.777,30.373 C25.961,30.373 26.135,30.458 26.252,30.606 C26.369,30.753 26.415,30.948 26.380,31.135 ZM4.375,24.019 L5.281,15.038 C5.543,12.441 7.651,10.469 10.165,10.469 L21.837,10.469 C24.351,10.469 26.458,12.441 26.721,15.037 L27.629,24.019 L4.375,24.019 L4.375,24.019 Z"/>
+                <div class="grid__col">
+                    <!-- card -->
+                    <a href="#" class="card card_blue">
+                       <span class="card__label">online</span>
+                        <i class="card__icon">
+                            <svg viewBox="0 0 43 61"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="43px" height="61px">
+                                <path fill-rule="evenodd"
+                                      d="M42.953,34.607 L40.902,14.585 C40.427,9.948 36.613,6.427 32.064,6.427 L26.948,6.427 L26.948,3.850 L28.871,3.850 C29.327,3.850 29.755,4.080 30.014,4.466 C30.379,5.008 30.966,5.299 31.562,5.299 C31.930,5.299 32.301,5.189 32.627,4.959 C33.481,4.356 33.696,3.157 33.107,2.281 C32.146,0.852 30.563,-0.001 28.871,-0.001 L25.070,-0.001 L17.934,-0.001 L14.133,-0.001 C12.441,-0.001 10.858,0.852 9.897,2.281 C9.308,3.157 9.524,4.356 10.378,4.959 C11.232,5.563 12.401,5.341 12.990,4.466 C13.250,4.080 13.677,3.850 14.133,3.850 L16.056,3.850 L16.056,6.427 L10.941,6.427 C6.391,6.427 2.576,9.948 2.102,14.587 L0.051,34.644 C-0.062,35.750 0.023,36.868 0.303,37.942 L2.354,45.820 C3.185,49.013 5.611,51.427 8.612,52.262 L6.500,58.437 C6.156,59.440 6.672,60.538 7.651,60.890 C7.856,60.964 8.066,60.999 8.272,60.999 C9.047,60.999 9.773,60.503 10.044,59.710 L12.483,52.581 L30.521,52.581 L32.960,59.710 C33.231,60.503 33.957,60.999 34.732,60.999 C34.938,60.999 35.148,60.964 35.353,60.890 C36.332,60.538 36.847,59.440 36.504,58.437 L34.392,52.262 C37.396,51.426 39.824,49.008 40.653,45.811 L42.703,37.897 C42.981,36.825 43.066,35.710 42.953,34.607 ZM19.812,3.850 L23.192,3.850 L23.192,6.427 L19.812,6.427 L19.812,3.850 L19.812,3.850 ZM15.756,44.537 C15.756,45.004 15.386,45.383 14.930,45.383 L9.027,45.383 C8.633,45.383 8.294,45.098 8.217,44.701 L7.557,41.288 C7.509,41.039 7.572,40.782 7.728,40.586 C7.885,40.390 8.120,40.277 8.367,40.277 L14.930,40.277 C15.386,40.277 15.756,40.656 15.756,41.123 L15.756,44.537 L15.756,44.537 ZM35.448,41.288 L34.787,44.701 C34.710,45.097 34.371,45.383 33.978,45.383 L28.074,45.383 C27.618,45.383 27.249,45.004 27.249,44.537 L27.249,41.123 C27.249,40.656 27.618,40.277 28.074,40.277 L34.638,40.277 C34.885,40.277 35.119,40.390 35.276,40.586 C35.433,40.782 35.496,41.040 35.448,41.288 ZM5.878,31.851 L7.096,19.942 C7.448,16.498 10.281,13.883 13.659,13.883 L29.343,13.883 C32.721,13.883 35.553,16.497 35.906,19.941 L37.126,31.851 L5.878,31.851 L5.878,31.851 Z"/>
+                            </svg>
+                        </i>
+                        <dl>
+                            <dt>Расписание поездов <br> и электричек</dt>
+                            <dd>
+                                <p class="card__preview">Онлайн расписание поездов и пригородных электричек</p>
+                                <p class="card__description">В данном разделе представлено универсальное расписание пригородных электричек и поездов на 2018 год. В нашем сервисе представлено актуальное расписание с вокзалов.</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <!-- /card -->
+                </div>
+
+                <div class="grid__col">
+                    <!-- card -->
+                    <a href="#" class="card card_orange">
+                        <i class="card__icon">
+                            <svg viewBox="0 0 61 37"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="61px" height="37px">
+                                <path fill-rule="evenodd"
+                                      d="M59.903,32.652 L56.063,32.652 L44.150,-0.000 L30.499,19.916 L15.908,0.237 L4.937,32.652 L1.097,32.652 L-0.001,36.999 L14.576,36.999 L20.298,21.107 L30.672,35.084 L30.734,35.172 L30.798,35.084 L40.703,21.107 L46.424,36.999 L61.000,36.999 L59.903,32.652 Z"/>
+                            </svg>
+                        </i>
+                        <dl>
+                            <dt>Режим работы <br> метро</dt>
+                            <dd>
+                                <p class="card__preview">Открытие и закрытие станций, время прибытия первых/последних поездов</p>
+                                <p class="card__description">В данном разделе представлено универсальное расписание пригородных электричек и поездов на 2018 год. В нашем сервисе представлено актуальное расписание с вокзалов.</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <!-- /card -->
+                </div>
+
+                <div class="grid__col">
+                    <!-- card -->
+                    <a href="#" class="card card_pink">
+                       <span class="card__label">
+                        <svg viewBox="0 0 25 25"
+                             xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             width="25px" height="25px">
+                            <path fill-rule="evenodd"
+                                  d="M19.987,14.296 C19.828,14.434 19.630,14.502 19.432,14.502 C19.234,14.502 19.035,14.434 18.876,14.296 C18.672,14.118 13.863,9.886 13.864,5.500 C13.864,2.467 16.362,-0.000 19.432,-0.000 C22.502,-0.000 25.000,2.467 25.000,5.500 C25.000,9.886 20.192,14.118 19.987,14.296 ZM19.432,1.659 C17.288,1.659 15.544,3.382 15.544,5.500 C15.544,8.345 18.240,11.339 19.432,12.524 C20.624,11.339 23.320,8.345 23.320,5.500 C23.320,3.382 21.576,1.659 19.432,1.659 ZM17.933,7.504 C17.825,7.393 17.771,7.226 17.771,7.008 L17.771,3.973 C17.771,3.750 17.827,3.581 17.938,3.471 C18.050,3.361 18.219,3.305 18.441,3.305 L19.766,3.305 C19.969,3.305 20.149,3.318 20.302,3.343 C20.465,3.371 20.615,3.424 20.746,3.503 C20.857,3.569 20.958,3.653 21.044,3.754 C21.131,3.856 21.198,3.970 21.244,4.093 C21.289,4.217 21.312,4.349 21.312,4.485 C21.312,4.839 21.170,5.132 20.897,5.345 C21.391,5.612 21.505,6.029 21.505,6.358 C21.505,6.615 21.437,6.850 21.303,7.058 C21.168,7.266 20.983,7.422 20.754,7.521 C20.614,7.579 20.455,7.619 20.279,7.642 C20.111,7.664 19.913,7.675 19.691,7.675 L18.441,7.675 C18.213,7.675 18.042,7.618 17.933,7.504 ZM18.935,6.729 L19.887,6.729 C20.123,6.729 20.315,6.538 20.315,6.305 C20.315,6.071 20.123,5.882 19.887,5.882 L18.935,5.882 L18.935,6.729 ZM18.935,4.964 L19.638,4.964 C19.838,4.964 20.000,4.798 20.000,4.600 C20.000,4.402 19.838,4.242 19.638,4.242 L18.935,4.242 L18.935,4.964 ZM6.123,21.663 C5.964,21.801 5.766,21.870 5.568,21.870 C5.370,21.870 5.171,21.801 5.013,21.663 C4.808,21.485 -0.000,17.254 -0.000,12.868 C-0.000,9.835 2.498,7.368 5.568,7.368 C8.638,7.368 11.136,9.835 11.136,12.868 C11.136,17.254 6.328,21.485 6.123,21.663 ZM5.568,9.027 C3.424,9.027 1.680,10.750 1.680,12.868 C1.680,15.713 4.375,18.707 5.568,19.892 C6.760,18.707 9.456,15.713 9.456,12.868 C9.456,10.750 7.712,9.027 5.568,9.027 ZM4.583,14.955 C4.533,15.040 4.405,15.128 4.184,15.128 C4.035,15.128 3.904,15.074 3.792,14.969 C3.679,14.863 3.620,14.733 3.620,14.592 C3.620,14.521 3.631,14.447 3.655,14.372 L4.905,11.222 C4.951,11.106 5.002,11.007 5.056,10.927 C5.118,10.836 5.199,10.762 5.299,10.706 C5.402,10.649 5.526,10.620 5.668,10.620 C5.812,10.620 5.937,10.649 6.039,10.706 C6.139,10.762 6.220,10.834 6.282,10.923 C6.336,11.000 6.382,11.084 6.419,11.173 L7.612,14.092 C7.706,14.315 7.750,14.472 7.750,14.587 C7.750,14.726 7.693,14.852 7.582,14.962 C7.471,15.072 7.334,15.128 7.177,15.128 C7.086,15.128 7.004,15.110 6.935,15.076 C6.866,15.042 6.800,15.000 6.761,14.937 C6.641,14.740 6.386,14.095 6.386,14.095 L4.956,14.095 C4.956,14.095 4.702,14.753 4.583,14.955 ZM6.038,13.149 L5.664,12.135 L5.296,13.149 L6.038,13.149 ZM5.556,23.459 L19.420,15.246 C19.817,15.010 20.334,15.137 20.572,15.530 C20.811,15.923 20.682,16.433 20.284,16.669 L6.420,24.882 C6.285,24.962 6.136,25.000 5.989,25.000 C5.703,25.000 5.425,24.856 5.267,24.597 C5.029,24.204 5.158,23.695 5.556,23.459 Z"/>
                         </svg>
-                    </i>
-                    Поиск <br> электричек
-                </a>
-                <a href="#" class="promo__item">
-                    <i>
-                        <svg viewBox="0 0 37 46"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="37px" height="46px">
-                            <image  x="0px" y="0px" width="37px" height="46px"  xlink:href="data:img/png;base64,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" />
-                        </svg>
-                    </i>
-                    Поиск <br> поездов
-                </a>
-                <a href="#" class="promo__item">
-                    <i>
-                        <svg viewBox="0 0 35 38"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="35px" height="38px">
-                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                                  d="M34.024,24.814 L31.190,22.066 L32.232,19.800 C32.309,19.634 32.313,19.442 32.243,19.269 C32.173,19.097 32.035,18.959 31.861,18.887 L30.424,18.293 C30.251,18.221 30.056,18.222 29.884,18.295 C29.713,18.367 29.581,18.506 29.517,18.679 L29.039,19.979 L28.438,19.396 L29.384,17.341 C29.460,17.174 29.464,16.982 29.394,16.810 C29.324,16.638 29.187,16.500 29.013,16.428 L27.576,15.834 C27.402,15.762 27.207,15.763 27.036,15.835 C26.865,15.908 26.732,16.047 26.668,16.219 L26.272,17.296 L24.005,15.097 C24.782,13.296 25.511,11.474 26.213,9.643 C26.588,8.664 26.943,7.676 27.282,6.683 C27.492,6.070 27.698,5.454 27.878,4.831 C28.007,4.387 28.059,3.923 28.034,3.469 C27.948,1.915 26.940,0.613 25.539,0.254 C24.187,-0.094 22.671,0.499 21.770,1.727 C21.628,1.921 21.508,2.127 21.395,2.339 C21.212,2.680 21.036,3.025 20.863,3.372 C20.415,4.268 19.986,5.174 19.571,6.086 C18.668,8.067 17.822,10.072 17.016,12.094 C17.003,12.127 16.990,12.160 16.977,12.193 L13.819,12.149 L14.298,11.107 C14.375,10.940 14.379,10.748 14.309,10.576 C14.239,10.404 14.101,10.266 13.928,10.194 L12.491,9.600 C12.317,9.528 12.122,9.529 11.951,9.602 C11.780,9.674 11.647,9.813 11.583,9.985 L10.802,12.108 L9.966,12.097 L10.545,10.838 C10.622,10.671 10.625,10.479 10.555,10.307 C10.485,10.135 10.348,9.997 10.174,9.925 L8.737,9.331 C8.563,9.259 8.368,9.260 8.197,9.332 C8.026,9.405 7.893,9.543 7.830,9.716 L6.969,12.056 L3.021,12.003 C2.670,11.998 2.354,12.203 2.223,12.521 L1.002,15.474 C0.906,15.708 0.921,15.973 1.045,16.198 C1.168,16.423 1.387,16.584 1.640,16.635 L14.347,19.246 C13.723,21.021 13.120,22.803 12.554,24.597 C12.180,25.783 11.818,26.972 11.473,28.165 L5.687,28.087 C5.336,28.082 5.020,28.287 4.889,28.605 L4.307,30.013 C4.128,30.445 4.342,30.943 4.784,31.126 L10.548,33.508 C10.744,34.020 11.102,34.444 11.570,34.694 C12.159,35.009 12.877,35.019 13.512,34.732 L19.276,37.114 C19.718,37.297 20.220,37.095 20.399,36.663 L20.981,35.255 C21.112,34.937 21.034,34.569 20.782,34.324 L16.631,30.298 C17.107,29.430 17.572,28.555 18.029,27.678 C19.014,25.785 19.968,23.875 20.886,21.948 L31.732,29.071 C31.779,29.102 31.828,29.129 31.880,29.150 C32.064,29.226 32.269,29.238 32.462,29.181 C32.708,29.109 32.907,28.932 33.003,28.698 L34.224,25.745 C34.355,25.427 34.276,25.059 34.024,24.814 Z"/>
-                        </svg>
-                    </i>
-                    Поиск <br> самолетов
-                </a>
-                <a href="#" class="promo__item promo__item_green">
-                    <i>
-                        <svg viewBox="0 0 171 38"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="171px" height="38px">
-                            <image  x="0px" y="0px" width="171px" height="38px"  xlink:href="data:img/png;base64,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" />
-                        </svg>
-                    </i>
-                </a>
+                    </span>
+                        <i class="card__icon">
+                            <svg viewBox="0 0 53 57"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="53px" height="57px">
+                                <path fill-rule="evenodd"  fill="rgb(202, 39, 120)"
+                                      d="M52.993,8.848 L48.840,8.848 L48.840,23.233 L50.501,23.233 L50.501,29.839 L47.345,29.839 L47.345,8.012 C47.345,3.579 43.775,-0.015 39.373,-0.015 L13.127,-0.015 C8.724,-0.015 5.155,3.579 5.155,8.012 L5.155,29.421 L2.415,29.421 L2.415,22.394 L4.159,22.394 L4.159,8.012 L0.007,8.012 L0.007,22.394 L1.751,22.394 L1.751,30.091 L5.155,30.091 L5.155,45.812 C5.155,48.849 6.834,51.497 9.307,52.859 L9.307,57.015 L16.284,57.015 L16.284,53.839 L36.050,53.839 L36.050,57.015 L43.028,57.015 L43.028,52.940 C45.591,51.608 47.345,48.916 47.345,45.812 L47.345,30.506 L51.166,30.506 L51.166,23.232 L52.993,23.232 L52.993,8.848 L52.993,8.848 ZM17.116,1.656 L35.717,1.656 L35.717,6.007 L17.116,6.007 L17.116,1.656 ZM19.107,45.476 L8.809,45.476 L8.809,40.796 L19.107,40.796 L19.107,45.476 ZM44.023,45.476 L33.725,45.476 L33.725,40.796 L44.023,40.796 L44.023,45.476 ZM44.023,30.424 C44.023,30.424 42.029,36.781 26.085,36.781 C10.138,36.781 8.476,30.424 8.476,30.424 L8.476,8.345 L44.023,8.345 L44.023,30.424 Z"/>
+                            </svg>
+                        </i>
+                        <dl>
+                            <dt>Междугородные <br> автобусы</dt>
+                            <dd>
+                                <p class="card__preview">Поиск междугородных автобусов, расписания автовокзалов</p>
+                                <p class="card__description">В данном разделе представлено универсальное расписание пригородных электричек и поездов на 2018 год. В нашем сервисе представлено актуальное расписание с вокзалов.</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <!-- /card -->
+                </div>
+
+                <div class="grid__col">
+                    <!-- card -->
+                    <div class="card card_red">
+                        <i class="card__icon">
+                            <svg viewBox="0 0 54 54"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="54px" height="54px">
+                                <path fill-rule="evenodd"  fill="rgb(205, 39, 25)"
+                                      d="M53.796,34.245 C53.679,34.639 53.314,34.892 52.918,34.892 C52.832,34.892 52.746,34.881 52.660,34.856 C52.174,34.717 51.897,34.216 52.039,33.740 C52.125,33.451 52.169,33.153 52.169,32.850 C52.170,32.676 52.156,32.514 52.130,32.354 C52.050,31.863 52.389,31.400 52.889,31.322 C53.386,31.241 53.858,31.577 53.938,32.068 C53.981,32.332 54.002,32.597 54.000,32.856 C54.000,33.323 53.931,33.792 53.796,34.245 ZM44.161,22.056 L38.241,15.498 C35.058,11.970 35.058,6.232 38.241,2.704 C39.816,0.960 41.918,-0.001 44.160,-0.001 C46.402,-0.001 48.504,0.960 50.079,2.704 C53.264,6.232 53.264,11.970 50.079,15.498 L44.161,22.056 ZM44.386,3.599 C41.610,3.599 39.350,5.821 39.350,8.549 C39.350,11.278 41.610,13.499 44.386,13.499 C47.162,13.499 49.422,11.278 49.422,8.549 C49.422,5.821 47.162,3.599 44.386,3.599 ZM34.642,29.699 L32.811,29.699 C32.305,29.699 31.895,29.297 31.895,28.799 C31.895,28.302 32.305,27.899 32.811,27.899 L34.642,27.899 C35.148,27.899 35.558,28.302 35.558,28.799 C35.558,29.297 35.148,29.699 34.642,29.699 ZM33.857,21.599 L32.025,21.599 C31.519,21.599 31.110,21.197 31.110,20.699 C31.110,20.202 31.519,19.799 32.025,19.799 L33.857,19.799 C34.363,19.799 34.772,20.202 34.772,20.699 C34.772,21.197 34.363,21.599 33.857,21.599 ZM29.335,40.354 C29.250,40.784 28.867,41.084 28.436,41.086 C28.379,41.086 28.321,41.081 28.263,41.070 C27.766,40.975 27.441,40.504 27.536,40.016 C27.679,39.288 27.979,38.616 28.427,38.016 C28.727,37.615 29.300,37.531 29.707,37.825 C30.115,38.120 30.201,38.683 29.902,39.083 C29.616,39.464 29.426,39.892 29.335,40.354 ZM29.148,29.699 L28.821,29.699 C28.200,29.698 27.597,29.589 27.023,29.374 C26.552,29.197 26.315,28.677 26.494,28.212 C26.675,27.748 27.207,27.517 27.676,27.692 C28.041,27.829 28.426,27.898 28.823,27.899 L29.148,27.899 C29.654,27.899 30.063,28.302 30.063,28.799 C30.063,29.297 29.654,29.699 29.148,29.699 ZM28.464,21.619 C27.987,21.671 27.538,21.823 27.132,22.072 C26.981,22.164 26.815,22.207 26.649,22.207 C26.343,22.207 26.045,22.057 25.871,21.784 C25.603,21.362 25.733,20.806 26.163,20.544 C26.804,20.150 27.511,19.911 28.263,19.829 C28.769,19.778 29.219,20.131 29.274,20.625 C29.329,21.120 28.966,21.564 28.464,21.619 ZM25.775,25.732 C25.933,26.205 25.671,26.713 25.191,26.869 C25.097,26.900 25.000,26.914 24.905,26.914 C24.520,26.914 24.162,26.674 24.035,26.295 C23.869,25.798 23.785,25.277 23.785,24.748 C23.786,24.534 23.800,24.327 23.825,24.124 C23.888,23.632 24.331,23.287 24.848,23.344 C25.350,23.405 25.705,23.856 25.642,24.349 C25.625,24.481 25.617,24.617 25.616,24.753 C25.616,25.086 25.670,25.416 25.775,25.732 ZM21.561,53.999 L19.730,53.999 C19.223,53.999 18.814,53.597 18.814,53.099 C18.814,52.602 19.223,52.199 19.730,52.199 L21.561,52.199 C22.066,52.199 22.477,52.602 22.477,53.099 C22.477,53.597 22.067,53.999 21.561,53.999 ZM10.967,51.758 L3.159,43.088 C-1.064,38.398 -1.064,30.768 3.159,26.079 C5.238,23.770 8.010,22.499 10.967,22.499 C13.923,22.499 16.695,23.770 18.775,26.079 C22.998,30.768 22.998,38.398 18.774,43.088 L10.967,51.758 ZM10.967,27.899 C7.937,27.899 5.473,30.321 5.473,33.299 C5.473,36.278 7.937,38.699 10.967,38.699 C13.996,38.699 16.460,36.278 16.460,33.299 C16.460,30.321 13.996,27.899 10.967,27.899 ZM14.236,52.199 L16.067,52.199 C16.573,52.199 16.983,52.602 16.983,53.099 C16.983,53.597 16.574,53.999 16.067,53.999 L14.236,53.999 C13.730,53.999 13.321,53.597 13.321,53.099 C13.321,52.602 13.730,52.199 14.236,52.199 ZM25.223,52.199 L27.055,52.199 C27.560,52.199 27.970,52.602 27.970,53.099 C27.970,53.597 27.561,53.999 27.055,53.999 L25.223,53.999 C24.717,53.999 24.308,53.597 24.308,53.099 C24.308,52.602 24.717,52.199 25.223,52.199 ZM30.027,42.973 C30.333,43.331 30.722,43.622 31.152,43.816 C31.611,44.022 31.813,44.556 31.603,45.008 C31.449,45.339 31.118,45.534 30.770,45.534 C30.643,45.534 30.514,45.507 30.390,45.452 C29.715,45.150 29.105,44.692 28.626,44.132 C28.300,43.751 28.350,43.183 28.737,42.864 C29.125,42.543 29.702,42.593 30.027,42.973 ZM30.717,52.199 L32.548,52.199 C33.054,52.199 33.464,52.602 33.464,53.099 C33.464,53.597 33.054,53.999 32.548,53.999 L30.717,53.999 C30.211,53.999 29.801,53.597 29.801,53.099 C29.801,52.602 30.211,52.199 30.717,52.199 ZM32.324,37.803 C32.311,37.804 32.298,37.804 32.286,37.804 C31.797,37.804 31.391,37.425 31.372,36.941 C31.351,36.444 31.743,36.025 32.249,36.005 C32.327,36.001 32.404,35.999 32.483,35.999 L34.118,35.999 C34.624,35.999 35.033,36.402 35.033,36.899 C35.033,37.397 34.624,37.799 34.118,37.799 L32.324,37.803 ZM34.380,44.099 L36.212,44.099 C36.718,44.099 37.127,44.502 37.127,44.999 C37.127,45.497 36.717,45.899 36.212,45.899 L34.380,45.899 C33.874,45.899 33.465,45.497 33.465,44.999 C33.465,44.502 33.874,44.099 34.380,44.099 ZM36.211,52.199 L38.042,52.199 C38.547,52.199 38.957,52.602 38.957,53.099 C38.957,53.597 38.548,53.999 38.042,53.999 L36.211,53.999 C35.704,53.999 35.295,53.597 35.295,53.099 C35.295,52.602 35.704,52.199 36.211,52.199 ZM41.051,28.799 C41.051,29.297 40.641,29.699 40.136,29.699 L38.305,29.699 C37.798,29.699 37.389,29.297 37.389,28.799 C37.389,28.302 37.798,27.899 38.305,27.899 L40.136,27.899 C40.642,27.899 41.051,28.302 41.051,28.799 ZM37.780,35.999 L39.611,35.999 C40.117,35.999 40.527,36.402 40.527,36.899 C40.527,37.397 40.117,37.799 39.611,37.799 L37.780,37.799 C37.275,37.799 36.864,37.397 36.864,36.899 C36.864,36.402 37.274,35.999 37.780,35.999 ZM37.519,19.799 L39.350,19.799 C39.857,19.799 40.266,20.202 40.266,20.699 C40.266,21.197 39.857,21.599 39.350,21.599 L37.519,21.599 C37.013,21.599 36.603,21.197 36.603,20.699 C36.603,20.202 37.013,19.799 37.519,19.799 ZM39.874,44.099 L41.705,44.099 C42.211,44.099 42.621,44.502 42.621,44.999 C42.621,45.497 42.211,45.899 41.705,45.899 L39.874,45.899 C39.368,45.899 38.958,45.497 38.958,44.999 C38.958,44.502 39.368,44.099 39.874,44.099 ZM41.703,52.199 L43.470,52.199 C43.977,52.199 44.418,52.602 44.418,53.099 C44.418,53.596 44.041,53.998 43.534,53.998 L43.534,53.099 L43.508,53.998 L41.703,53.999 C41.197,53.999 40.788,53.597 40.788,53.099 C40.788,52.602 41.197,52.199 41.703,52.199 ZM45.105,35.999 C45.611,35.999 46.020,36.402 46.020,36.899 C46.020,37.397 45.611,37.799 45.105,37.799 L43.274,37.799 C42.767,37.799 42.358,37.397 42.358,36.899 C42.358,36.402 42.767,35.999 43.274,35.999 L45.105,35.999 ZM43.798,27.899 L45.629,27.899 C46.136,27.899 46.545,28.302 46.545,28.799 C46.545,29.297 46.135,29.699 45.629,29.699 L43.798,29.699 C43.292,29.699 42.883,29.297 42.883,28.799 C42.883,28.302 43.292,27.899 43.798,27.899 ZM44.480,45.020 C44.705,44.575 45.253,44.393 45.708,44.615 C46.374,44.940 46.968,45.415 47.428,45.990 C47.741,46.380 47.673,46.946 47.275,47.254 C47.108,47.383 46.908,47.446 46.710,47.446 C46.438,47.446 46.170,47.328 45.988,47.103 C45.695,46.736 45.316,46.433 44.892,46.227 C44.440,46.006 44.255,45.466 44.480,45.020 ZM46.598,49.745 C46.709,49.260 47.199,48.956 47.692,49.064 C48.186,49.173 48.495,49.655 48.385,50.141 C48.222,50.854 47.892,51.534 47.430,52.110 C47.250,52.336 46.982,52.454 46.710,52.454 C46.512,52.454 46.313,52.391 46.145,52.262 C45.747,51.954 45.679,51.389 45.991,50.998 C46.289,50.626 46.493,50.204 46.598,49.745 ZM47.852,36.899 C47.852,36.402 48.261,35.999 48.767,35.999 L48.964,35.999 C49.393,35.999 49.809,35.917 50.202,35.755 C50.664,35.563 51.204,35.779 51.400,36.237 C51.596,36.695 51.377,37.222 50.910,37.415 C50.293,37.670 49.638,37.799 48.964,37.799 L48.767,37.799 C48.261,37.799 47.852,37.397 47.852,36.899 ZM50.566,30.120 C50.151,29.884 49.698,29.745 49.220,29.708 C48.716,29.670 48.340,29.237 48.379,28.741 C48.418,28.244 48.860,27.878 49.363,27.914 C50.117,27.972 50.831,28.191 51.485,28.564 C51.922,28.814 52.072,29.364 51.818,29.794 C51.649,30.081 51.341,30.242 51.025,30.242 C50.869,30.242 50.711,30.203 50.566,30.120 Z"/>
+                            </svg>
+                        </i>
+                        <dl>
+                            <dt>Проложить маршрут <br> От и До</dt>
+                            <dd>
+                                <p class="card__preview"><a href="#" class="btn btn_white">Проложить</a></p>
+                                <p class="card__description">В данном разделе представлено универсальное расписание пригородных электричек и поездов на 2018 год. В нашем сервисе представлено актуальное расписание с вокзалов.</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- /card -->
+                </div>
+
             </div>
-            <!-- /promo -->
-            
+            <!-- /grid -->
+
+            <!-- grid -->
+            <div class="grid">
+
+                <div class="grid__col-2">
+                    <!-- wrapper -->
+                    <div class="wrapper">
+
+                        <div class="content">
+                            <h2>Интересные новости</h2>
+                        </div>
+
+                        <!-- preview-list -->
+                        <div class="preview-list">
+                            <a href="#" class="preview-list__item">
+                                <span class="preview-list__pic"><img src="pic/preview1.jpg" alt=""></span>
+                                <div class="preview-list__info">
+                                    <p>Работа метро и автобусов в Пасхальную ночь</p>
+                                    <time datetime="2018-04-04">04.04.18</time>
+                                </div>
+                            </a>
+                            <a href="#" class="preview-list__item">
+                                <span class="preview-list__pic"><img src="pic/preview2.jpg" alt=""></span>
+                                <div class="preview-list__info">
+                                    <p>На Чижике с ветерком</p>
+                                    <time datetime="2018-04-04">04.04.18</time>
+                                </div>
+                            </a>
+                            <a href="#" class="preview-list__item">
+                                <span class="preview-list__pic"><img src="pic/preview3.jpg" alt=""></span>
+                                <div class="preview-list__info">
+                                    <p>“Чижик” начнет работу 7 марта и денег не попросит</p>
+                                    <time datetime="2018-04-04">04.04.18</time>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- /preview-list -->
+                    </div>
+                    <!-- /wrapper -->
+                </div>
+
+                <div class="grid__col">
+                    <!-- wrapper -->
+                    <div class="wrapper">
+                        <div class="content">
+                            <svg viewBox="0 0 171 38"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="171px" height="38px">
+                                <image  x="0px" y="0px" width="171px" height="38px"  xlink:href="data:img/png;base64,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" />
+                            </svg>
+                            <h2>Сервис бронирования
+                                билетов на автобусы</h2>
+                            <a href="#" class="btn btn_green">Заказать</a>
+                        </div>
+                    </div>
+                    <!-- /wrapper -->
+                </div>
+
+                <div class="grid__col-2">
+                    <!-- wrapper -->
+                    <div class="wrapper">
+                        <div class="content">
+                            <h2>Наша группа в Вконтакте</h2>
+                        </div>
+                    </div>
+                    <!-- /wrapper -->
+                </div>
+
+            </div>
+            <!-- /grid -->
+
             <!-- wrapper -->
             <div class="wrapper">
                 <!-- offers -->

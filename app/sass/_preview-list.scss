@@ -1,0 +1,55 @@
+.preview-list {
+
+  &__item {
+    display: flex;
+    margin: 12px 0;
+  }
+
+  &__pic {
+    width: 50px;
+    margin-right: 10px;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__pic + .preview-list__info {
+    width: calc(100% - 60px);
+  }
+
+  &__info {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+    color: rgb(33, 33, 33);
+    line-height: 1.2;
+
+    time {
+      font-size: 13px;
+      color: rgb(158, 158, 158);
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .preview-list {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .preview-list {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .preview-list {
+
+  }
+}
+@media (min-width: $desktop) {
+  .preview-list {
+
+  }
+}
+

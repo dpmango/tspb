@@ -1,0 +1,150 @@
+.card {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  height: 280px;
+  padding: 70px 20px 20px;
+  border-radius: 5px;
+  background-color: #b0b0b0;
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+  font-size: 14px;
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  transition: padding $duration $easing;
+
+  &_green {
+    background-color: rgb(75, 176, 75);
+
+    .card__icon svg {
+      fill: rgb(53, 148, 53);
+    }
+  }
+
+  &_blue {
+    background-color: rgb(90, 166, 209);
+
+    .card__icon svg {
+      fill: rgb(22, 129, 190);
+    }
+  }
+
+  &_orange {
+    background-color: rgb(247, 162, 46);
+
+    .card__icon svg {
+      fill: rgb(214, 132, 21);
+    }
+  }
+
+  &_pink {
+    background-color: rgb(226, 71, 148);
+
+    .card__icon svg {
+      fill: rgb(202, 39, 120);
+    }
+  }
+
+  &_red {
+    background-color: rgb(254, 69, 53);
+
+    .card__icon svg {
+      fill: rgb(205, 39, 25);
+    }
+  }
+
+  dl {
+
+    dt {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-family: 'Solomon-Sans-Black', sans-serif;
+    }
+
+    dd {
+
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: flex-end;
+    height: 61px;
+    margin-bottom: 20px;
+    transition: all $duration $easing;
+
+    svg {
+      max-height: 61px;
+      fill: #fff;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+    color: rgb(254, 204, 53);
+    line-height: 1.2;
+
+    svg {
+      width: 25px;
+      height: 25px;
+      fill: rgb(254, 204, 53);
+    }
+  }
+
+  &__preview {
+    overflow: hidden;
+    height: 48px;
+    transition: all $duration $easing;
+  }
+
+  &__description {
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration $easing;
+  }
+}
+a.card:hover {
+  padding-top: 40px;
+
+  .card__icon {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+
+  .card__preview {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+
+  .card__description {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .card {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .card {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .card {
+  }
+}
+@media (min-width: $desktop) {
+  .card {
+
+  }
+}
+
