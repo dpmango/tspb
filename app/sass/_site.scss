@@ -28,6 +28,10 @@ body {
     padding: 20px 10px 0;
   }
 
+  &__social {
+    margin-bottom: 15px;
+  }
+
   .sidebar {
     display: none;
   }
@@ -56,6 +60,24 @@ body {
     .sidebar + .site__container {
       width: calc(100% - 110px);
       padding: 25px;
+    }
+
+    &__social {
+      margin-bottom: 24px;
+    }
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__aside {
+      width: calc(31% - 24px);
+    }
+
+    &__content {
+      width: 69%;
     }
   }
 
