@@ -60,13 +60,15 @@
     display: table;
     width: 100%;
     font-family: 'Solomon-Sans-Normal', sans-serif;
-    font-size: 12px;
-    color: rgb(167, 167, 167);
+    font-size: 16px;
+    color: rgb(33, 33, 33);
     line-height: 1.083;
 
     &__head {
       display: table-row;
       font-size: 16px;
+      color: rgb(167, 167, 167);
+      line-height: 1.083;
     }
 
     &__row {
@@ -79,6 +81,29 @@
           border-color: rgb(172, 172, 172);
           color: rgb(172, 172, 172);
           pointer-events: none;
+        }
+      }
+
+      &_line {
+
+        .table__item {
+          border-bottom: 1px solid #e7e7e7;
+        }
+      }
+
+      &_sequel {
+
+        .table__item {
+          padding-top: 0;
+          padding-bottom: 0;
+          vertical-align: middle;
+        }
+      }
+
+      &_general {
+
+        .table__item {
+          padding-bottom: 0;
         }
       }
     }
@@ -102,6 +127,12 @@
           color: rgb(33, 33, 33);
           line-height: 0.929;
         }
+      }
+
+      p {
+        font-size: 12px;
+        color: rgb(167, 167, 167);
+        line-height: 1.083;
       }
     }
 

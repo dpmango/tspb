@@ -4,6 +4,13 @@
 
   }
 
+  &__title {
+    display: block;
+    font-size: 16px;
+    color: rgb(33, 33, 33);
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+  }
+
   &__info {
     display: flex;
     justify-content: space-between;

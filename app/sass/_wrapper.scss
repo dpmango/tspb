@@ -30,6 +30,24 @@
     }
   }
 
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    a,
+    a:visited {
+      font-size: 12px;
+      color: rgb(154, 154, 154);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+
   &_buy-service {
     padding-top: 30px;
 
@@ -76,6 +94,14 @@
 
 
       a {
+        font-size: 14px;
+      }
+    }
+
+    &__footer {
+
+      a,
+      a:visited {
         font-size: 14px;
       }
     }
