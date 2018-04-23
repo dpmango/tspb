@@ -41,6 +41,17 @@
       color: #000;
       font-weight: 400;
     }
+
+    a,
+    a:visited {
+      color: #000;
+      font-weight: 400;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   strong {

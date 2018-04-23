@@ -3,6 +3,20 @@
   align-items: center;
   user-select: none;
 
+  &.nice-toggle_white {
+
+    label {
+      color: transparentize(rgb(255,255,255), .5);
+    }
+
+    input[ type = radio ] {
+
+      &:checked + label {
+        color: rgb(255,255,255);
+      }
+    }
+  }
+
   &__slider {
     position: relative;
     width: 40px;

@@ -18,11 +18,31 @@
     color: #fecc35;
   }
 
-  &__form {
-    padding: 20px 0;
 
-    button[type=submit] {
-      min-width: 200px;
+  &__prefer {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.714;
+    color: rgb(255,255,255);
+
+    dl {
+      margin-bottom: 15px;
+
+      dt {
+        margin-bottom: 5px;
+      }
+
+      dd {
+
+      }
+    }
+
+    .nice-toggle {
+
+      label {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -44,6 +64,23 @@
 @media (min-width: $desktop) {
   .search-path {
 
+    &__prefer {
+      display: flex;
+      justify-content: space-between;
+
+      dl {
+        width: calc(50% - 10px);
+        margin-bottom: 0;
+
+        dt {
+          margin-bottom: 15px;
+        }
+
+        dd {
+
+        }
+      }
+    }
   }
 }
 

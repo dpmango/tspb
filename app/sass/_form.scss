@@ -190,6 +190,32 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        .btn {
+          border-radius: 0 5px 5px 0;
+        }
+      }
+    }
+
+    &_path {
+
+      .form__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .form__field {
+          width: 39.5%;
+        }
+
+        .btn {
+          position: relative;
+          right: -1px;
+          width: 21%;
+          min-width: 0;
+          font-size: 14px;
+          border-radius: 0 5px 5px 0;
+        }
       }
     }
 
@@ -218,6 +244,16 @@
 }
 @media (min-width: $desktop) {
   .form {
+
+    &_path {
+
+      .form__row {
+
+        .btn {
+          font-size: 18px;
+        }
+      }
+    }
 
   }
 }
