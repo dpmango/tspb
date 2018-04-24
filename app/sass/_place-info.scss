@@ -2,11 +2,24 @@
   display: flex;
   flex-wrap: wrap;
 
-  &_time {
+  &.place-info_time {
     flex-wrap: nowrap;
 
     .place-info__wrap {
       min-width: 130px;
+    }
+  }
+
+  &.place-info_stations {
+    padding-left: 25px;
+
+    a,
+    a:visited {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
@@ -31,10 +44,28 @@
       line-height: 1.5;
     }
 
+    ul {
+      padding-top: 10px;
+
+      li {
+        font-size: 13px;
+        color: rgb(33, 33, 33);
+        line-height: 1.385;
+      }
+    }
+
     a,
     a:visited {
       font-size: 13px;
       color: rgb(33, 33, 33);
+
+      &.line {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
       &:hover {
         text-decoration: underline;

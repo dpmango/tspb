@@ -1,28 +1,24 @@
 .grid {
 
-  .wrapper {
-    height: 100%;
-    margin-bottom: 0;
-  }
-
-  &__col {
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  &__col-2 {
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  &__col-3 {
-    display: block;
-    margin-bottom: 15px;
-  }
-
+  &__col,
+  &__col-2,
+  &__col-3,
   &__col-half {
     display: block;
+    width: 100%;
     margin-bottom: 15px;
+
+    > .wrapper {
+      height: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrap {
+
+    .wrapper:last-child {
+      margin-bottom: 0;
+    }
   }
 
     .search-path {
@@ -45,16 +41,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    &__col {
-      width: calc((100% - 4*24px)/5);
-      margin-bottom: 24px;
-    }
-
-    &__col-2 {
-      width: calc(2*(100% - 4*24px)/5 + 24px);
-      margin-bottom: 24px;
-    }
-
     &__col-3 {
       width: calc(3*(100% - 4*24px)/5 + 2*24px);
       margin-bottom: 24px;
@@ -74,6 +60,13 @@
 @media (min-width: $desktop) {
   .grid {
 
+    &__col {
+      width: calc((100% - 4*24px)/5);
+    }
+
+    &__col-2 {
+      width: calc(2*(100% - 4*24px)/5 + 24px);
+    }
   }
 }
 

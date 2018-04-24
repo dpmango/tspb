@@ -2,6 +2,18 @@
 
     $(function () {
 
+        $('.scroll-content').niceScroll({
+            cursorcolor: 'rgb(217, 217, 217)',
+            cursoropacitymin: 1,
+            cursorwidth: '6px',
+            cursorborderradius: '3px',
+            cursorborder: '0'
+        });
+
+        $('.shedule').each(function () {
+            new Shedule($(this));
+        });
+
         $('.sign').each(function () {
             new Sign($(this));
         });
@@ -177,6 +189,32 @@
 
                         _obj.toggleClass('open');
 
+                    }
+                } );
+
+            },
+            _init = function() {
+                _onEvents();
+            };
+
+        _init();
+    };
+
+    var Shedule = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _item = _obj.find('.shedule__title');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _item.on( {
+                    click: function() {
+                        var curElem = $(this),
+                            curParent = curElem.parent();
+
+                        curParent.toggleClass('open');
                     }
                 } );
 

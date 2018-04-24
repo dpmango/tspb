@@ -6,6 +6,10 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
 
+  &.wrapper_tab {
+    padding-top: 0;
+  }
+
   &__title {
     display: flex;
     flex-wrap: wrap;
@@ -28,11 +32,44 @@
         text-decoration: none;
       }
     }
+
+    time {
+      font-size: 10px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      color: rgb(183, 183, 183);
+      line-height: 1.2;
+    }
+
+    strong {
+      font-size: 18px;
+      font-family: 'Solomon-Sans-Bold', sans-serif;
+    }
+
+    &-time {
+      display: flex;
+      align-items: baseline;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      font-size: 10px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      color: rgb(183, 183, 183);
+      line-height: 1.2;
+    }
   }
 
   &__footer {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: flex-end;
 
     a,
@@ -46,6 +83,9 @@
       }
     }
 
+    .place-info__icon+.place-info__item {
+      min-width: 0;
+    }
   }
 
   &_buy-service {

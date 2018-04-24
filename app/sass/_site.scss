@@ -18,6 +18,13 @@ body {
   color: rgb(61, 145, 193) !important;
 }
 
+&.justify {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
 .site {
   overflow: hidden;
   width: 100%;

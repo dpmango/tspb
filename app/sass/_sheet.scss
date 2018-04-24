@@ -115,6 +115,19 @@
 @media (min-width: $tablet-landscape) {
   .sheet {
 
+    &__top {
+      display: flex;
+      align-items: center;
+
+      .nice-toggle {
+        margin: 15px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
     &__filter {
       display: flex;
       align-items: center;

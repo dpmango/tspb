@@ -1,0 +1,42 @@
+.scroll-content {
+  height: 145px;
+  padding-right: 15px;
+  font-size: 13px;
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+  color: rgb(154, 154, 154);
+  line-height: 1.385;
+
+  p {
+    margin-bottom: 15px;
+  }
+}
+.nicescroll-rails {
+  width: 6px;
+  border-radius: 3px;
+  background-color: rgba(226, 226, 226, 0.4);
+}
+.nicescroll-cursors {
+  width: 6px;
+  border-radius: 3px;
+}
+@media (min-width: $phone-landscape) {
+  .scroll-content {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .scroll-content {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .scroll-content {
+
+  }
+}
+@media (min-width: $desktop) {
+  .scroll-content {
+
+  }
+}
+

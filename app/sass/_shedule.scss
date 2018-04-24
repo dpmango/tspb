@@ -1,0 +1,170 @@
+.shedule {
+
+  &__item {
+    padding: 10px 0;
+    border-bottom: 2px solid #ebebeb;
+
+    &:last-child {
+      border: none;
+    }
+
+    &.open {
+
+      .shedule__hours-wrap {
+        display: block;
+      }
+
+      .shedule__title {
+
+        &:before {
+          content: '-';
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    position: relative;
+    padding: 5px 0 10px 30px;
+    font-size: 14px;
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+    color: rgb(33, 33, 33);
+
+    &:before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      font-size: 16px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(205, 205, 205);
+      border-radius: 50%;
+      color: rgb(205, 205, 205);
+      background-color: rgb(255, 255, 255);
+      cursor: pointer;
+      content: '+';
+    }
+  }
+
+  &__hours {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    padding: 5px 0;
+    font-size: 12px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+    color: rgb(154, 154, 154);
+    line-height: 1.333;
+
+    &:before {
+      font-size: 9px;
+      line-height: 24px;
+      content: 'Часы';
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      pointer-events: none;
+      background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+      content: '';
+    }
+
+    &-item {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 10px;
+      text-align: center;
+
+      time {
+        display: block;
+        font-size: 18px;
+        font-family: 'Solomon-Sans-Bold', sans-serif;
+        color: rgb(33, 33, 33);
+        font-weight: bold;
+      }
+
+      span {
+        display: block;
+        padding-top: 5px;
+      }
+    }
+
+    &-wrap {
+      display: none;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .shedule {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .shedule {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .shedule {
+
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 20px 0;
+
+      &.open {
+
+      }
+    }
+
+    &__title {
+      width: 28%;
+      user-select: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+    }
+
+    &__hours {
+      width: 72%;
+
+      &:after {
+        width: 10%;
+      }
+
+      &-item {
+
+        time {
+          font-size: 18px;
+        }
+
+        span {
+          padding-top: 2px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .shedule {
+
+  }
+}
+
