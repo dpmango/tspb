@@ -61,7 +61,9 @@
 }
 @media (min-width: $tablet-landscape) {
   .sidebar {
-    position: relative;
+    position: fixed;
+    top: 92px;
+    left: 0;
     width: 110px;
     padding: 13px 0;
     z-index: 2;
