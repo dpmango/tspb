@@ -56,6 +56,13 @@
 
     .tab__controls-item {
       color: rgb(254, 254, 254);
+      
+      &.active {
+        
+        &:before {
+          background-color: #ff9300;
+        }
+      }
     }
   }
 }
