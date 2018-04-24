@@ -51,6 +51,13 @@
       }
     }
   }
+
+  &.tab_white {
+
+    .tab__controls-item {
+      color: rgb(254, 254, 254);
+    }
+  }
 }
 @media (min-width: $phone-landscape) {
   .tab {

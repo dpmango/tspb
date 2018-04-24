@@ -102,6 +102,22 @@
     }
   }
 
+  &__more {
+    padding: 15px;
+    text-align: center;
+
+    .on-mobile {
+
+      a,
+      a:visited {
+        font-size: 12px;
+        font-family: 'Solomon-Sans-Normal', sans-serif;
+        color: rgb(154, 154, 154);
+        text-decoration: underline;
+      }
+    }
+  }
+
   &_buy-service {
     padding-top: 30px;
 
@@ -116,6 +132,11 @@
       padding: 20px 0;
       margin-bottom: 0;
     }
+  }
+
+  .carriers {
+    margin-left: -10px;
+    margin-right: -10px;
   }
 }
 @media (min-width: $phone-landscape) {
@@ -169,6 +190,11 @@
       a:visited {
         font-size: 14px;
       }
+    }
+
+    .carriers {
+      margin-left: -20px;
+      margin-right: -20px;
     }
   }
 }

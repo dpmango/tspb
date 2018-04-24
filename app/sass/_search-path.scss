@@ -3,7 +3,18 @@
   margin-bottom: 24px;
   border-radius: 5px;
   background-color: rgb(80, 164, 212);
+  color: rgb(254, 254, 254);
   box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+
+  p {
+    margin-bottom: 15px;
+    line-height: 1.714;
+    font-size: 14px;
+  }
+
+  &.search-path_tab {
+    padding-top: 0;
+  }
 
   h2,
   &__title {
@@ -17,7 +28,6 @@
   time {
     color: #fecc35;
   }
-
 
   &__prefer {
     padding: 10px 0;
@@ -43,6 +53,13 @@
       label {
         font-size: 14px;
       }
+    }
+  }
+
+  &__footer {
+
+    .icon-link {
+      color: rgb(255,255,255);
     }
   }
 }
@@ -80,6 +97,13 @@
 
         }
       }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
     }
   }
 }

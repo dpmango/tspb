@@ -157,6 +157,33 @@
       }
     }
   }
+
+
+  &_find {
+
+    .form__row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+
+      .form__field {
+        width: 79%;
+        margin-bottom: 0;
+      }
+
+      .btn {
+        position: relative;
+        right: -1px;
+        width: 21%;
+        min-width: 0;
+        font-size: 14px;
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
 }
 @media (min-width: $phone-landscape) {
   .form {
@@ -219,6 +246,13 @@
       }
     }
 
+    &_find {
+
+      .form__row {
+        margin-bottom: 30px;
+      }
+    }
+
     &__row {
       display: flex;
       flex-wrap: wrap;
@@ -246,6 +280,16 @@
   .form {
 
     &_path {
+
+      .form__row {
+
+        .btn {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &_find {
 
       .form__row {
 

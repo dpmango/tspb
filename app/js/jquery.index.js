@@ -2,13 +2,15 @@
 
     $(function () {
 
-        $('.scroll-content').niceScroll({
-            cursorcolor: 'rgb(217, 217, 217)',
-            cursoropacitymin: 1,
-            cursorwidth: '6px',
-            cursorborderradius: '3px',
-            cursorborder: '0'
-        });
+        if ($('.scroll-content').length) {
+            $('.scroll-content').niceScroll({
+                cursorcolor: 'rgb(217, 217, 217)',
+                cursoropacitymin: 1,
+                cursorwidth: '6px',
+                cursorborderradius: '3px',
+                cursorborder: '0'
+            });
+        }
 
         $('.shedule').each(function () {
             new Shedule($(this));

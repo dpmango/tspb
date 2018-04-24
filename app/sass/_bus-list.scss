@@ -1,0 +1,38 @@
+.bus-list {
+
+  ul {
+    color: rgb(154, 154, 154);
+    font-size: 13px;
+    text-decoration: underline;
+    line-height: 1.385;
+
+    li {
+
+      a,
+      a:visited {
+        color: rgb(33, 33, 33);
+      }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .bus-list {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .bus-list {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .bus-list {
+
+  }
+}
+@media (min-width: $desktop) {
+  .bus-list {
+
+  }
+}
+
