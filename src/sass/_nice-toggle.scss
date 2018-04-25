@@ -1,0 +1,75 @@
+.nice-toggle {
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  &.nice-toggle_white {
+
+    label {
+      color: transparentize(rgb(255,255,255), .5);
+    }
+
+    input[ type = radio ] {
+
+      &:checked + label {
+        color: rgb(255,255,255);
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: rgb(237, 238, 240);
+    
+    &:before {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 5px solid rgb(255, 255, 255);
+      background-color: rgb(80, 164, 212);
+      box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.25);
+      box-sizing: border-box;
+      transition: transform $duration $easing;
+      content: '';
+    }
+  }
+
+  input[ type = radio ] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked + label {
+      color: rgb(33,33,33);
+    }
+
+    &:checked + label + .nice-toggle__slider {
+
+      &:before {
+        transform: translate(-20px, 0);
+      }
+    }
+
+    &:disabled + label {
+      cursor: default;
+      opacity: .5;
+      pointer-events: none;
+    }
+
+  }
+  label {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+    color: rgb(170, 170, 170);
+    line-height: 0.929;
+    cursor: pointer;
+    transition: color $duration $easing;
+  }
+}

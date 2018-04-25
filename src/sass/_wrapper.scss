@@ -1,0 +1,245 @@
+.wrapper {
+  display: block;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+
+  &.wrapper_tab {
+    padding-top: 0;
+  }
+
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: rgb(33, 33, 33);
+
+    a,
+    a:visited {
+      font-size: 10px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      color: rgb(183, 183, 183);
+      text-decoration: underline;
+      line-height: 1.2;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    time {
+      font-size: 10px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      color: rgb(183, 183, 183);
+      line-height: 1.2;
+    }
+
+    strong {
+      font-size: 18px;
+      font-family: 'Solomon-Sans-Bold', sans-serif;
+    }
+
+    &-time {
+      display: flex;
+      align-items: baseline;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-result {
+      display: flex;
+      align-items: baseline;
+
+      span {
+        display: block;
+        padding-left: 10px;
+        font-size: 10px;
+        font-family: 'Solomon-Sans-Normal', sans-serif;
+        color: rgb(183, 183, 183);
+        line-height: 1.2;
+      }
+    }
+
+    p {
+      font-size: 10px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      color: rgb(183, 183, 183);
+      line-height: 1.2;
+    }
+
+    &-line {
+      position: relative;
+      padding: 20px 5px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #fe4535;
+        content: '';
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    a,
+    a:visited {
+      font-size: 12px;
+      color: rgb(154, 154, 154);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .place-info__icon+.place-info__item {
+      min-width: 0;
+    }
+  }
+
+  &__more {
+    padding: 15px;
+    text-align: center;
+
+    .on-mobile {
+
+      a,
+      a:visited {
+        font-size: 12px;
+        font-family: 'Solomon-Sans-Normal', sans-serif;
+        color: rgb(154, 154, 154);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+
+    a,
+    a:visited {
+      display: block;
+      margin-right: 30px;
+      font-size: 12px;
+      font-family: 'Solomon-Sans-Normal', sans-serif;
+      color: rgb(154, 154, 154);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &_buy-service {
+    padding-top: 30px;
+
+    svg,
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .wrapper__title {
+      padding: 20px 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &_blue {
+    background-color: rgb(80, 164, 212);
+    color: rgb(255, 255, 255);
+  }
+
+  .carriers {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .wrapper {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .wrapper {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .wrapper {
+    padding: 20px;
+    margin-bottom: 24px;
+
+    &_buy-service {
+      padding-top: 50px;
+
+      .wrapper__title {
+        padding: 30px 0;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-family: 'Solomon-Sans-Bold', sans-serif;
+
+
+      a {
+        font-size: 14px;
+      }
+
+
+      &-result {
+        padding-right: 20px;
+
+        span {
+          padding-left: 20px;
+          font-size: 14px;
+        }
+      }
+
+    }
+
+    &__footer {
+
+      a,
+      a:visited {
+        font-size: 14px;
+      }
+    }
+
+    .carriers {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .wrapper {
+
+  }
+}
+

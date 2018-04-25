@@ -1,0 +1,47 @@
+.social {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgb(33, 33, 33);
+    transition: background-color $duration $easing;
+    
+    &:hover {
+      background-color: #fe4535;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: #fff
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .social {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .social {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .social {
+
+  }
+}
+@media (min-width: $desktop) {
+  .social {
+
+  }
+}
+

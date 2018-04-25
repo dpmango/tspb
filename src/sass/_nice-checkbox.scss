@@ -1,0 +1,64 @@
+.nice-checkbox {
+  margin-bottom: 20px;
+  user-select: none;
+
+  input[ type = checkbox ] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked + label {
+
+      &:after {
+        opacity: 1;
+      }
+
+    }
+
+    &:disabled + label {
+      cursor: default;
+      opacity: .5;
+    }
+
+  }
+  label {
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+    color: rgb(170, 170, 170);
+    line-height: 0.929;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(209, 209, 209);
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: rgb(254, 254, 254);
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: -6px;
+      left: 1px;
+      width: 16px;
+      height: 16px;
+      opacity: 0;
+      border: 2px solid #212121;
+      box-sizing: border-box;
+      clip: rect(3px, 16px, 16px, 9px);
+      transition: opacity $duration $easing;
+      transform: rotate(45deg);
+      content: '';
+    }
+
+  }
+
+}

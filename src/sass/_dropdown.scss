@@ -1,0 +1,57 @@
+.dropdown {
+  color: rgb(33,33,33);
+  
+  &__title {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__caret {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translate(0, -50%);
+
+    svg {
+      fill: rgb(33,33,33);
+    }
+  }
+
+  &__wrap {
+    display: none;
+    padding-top: 10px;
+  }
+
+  &.open {
+
+    > .dropdown__wrap {
+      display: block;
+    }
+
+    > .dropdown__title .dropdown__caret {
+      transform: translate(0, -50%) matrix(1,0,0,-1,0,0);
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .dropdown {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .dropdown {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .dropdown {
+
+  }
+}
+@media (min-width: $desktop) {
+  .dropdown {
+
+  }
+}
+

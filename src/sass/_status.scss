@@ -1,0 +1,35 @@
+.status {
+  font-size: 10px;
+  font-family: 'Solomon-Sans-Bold', sans-serif;
+  color: inherit;
+
+  .sent & {
+    color: rgb(254, 69, 53);
+  }
+
+  .waiting & {
+    color: rgb(85, 186, 74);
+  }
+}
+@media (min-width: $phone-landscape) {
+  .status {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .status {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .status {
+    font-size: 16px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+  }
+}
+@media (min-width: $desktop) {
+  .status {
+
+  }
+}
+

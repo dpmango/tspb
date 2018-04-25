@@ -3,7 +3,7 @@ var config = require('../config');
 
 gulp.task('copy:fonts', function() {
   return gulp
-    .src(config.src.fonts + '/*.{ttf,eot,woff,woff2}')
+    .src(config.src.fonts + '/*.{ttf,eot,woff,svg,woff2}')
     .pipe(gulp.dest(config.dest.fonts));
 });
 
@@ -13,6 +13,18 @@ gulp.task('copy:vendor', function() {
     .pipe(gulp.dest(config.dest.vendor));
 });
 
+gulp.task('copy:php', function() {
+  return gulp
+    .src(config.src.php + '/**/*.*')
+    .pipe(gulp.dest(config.dest.php));
+});
+
+gulp.task('copy:html', function() {
+  return gulp
+    .src(config.src.html + '/**/*.*')
+    .pipe(gulp.dest(config.dest.html));
+});
+
 gulp.task('copy:rootfiles', function() {
   return gulp
     .src(config.src.root + '/*.*')
@@ -20,12 +32,16 @@ gulp.task('copy:rootfiles', function() {
 });
 
 gulp.task('copy', [
-  // 'copy:rootfiles',
+  'copy:rootfiles',
+  'copy:html',
+  'copy:php',
   'copy:vendor',
   'copy:fonts'
 ]);
 
 gulp.task('copy:watch', function() {
+  gulp.watch(config.src.php + '/**/*.*', ['copy:php']);
+  gulp.watch(config.src.html + '/**/*.*', ['copy:html']);
   gulp.watch(config.src.vendor + '/**/*.*', ['copy:vendor']);
   gulp.watch(config.src.root + '/*.*', ['copy:rootfiles']);
 });

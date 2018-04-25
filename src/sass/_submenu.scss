@@ -1,0 +1,97 @@
+.submenu {
+  cursor: default;
+  color: rgb(33,33,33);
+
+  .dropdown {
+
+    .submenu__item {
+      padding: 10px 0 10px 10px;
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding: 10px;
+    color: rgb(33,33,33);
+    transition: background-color $duration $easing;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .submenu {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .submenu {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 215px;
+    background-color: #fe4535;
+    text-align: left;
+    color: #fff;
+    cursor: default;
+
+    &__caret {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate(0, -50%);
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    .dropdown {
+      color: #fff;
+
+      .submenu__item {
+        padding: 10px 0 10px 10px;
+      }
+
+      &__caret {
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    &__item {
+      display: block;
+      position: relative;
+      padding: 10px 20px;
+      color: #fff;
+      transition: background-color $duration $easing;
+
+      > .submenu {
+        display: none;
+      }
+
+      &:hover {
+        background-color: #ef3d2e;
+
+        > .submenu {
+          display: block;
+        }
+      }
+    }
+
+    .dropdown.open {
+      background-color: #ef3d2e;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .submenu {
+
+  }
+}
+

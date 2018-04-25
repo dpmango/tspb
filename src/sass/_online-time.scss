@@ -1,0 +1,47 @@
+.online-time {
+  display: flex;
+  align-items: flex-start;
+  font-family: "Solomon-Sans-Bold", sans-serif;
+
+  time {
+    margin: 0;
+    font-size: 12px;
+    color: rgb(80, 164, 211);
+  }
+
+  sup {
+    padding-left: 2px;
+    font-size: 9px;
+    color: rgb(254, 69, 53);
+    line-height: 1.083;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .online-time {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .online-time {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .online-time {
+
+    time {
+      font-size: 18px;
+    }
+
+    sup {
+      padding-left: 5px;
+      font-size: 12px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .online-time {
+
+  }
+}
+

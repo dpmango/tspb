@@ -1,0 +1,67 @@
+.arrow-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px 10px 45px;
+  font-size: 16px;
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+  color: rgb(33, 33, 33);
+  line-height: 1.2;
+  transition: color $duration $easing;
+
+  &:hover {
+    color: #fe4535;
+
+    .arrow-link__arrow {
+
+      svg {
+        fill: #fe4535;
+      }
+    }
+  }
+
+  &__icon {
+    @include absoluteCenterY();
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+      display: block;
+      width: 30px;
+    }
+  }
+
+  &__arrow {
+    @include absoluteCenterY();
+    right: 0;
+
+    svg {
+      fill: rgb(217, 217, 217);
+      transition: fill $duration $easing;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .arrow-link {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .arrow-link {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .arrow-link {
+    padding: 0 30px 0 45px;
+  }
+}
+@media (min-width: $desktop) {
+  .arrow-link {
+
+  }
+}
+

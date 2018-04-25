@@ -1,0 +1,90 @@
+.arrival-time {
+  font-size: 16px;
+  font-family: "Solomon-Sans-Normal", sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 1.125;
+
+  &__title {
+    display: block;
+    line-height: 1.2;
+    font-family: "Solomon-Sans-Bold", sans-serif;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    padding: 5px 0 5px 55px;
+
+    span {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    a,
+    a:visited {
+      color: rgb(255, 255, 255);
+      text-decoration: underline;
+      transition: color $duration $easing;
+
+      &:hover {
+        color: #fe4535;
+      }
+    }
+
+    time {
+      display: block;
+      font-family: "Solomon-Sans-Bold", sans-serif;
+      color: rgb(254, 204, 53);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+      display: block;
+      width: 25px;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .arrival-time {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .arrival-time {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .arrival-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      max-width: 30%;
+    }
+
+    &__list {
+      max-width: 70%;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .arrival-time {
+
+  }
+}
+

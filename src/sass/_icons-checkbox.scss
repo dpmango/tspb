@@ -1,0 +1,38 @@
+.icons-checkbox {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  user-select: none;
+  cursor: default;
+
+  input[ type = checkbox ] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked + label {
+      opacity: 1;
+    }
+
+    &:disabled + label {
+      cursor: default;
+      opacity: .5;
+    }
+
+  }
+  label {
+    display: block;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .35;
+    transition: opacity $duration $easing;
+
+    img,
+    svg {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

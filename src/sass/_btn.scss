@@ -1,0 +1,86 @@
+.btn,
+a.btn,
+button.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+  color: rgb(254, 254, 254);
+  line-height: 1.2;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(61, 145, 193);
+  transition: background $duration $easing;
+
+  i {
+    margin-right: 10px;
+
+    svg,
+    img {
+      position: relative;
+      top: 1px;
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &:hover {
+    background: #fe4535;
+  }
+
+  &:active {
+    background: transparentize(#fe4535, .3);
+  }
+
+  &_small {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  &_big {
+    height: 50px;
+    min-width: 200px;
+    font-size: 18px;
+  }
+
+  &_yellow {
+    font-size: 18px;
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+    color: rgb(33, 33, 33);
+    line-height: 0.722;
+    background-color: rgb(254, 204, 53);
+  }
+
+  &_green {
+    background-color: rgb(85, 186, 74);
+  }
+
+  &_gray {
+    background-color: rgb(245, 245, 245);
+    color: rgb(33, 33, 33);
+  }
+
+  &_blue-border {
+    border: 1px solid rgb(80, 164, 212);
+    background-color: rgb(255, 255, 255);
+    color: rgb(80, 164, 212);
+
+    &:hover {
+      background-color: rgb(80, 164, 212);
+      color: rgb(255, 255, 255);
+    }
+  }
+  
+  &_white {
+    color: rgb(33, 33, 33);
+    background-color: rgb(255, 255, 255);
+    
+    &:hover {
+      background-color: #b0b0b0;
+    }
+  }
+}

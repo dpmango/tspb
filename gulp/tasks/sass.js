@@ -31,12 +31,12 @@ var config       = require('../config');
 var processors = [
   short(),
   svginline(),
-  animations(),
-  respType(),
-  focus(),
-  easings(),
+  // animations(),
+  // respType(),
+  // focus(),
+  // easings(),
   autoprefixer({
-    browsers: ['last 10 versions'],
+    browsers: ['last 2 versions'],
     remove: true, // remove outdated prefixes?
     // cascade: false
   }),
