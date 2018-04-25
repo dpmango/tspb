@@ -13,9 +13,11 @@
     position: relative;
     top: -2px;
     margin-right: 10px;
-
+    color: #212121; // svg would take as currentColor
+    transition: $duration $easing;
     img,
     svg {
+      // or fill: #333 if color is not taking from parent
       display: block;
       width: 20px;
       height: 24px;
@@ -24,6 +26,9 @@
 
   &:hover {
     color: #fe4535;
+    i {
+      color: #fe4535;
+    }
   }
 }
 @media (min-width: $phone-landscape) {
@@ -46,4 +51,3 @@
 
   }
 }
-
