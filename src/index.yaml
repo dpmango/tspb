@@ -18,14 +18,15 @@ PageList:
 - file: tram.html
   ready: 80
 
-
+- file: extra.html
+  ready: 0
 - file: homepage.html
-  ready: 0
+  ready: 50
 - file: txt_template.html
-  ready: 0
+  ready: 50
 - file: avtovokzal.html
-  ready: 0
+  ready: 50
 - file: ladozhskiy.html
-  ready: 0
+  ready: 50
 - file: path_A_to_B.html
-  ready: 0
+  ready: 50

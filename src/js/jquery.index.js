@@ -1,4 +1,32 @@
 ( function(){
+    //////////
+    // Global variables
+    //////////
+
+    var _window = $(window);
+    var _document = $(document);
+
+    function pageReady(){
+      legacySupport();
+    }
+
+    function legacySupport(){
+      // svg support for IE
+      svg4everybody();
+
+      // Viewport units buggyfill
+      window.viewportUnitsBuggyfill.init({
+        force: false,
+        refreshDebounceWait: 150,
+        appendToBody: true
+      });
+    }
+
+    // Prevent # behavior
+    _document.on('click', '[href="#"]', function(e) {
+      e.preventDefault();
+    });
+
 
     $(function () {
 
@@ -97,7 +125,7 @@
             _obj = obj,
             _controlsItem = _obj.find('.tab__controls-item'),
             _contentItem = _obj.find('.tab__content-item');
-        
+
         //private methods
         var _onEvents = function()  {
 
