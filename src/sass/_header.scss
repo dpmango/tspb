@@ -16,7 +16,7 @@
   &.active {
 
     .header__layout {
-      transform: translate(0,0);
+      transform: translate(100%, 0);
     }
   }
 
@@ -28,7 +28,7 @@
     z-index: 5;
     padding: 20px 20px 85px;
     background-color: #fff;
-    transform: translate(100%, 0);
+    transform: translate(0, 0);
     transition: transform $duration $easing;
 
     .icon-link,
