@@ -56,11 +56,6 @@
 }
 @media (min-width: $tablet-portrait) {
   .sidebar {
-
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .sidebar {
     position: fixed;
     top: 92px;
     left: 0;
@@ -144,6 +139,11 @@
         margin: 0 auto;
       }
     }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .sidebar {
+
   }
 }
 @media (min-width: $desktop) {

@@ -116,11 +116,6 @@
 }
 @media (min-width: $tablet-portrait) {
   .header {
-
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .header {
     position: fixed;
     top: 0;
     left: 0;
@@ -167,6 +162,11 @@
     &__btn {
       display: none;
     }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .header {
+
   }
 }
 @media (min-width: $desktop) {
