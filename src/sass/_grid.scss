@@ -4,7 +4,9 @@
   &__col-2,
   &__col-3,
   &__col-4,
-  &__col-half {
+  &__col-half,
+  &__col-one,
+  &__col-four {
     display: block;
     width: 100%;
     margin-bottom: 15px;
@@ -43,7 +45,9 @@
     &__col-2,
     &__col-3,
     &__col-4,
-    &__col-half {
+    &__col-half,
+    &__col-one,
+    &__col-four {
       margin-bottom: 24px;
     }
   }
@@ -74,6 +78,14 @@
 
     &__col-half {
       width: calc(50% - 12px);
+    }
+
+    &__col-one {
+      width: 293px;
+    }
+
+    &__col-four {
+      width: calc(100% - 293px - 24px);
     }
   }
 }

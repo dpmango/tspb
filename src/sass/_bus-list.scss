@@ -1,12 +1,16 @@
 .bus-list {
 
   ul {
+    padding: 3px 0;
     color: rgb(154, 154, 154);
     font-size: 13px;
     text-decoration: underline;
-    line-height: 1.385;
+    line-height: 1.9;
 
     li {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
       a,
       a:visited {
