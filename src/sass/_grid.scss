@@ -6,7 +6,7 @@
   &__col-4,
   &__col-half,
   &__col-one,
-  &__col-four {
+  &__col-four{
     display: block;
     width: 100%;
     margin-bottom: 15px;
@@ -17,16 +17,9 @@
     }
   }
 
-  &__wrap {
-
-    .wrapper:last-child {
-      margin-bottom: 0;
-    }
+  .search-path {
+    margin-bottom: 0;
   }
-
-    .search-path {
-      margin-bottom: 0;
-    }
 }
 @media (min-width: $phone-landscape) {
   .grid {
@@ -34,11 +27,6 @@
   }
 }
 @media (min-width: $tablet-portrait) {
-  .grid {
-
-  }
-}
-@media (min-width: $tablet-landscape) {
   .grid {
 
     &__col,
@@ -50,6 +38,37 @@
     &__col-four {
       margin-bottom: 24px;
     }
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .wrapper {
+        width: calc(50% - 12px);
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &_three {
+
+        .wrapper {
+          margin-bottom: 24px;
+
+          &:last-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .grid {
+
   }
 }
 @media (min-width: $desktop) {
@@ -87,9 +106,18 @@
     &__col-four {
       width: calc(100% - 293px - 24px);
     }
-    &__grow-child{
-      display: flex;
-      flex-direction: column;
+
+    &__wrap {
+      display: block;
+
+      .wrapper {
+        width: 100%;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
