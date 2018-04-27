@@ -204,6 +204,13 @@
 
       .form__row {
         margin-right: 20px;
+
+        &:first-child {
+
+          .form__field {
+            width: 275px;
+          }
+        }
       }
 
       button[type=submit] {
@@ -272,6 +279,13 @@
 
       .separator {
         margin: 0;
+      }
+    }
+
+    &__field {
+
+      .datepicker-here {
+        width: 160px;
       }
     }
   }

@@ -18,6 +18,21 @@
     .header__layout {
       transform: translate(0,0);
     }
+
+    .header__btn {
+
+      span {
+        background: transparent;
+      }
+      &:before {
+        top: calc(50% - 2px);
+        transform: rotate(45deg);
+      }
+      &:after {
+        bottom: calc(50% - 2px);
+        transform: rotate(-45deg);
+      }
+    }
   }
 
   &__layout {
@@ -53,14 +68,22 @@
     height: 25px;
     transform: translate(0,-50%);
 
+    &:hover {
+
+      span {
+        width: 100%;
+      }
+    }
+
     span {
       position: absolute;
       top: 50%;
-      left: 0;
-      width: 100%;
+      right: 0;
+      width: calc(100% - 9px);
       height: 4px;
-      transform: translate(9px,-50%);
+      transform: translate(0,-50%);
       background-color: rgb(33,33,33);
+      transition: width $duration $easing, background $duration $easing;
     }
 
     &:before {
@@ -71,6 +94,7 @@
       height: 4px;
       background-color: rgb(33,33,33);
       content: '';
+      transition: transform $duration $easing;
     }
 
     &:after {
@@ -81,6 +105,7 @@
       height: 4px;
       background-color: rgb(33,33,33);
       content: '';
+      transition: transform $duration $easing;
     }
   }
 }

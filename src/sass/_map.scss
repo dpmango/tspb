@@ -1,0 +1,25 @@
+.map {
+  width: 100%;
+  height: 200px;
+}
+@media (min-width: $phone-landscape) {
+  .map {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .map {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .map {
+    height: 100%;
+  }
+}
+@media (min-width: $desktop) {
+  .map {
+
+  }
+}
+
