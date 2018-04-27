@@ -10,7 +10,34 @@
 
   img {
     display: block;
-    max-width: 100%;
+    max-width: 36px;
+  }
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: #ff2a16;
+    border-right-color: #0266a3;
+    border-bottom-color: #009236;
+    border-left-color: #ff9300;
+    box-sizing: border-box;
+    content: '';
+    transition: opacity $duration $easing, transform $duration $easing;
+  }
+
+  &:hover {
+
+    &:before {
+      opacity: 1;
+    }
   }
 }
 @media (min-width: $phone-landscape) {
@@ -30,6 +57,16 @@
     left: 0;
     transform: none;
     width: 110px;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:before {
+      width: 80px;
+      height: 80px;
+      border-width: 4px;
+    }
   }
 }
 @media (min-width: $desktop) {

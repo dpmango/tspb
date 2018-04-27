@@ -190,7 +190,7 @@
 }
 @media (min-width: $tablet-landscape) {
   .wrapper {
-    padding: 20px;
+    padding: 15px 20px;
     margin-bottom: 24px;
 
     &_buy-service {
@@ -206,11 +206,9 @@
       font-size: 16px;
       font-family: 'Solomon-Sans-Bold', sans-serif;
 
-
       a {
         font-size: 14px;
       }
-
 
       &-result {
         padding-right: 20px;

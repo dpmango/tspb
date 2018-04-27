@@ -1,5 +1,5 @@
 .search-path {
-  padding: 20px 15px;
+  padding: 10px;
   margin-bottom: 24px;
   border-radius: 5px;
   background-color: rgb(80, 164, 212);
@@ -80,6 +80,12 @@
 }
 @media (min-width: $desktop) {
   .search-path {
+    padding: 15px 20px;
+
+    h2,
+    &__title {
+      margin-bottom: 38px;
+    }
 
     &__prefer {
       display: flex;
