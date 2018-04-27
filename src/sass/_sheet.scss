@@ -150,9 +150,19 @@
     &__result {
       padding: 15px 0;
 
+      &_type2 {
+        padding: 0;
+      }
+
       .table {
         width: calc(100% + 40px);
         margin: 0 -20px;
+
+        &__head {
+          .table__item {
+            padding-top: 0;
+          }
+        }
       }
     }
   }

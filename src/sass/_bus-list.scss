@@ -4,7 +4,6 @@
     padding: 3px 0;
     color: rgb(154, 154, 154);
     font-size: 13px;
-    text-decoration: underline;
     line-height: 1.9;
 
     li {
@@ -15,6 +14,11 @@
       a,
       a:visited {
         color: rgb(33, 33, 33);
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
