@@ -64,6 +64,10 @@
             new Map($(this));
         });
 
+        $('.nice-toggle').each(function () {
+            new NiceToggle($(this));
+        });
+
         $('.form_validate').each(function () {
             $(this).validate({
                 rules:{
@@ -288,8 +292,7 @@
     var Map = function(obj) {
 
         //private properties
-        var _self = this,
-            _obj = obj,
+        var _obj = obj,
             _centerMap = _obj.data('center') || [55.751574, 37.573856],
             _zoom = _obj.data('zoom') || 9;
 
@@ -350,6 +353,39 @@
                         .add(myPlacemark)
                         .add(myPlacemarkWithContent);
                 });
+
+            },
+            _init = function() {
+                _onEvents();
+            };
+
+        _init();
+    };
+
+    var NiceToggle = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _inputs = _obj.find('input[type=radio]'),
+            _slider = _obj.find('.nice-toggle__slider');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _slider.on( {
+                    click: function() {
+
+                        _inputs.each(function () {
+                            var curItem = $(this);
+
+                            if (!curItem.prop('checked')) {
+                                curItem.trigger('click');
+                                return false;
+                            }
+                        });
+
+                    }
+                } );
 
             },
             _init = function() {
