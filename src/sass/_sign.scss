@@ -55,11 +55,6 @@
 @media (min-width: $tablet-portrait) {
   .sign {
 
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .sign {
-
     &__modal {
       top: 68px;
       width: 293px;
@@ -70,6 +65,11 @@
         right: 36px;
       }
     }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .sign {
+
   }
 }
 @media (min-width: $desktop) {

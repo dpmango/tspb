@@ -8,17 +8,12 @@
 }
 @media (min-width: $tablet-portrait) {
   .breadcrumbs {
-
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .breadcrumbs {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 25px;
+    margin-bottom: 13px;
     font-size: 13px;
-    color: rgb(154, 154, 154);
-    line-height: 1;
+    color: #9a9a9a;
+    line-height: 1.5;
 
     a,
     a:visited {
@@ -35,6 +30,11 @@
         content: '/';
       }
     }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .breadcrumbs {
+
   }
 }
 @media (min-width: $desktop) {

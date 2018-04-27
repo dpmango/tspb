@@ -14,6 +14,10 @@ body {
   display: none !important;
 }
 
+.hide-on-tablet {
+  display: none !important;
+}
+
 .blue-text {
   color: rgb(61, 145, 193) !important;
 }
@@ -51,11 +55,6 @@ body {
 }
 @media (min-width: $tablet-portrait) {
   .site {
-
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .site {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -89,14 +88,22 @@ body {
     }
   }
 
-  .on-mobile {
-    display: none !important;
-  }
+}
+@media (min-width: $tablet-landscape) {
+  .site {
 
-  .on-desktop {
-    display: block !important;
-  }
+    .hide-on-tablet {
+      display: block !important;
+    }
 
+    .on-mobile {
+      display: none !important;
+    }
+
+    .on-desktop {
+      display: block !important;
+    }
+  }
 }
 @media (min-width: $desktop) {
   .site {
