@@ -9,6 +9,8 @@ PageList:
   ready: 80
 - file: train_results.html
   ready: 80
+- file: header-login.html
+  ready: 80
 - file: transportspb.html
   ready: 70
 - file: find.html
@@ -29,6 +31,4 @@ PageList:
 - file: ladozhskiy.html
   ready: 50
 - file: path_A_to_B.html
-  ready: 50
-- file: header-login.html
   ready: 50

@@ -87,6 +87,9 @@
     &__col-four {
       width: calc(100% - 293px - 24px);
     }
+    &__grow-child{
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
-
