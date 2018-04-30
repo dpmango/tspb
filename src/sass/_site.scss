@@ -78,19 +78,19 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
     }
-
-    &__aside {
-      width: calc(31% - 24px);
-    }
-
-    &__content {
-      width: 69%;
-    }
   }
 
 }
 @media (min-width: $tablet-landscape) {
   .site {
+
+    &__aside {
+      width: 350px;
+    }
+
+    &__content {
+      width: calc(100% - 350px - 24px);
+    }
 
     .hide-on-tablet {
       display: block !important;

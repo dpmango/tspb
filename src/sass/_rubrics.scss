@@ -1,0 +1,54 @@
+.rubrics {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+
+  a,
+  a:visited {
+    display: block;
+    margin: 0 19px 10px 0;
+    font-size: 12px;
+    color: rgb(33, 33, 33);
+    text-decoration: underline;
+    transition: color $duration $easing;
+
+    &:hover,
+    &.active {
+      color: #fe4535;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .rubrics {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .rubrics {
+    padding: 18px 0 10px 3px;
+
+    a,
+    a:visited {
+      margin: 0 19px 14px 0;
+      font-size: 16px;
+    }
+  }
+
+  .wrapper {
+
+    .rubrics {
+      margin-right: -28px;
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .rubrics {
+
+  }
+}
+@media (min-width: $desktop) {
+  .rubrics {
+
+  }
+}
+

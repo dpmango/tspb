@@ -1,18 +1,6 @@
 @font-face {
-  font-family: 'Solomon-Sans-Black-Italic';
-  src:  url('../fonts/Solomon-Sans-Black-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Black-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Solomon-Sans-Black';
   src:  url('../fonts/Solomon-Sans-Black.woff2') format('woff2'), url('../fonts/Solomon-Sans-Black.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-Bold-Italic';
-  src:  url('../fonts/Solomon-Sans-Bold-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Bold-Italic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,68 +11,74 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Solomon-Sans-Book-Italic';
-  src:  url('../fonts/Solomon-Sans-Book-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Book-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-Book';
-  src:  url('../fonts/Solomon-Sans-Book.woff2') format('woff2'), url('../fonts/Solomon-Sans-Book.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-Light-Italic';
-  src:  url('../fonts/Solomon-Sans-Light-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Light-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-Light';
-  src:  url('../fonts/Solomon-Sans-Light.woff2') format('woff2'), url('../fonts/Solomon-Sans-Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-Normal-Italic';
-  src:  url('../fonts/Solomon-Sans-Normal-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Normal-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: '';
-  src:  url('../fonts/2') format('woff2'), url('../fonts/') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Solomon-Sans-Normal';
   src:  url('../fonts/Solomon-Sans-Normal.woff2') format('woff2'), url('../fonts/Solomon-Sans-Normal.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Solomon-Sans-SemiBold-Italic';
-  src:  url('../fonts/Solomon-Sans-SemiBold-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-SemiBold-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-SemiBold';
-  src:  url('../fonts/Solomon-Sans-SemiBold.woff2') format('woff2'), url('../fonts/Solomon-Sans-SemiBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-Thin-Italic';
-  src:  url('../fonts/Solomon-Sans-Thin-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Thin-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Solomon-Sans-Thin';
-  src:  url('../fonts/Solomon-Sans-Thin.woff2') format('woff2'), url('../fonts/Solomon-Sans-Thin.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+//@font-face {
+//  font-family: 'Solomon-Sans-Black-Italic';
+//  src:  url('../fonts/Solomon-Sans-Black-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Black-Italic.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Bold-Italic';
+//  src:  url('../fonts/Solomon-Sans-Bold-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Bold-Italic.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Book-Italic';
+//  src:  url('../fonts/Solomon-Sans-Book-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Book-Italic.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Book';
+//  src:  url('../fonts/Solomon-Sans-Book.woff2') format('woff2'), url('../fonts/Solomon-Sans-Book.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Light-Italic';
+//  src:  url('../fonts/Solomon-Sans-Light-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Light-Italic.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Light';
+//  src:  url('../fonts/Solomon-Sans-Light.woff2') format('woff2'), url('../fonts/Solomon-Sans-Light.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Normal-Italic';
+//  src:  url('../fonts/Solomon-Sans-Normal-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Normal-Italic.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-SemiBold-Italic';
+//  src:  url('../fonts/Solomon-Sans-SemiBold-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-SemiBold-Italic.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-SemiBold';
+//  src:  url('../fonts/Solomon-Sans-SemiBold.woff2') format('woff2'), url('../fonts/Solomon-Sans-SemiBold.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Thin-Italic';
+//  src:  url('../fonts/Solomon-Sans-Thin-Italic.woff2') format('woff2'), url('../fonts/Solomon-Sans-Thin-Italic.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Solomon-Sans-Thin';
+//  src:  url('../fonts/Solomon-Sans-Thin.woff2') format('woff2'), url('../fonts/Solomon-Sans-Thin.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}

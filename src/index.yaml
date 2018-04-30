@@ -32,3 +32,7 @@ PageList:
   ready: 50
 - file: path_A_to_B.html
   ready: 50
+- file: all_news.html
+  ready: 50
+- file: news.html
+  ready: 50

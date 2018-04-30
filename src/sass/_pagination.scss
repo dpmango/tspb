@@ -1,0 +1,68 @@
+.pagination {
+  display: none;
+}
+@media (min-width: $phone-landscape) {
+  .pagination {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .pagination {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: rgb(154, 154, 154);
+
+    a,
+    a:visited {
+      color: rgb(154, 154, 154);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      padding-left: 7px;
+      font-size: 16px;
+      color: rgb(33, 33, 33);
+
+      a,
+      a:visited {
+        padding: 6px 7px 5px;
+        margin: 0 3px;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: color $duration $easing;
+
+        &:hover {
+          color: rgb(33, 33, 33);
+        }
+      }
+
+      .active,
+      a.active {
+        color: rgb(33, 33, 33);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+      }
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .pagination {
+
+  }
+}
+@media (min-width: $desktop) {
+  .pagination {
+
+  }
+}
+
