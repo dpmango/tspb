@@ -48,6 +48,10 @@
             new Sign($(this));
         });
 
+        $('.sidebar').each(function () {
+            new Sidebar($(this));
+        });
+
         $('.tab').each(function () {
             new Tab($(this));
         });
@@ -208,6 +212,69 @@
             },
             _init = function() {
                 _onEvents();
+            };
+
+        _init();
+    };
+
+    var Sidebar = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _item = _obj.find('.sidebar__item');
+
+        //private methods
+        var _onEvents = function()  {
+
+                $(window).on( {
+                    resize: function() {
+                        _obj.getNiceScroll().resize();
+                        _setSidebarHeight();
+                        _setTopSubmenu();
+                    }
+                } );
+
+                _obj.on( {
+                    scroll: function() {
+                        _setTopSubmenu();
+                    }
+                } );
+
+            },
+            _setTopSubmenu = function() {
+
+                _item.each(function () {
+                    var curElem = $(this),
+                        curSubmenu = curElem.find(' > .submenu');
+
+                    if (curSubmenu.length) {
+                        curSubmenu.css({ 'top': curElem.offset().top - $(window).scrollTop() + 'px' });
+                    }
+                });
+            },
+            _setSidebarHeight = function() {
+                _obj.css({ 'height': 'auto' });
+                var curHeight = $(window).outerHeight(),
+                    elem = _obj.outerHeight();
+
+                if ((curHeight - elem - 92) < 0) {
+                    _obj.css({ 'height': (curHeight - 92) + 'px' });
+                }
+
+            },
+            _init = function() {
+                _onEvents();
+                _setSidebarHeight();
+                _setTopSubmenu();
+                _obj.niceScroll({
+                    autohidemode: true,
+                    railalign: 'left',
+                    cursorcolor: 'rgb(217, 217, 217)',
+                    cursoropacitymin: 1,
+                    cursorwidth: '6px',
+                    cursorborderradius: '3px',
+                    cursorborder: '0'
+                });
             };
 
         _init();

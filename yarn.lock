@@ -3674,6 +3674,12 @@ gulplog@^1.0.0:
   dependencies:
     glogg "^1.0.0"
 
+gutenberg-css@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/gutenberg-css/-/gutenberg-css-0.4.4.tgz#56c1ed2603a3b21e9566471b9fb1befdbd16749e"
+  dependencies:
+    normalize-scss "~7.0.0"
+
 handlebars-layouts@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/handlebars-layouts/-/handlebars-layouts-1.1.0.tgz#2612be5aed8f20269737c7311da15c9c2d75fbbc"
@@ -5580,6 +5586,10 @@ normalize-path@^2.0.0, normalize-path@^2.0.1, normalize-path@^2.1.1:
 normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
+
+normalize-scss@~7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-7.0.1.tgz#74485e82bb5d0526371136422a09fdb868ffc1a4"
 
 normalize-selector@^0.2.0:
   version "0.2.0"

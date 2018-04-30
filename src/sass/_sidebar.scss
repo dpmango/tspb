@@ -76,6 +76,8 @@
       transition: color $duration $easing, background $duration $easing;
 
       > .submenu {
+        position: fixed;
+        left: 110px;
         opacity: 0;
         pointer-events: none;
       }
