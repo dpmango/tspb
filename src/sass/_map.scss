@@ -45,8 +45,8 @@
 
   &__btns {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     width: 35px;
     z-index: 2;
 
@@ -57,6 +57,7 @@
       justify-content: center;
       width: 35px;
       height: 35px;
+      margin-top: 12px;
       border-radius: 50%;
       background-color: rgb(255, 255, 255);
       box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.25);
@@ -64,6 +65,7 @@
 
       img {
         display: block;
+        max-width: 20px;
       }
 
       &:hover {
@@ -79,7 +81,24 @@
 }
 @media (min-width: $tablet-portrait) {
   .map {
+    height: 100%;
 
+    &.map_full {
+
+      .map__wrap {
+        height: 550px;
+      }
+    }
+
+    &__btns {
+      bottom: 20px;
+      right: 20px;
+
+      a,
+      a:visited {
+        margin-top: 15px;
+      }
+    }
   }
 }
 @media (min-width: $tablet-landscape) {
@@ -89,14 +108,7 @@
 }
 @media (min-width: $desktop) {
   .map {
-    height: 100%;
 
-    &.map_full {
-
-      .map__layout {
-        height: 550px;
-      }
-    }
   }
 }
 
