@@ -293,14 +293,34 @@
 
         //private properties
         var _obj = obj,
-            _centerMap = _obj.data('center') || [55.751574, 37.573856],
-            _zoom = _obj.data('zoom') || 9;
+            _map = _obj.find('.map__layout'),
+            _centerMap = _map.data('center') || [55.751574, 37.573856],
+            _zoom = _map.data('zoom') || 9,
+            _fullsize = _obj.find('.map__fullsize'),
+            _fullMap = $('.map_full'),
+            _close = _fullMap.find('.map__close');
 
+        console.log(_fullsize, _fullMap);
         //private methods
         var _onEvents = function()  {
 
+                _fullsize.on({
+                    'click': function () {
+                        _fullMap.addClass('active');
+                        console.log('click');
+                        return false;
+                    }
+                });
+
+                _close.on({
+                    'click': function () {
+                        _fullMap.removeClass('active');
+                        return false;
+                    }
+                });
+
                 ymaps.ready(function () {
-                    var myMap = new ymaps.Map(_obj[0], {
+                    var myMap = new ymaps.Map(_map[0], {
                             center: _centerMap,
                             zoom: _zoom
                         }, {
