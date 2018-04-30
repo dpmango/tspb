@@ -365,14 +365,31 @@
             _zoom = _map.data('zoom') || 9,
             _fullsize = _obj.find('.map__fullsize'),
             _fullMap = $('.map_full'),
-            _close = _fullMap.find('.map__close');
+            _close = _fullMap.find('.map__close'),
+            _points = _fullMap.find('.map__column_points');
 
-        console.log(_fullsize, _fullMap);
         //private methods
         var _onEvents = function()  {
 
+                $(window).on({
+                    'resize': function () {
+                        if (_points.length) {
+                            _points.getNiceScroll().resize();
+                        }
+                    }
+                });
+
                 _fullsize.on({
                     'click': function () {
+                        if (_points.length) {
+                            _points.niceScroll({
+                                cursorcolor: 'rgb(217, 217, 217)',
+                                cursoropacitymin: 1,
+                                cursorwidth: '6px',
+                                cursorborderradius: '3px',
+                                cursorborder: '0'
+                            });
+                        }
                         _fullMap.addClass('active');
                         return false;
                     }
@@ -380,22 +397,29 @@
 
                 _close.on({
                     'click': function () {
+                        if (_points.length) {
+                            _points.getNiceScroll().remove();
+                        }
                         _fullMap.removeClass('active');
                         return false;
                     }
                 });
 
-                ymaps.ready(function () {
-                    var myMap = new ymaps.Map(_map[0], {
-                            center: _centerMap,
-                            zoom: _zoom
-                        }, {
-                            searchControlProvider: 'yandex#search'
-                        }),
-                        myPlacemark = new ymaps.Placemark(myMap.getCenter());
+                try {
+                    ymaps.ready(function () {
+                        var myMap = new ymaps.Map(_map[0], {
+                                center: _centerMap,
+                                zoom: _zoom
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            }),
+                            myPlacemark = new ymaps.Placemark(myMap.getCenter());
 
-                    myMap.geoObjects.add(myPlacemark);
-                });
+                        myMap.geoObjects.add(myPlacemark);
+                    });
+                } catch (err) {
+                    console.error(err);
+                }
 
             },
             _init = function() {

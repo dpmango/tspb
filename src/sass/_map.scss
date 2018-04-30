@@ -5,6 +5,10 @@
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+  
+  &__column {
+    position: relative;
+  }
 
   &.map_full {
     height: 0;
@@ -17,6 +21,15 @@
     .map__wrap {
       position: relative;
       height: calc(100vh - 85px);
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+
+      .map__column {
+        height: calc((100vh - 85px)/2);
+        overflow-y: scroll;
+        padding: 20px 0;
+      }
     }
 
     .map__layout {
@@ -25,9 +38,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 5px;
-      background-color: rgb(255, 255, 255);
-      box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
     }
 
     &.active {
@@ -73,6 +83,10 @@
       }
     }
   }
+
+  .carriers {
+    margin: 0;
+  }
 }
 @media (min-width: $phone-landscape) {
   .map {
@@ -91,7 +105,22 @@
 
       .map__wrap {
         height: 550px;
+
+        .map__column {
+          height: 550px;
+          width: calc(100% - 350px);
+          overflow: auto;
+          padding: 0;
+
+          &:first-child {
+            width: 350px;
+          }
+        }
       }
+    }
+
+    &__wrap {
+      display: flex;
     }
 
     &__btns {
@@ -101,6 +130,15 @@
       a,
       a:visited {
         margin-top: 15px;
+      }
+    }
+
+    .carriers {
+      display: block;
+      padding: 20px 0;
+
+      &__column {
+        width: 100%;
       }
     }
   }

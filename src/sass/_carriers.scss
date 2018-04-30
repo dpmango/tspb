@@ -1,11 +1,52 @@
 .carriers {
   margin-bottom: 15px;
+  font-size: 16px;
+  color: rgb(33, 33, 33);
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+
+    svg {
+      display: block;
+      position: relative;
+      top: -2px;
+      margin-right: 10px;
+    }
+
+    a,
+    a:visited {
+      display: flex;
+      align-items: center;
+      opacity: .5;
+      font-size: 14px;
+      color: rgb(33, 33, 33);
+      transition: opacity $duration $easing;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__column {
+    margin-bottom: 20px;
+    transition: background $duration $easing;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   &__item {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
-    padding: 10px 50px 10px 15px;
-    font-size: 16px;
+    padding: 10px 15px;
     color: rgb(33, 33, 33);
     transition: background $duration $easing;
     
@@ -20,16 +61,36 @@
       content: '';
     }
 
-    &-icon {
-      @include absoluteCenterY();
+    &:hover,
+    &.active {
+      background-color: rgb(245, 245, 245);
+
+      &:before {
+        background-color: #fe4535;
+      }
+
+      .carriers__icons {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity $duration $easing;
+
+    a,
+    a:visited {
       display: flex;
       align-items: center;
       justify-content: center;
       right: 15px;
       width: 20px;
       height: 20px;
+      margin-left: 6px;
       border-radius: 50%;
-      opacity: 0;
       background-color: #fff;
       transition: opacity $duration $easing;
 
@@ -37,18 +98,9 @@
         width: 14px;
         height: 14px;
       }
-    }
 
-    &:hover,
-    &.active {
-      background-color: rgb(245, 245, 245);
-      
-      &:before {
-        background-color: #fe4535;
-      }
-
-      .carriers__item-icon {
-        opacity: 1;
+      &:hover {
+        opacity: .8;
       }
     }
   }
@@ -65,11 +117,16 @@
 }
 @media (min-width: $tablet-landscape) {
   .carriers {
-    column-count: 2;
-    column-gap: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    &__column {
+      width: calc(50% - 15px);
+      margin-bottom: 0;
+    }
 
     &__item {
-      padding: 10px 60px 10px 20px;
+      padding: 10px 20px;
     }
   }
 }
