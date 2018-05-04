@@ -432,15 +432,22 @@
 
                 $(window).on({
                     'resize': function () {
-                        if (_points.length) {
+                        var curWindowSize = $(window).width();
+                        if (_points.length && curWindowSize > 767) {
                             _points.getNiceScroll().resize();
+                        } else {
+                            if ( _points.getNiceScroll()) {
+                                _points.getNiceScroll().remove();
+                            }
                         }
                     }
                 });
 
                 _fullsize.on({
                     'click': function () {
-                        if (_points.length) {
+                        var curWindowSize = $(window).width();
+                        
+                        if (_points.length && curWindowSize > 767) {
                             _points.niceScroll({
                                 cursorcolor: 'rgb(217, 217, 217)',
                                 cursoropacitymin: 1,

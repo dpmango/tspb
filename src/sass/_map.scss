@@ -96,12 +96,15 @@
 @media (min-width: $tablet-portrait) {
   .map {
     height: 100%;
+    min-height: 200px;
 
     &__layout {
       height: 100%;
+      min-height: 200px;
     }
 
     &.map_full {
+      min-height: 0;
 
       .map__wrap {
         height: 550px;
