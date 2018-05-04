@@ -25,6 +25,7 @@ var config = {
     vendor       : 'src/vendor',
     php          : 'src/php',
     html         : 'src/html',
+    json         : 'src/json',
   },
   dest: {
     root  : destPath,
@@ -35,6 +36,7 @@ var config = {
     fonts : destPath + '/fonts',
     vendor: destPath + '/vendor',
     php   : destPath + '/php',
+    json  : destPath + '/json',
   },
 
   setEnv: function(env) {

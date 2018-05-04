@@ -361,8 +361,11 @@
         //private properties
         var _obj = obj,
             _map = _obj.find('.map__layout'),
-            _centerMap = _map.data('center') || [55.751574, 37.573856],
+            _centerMap = _map.data('center') || [59.939095, 30.315868],
             _zoom = _map.data('zoom') || 9,
+            _placemark = _map.data('placemark'),
+            _route = _map.data('route'),
+            _zoomable = _map.data('zoom') || true,
             _fullsize = _obj.find('.map__fullsize'),
             _fullMap = $('.map_full'),
             _close = _fullMap.find('.map__close'),
@@ -412,10 +415,104 @@
                                 zoom: _zoom
                             }, {
                                 searchControlProvider: 'yandex#search'
-                            }),
-                            myPlacemark = new ymaps.Placemark(myMap.getCenter());
+                            })
+                        myMap.controls.remove('trafficControl');
+                        myMap.controls.remove('searchControl');
+                        myMap.controls.remove('fullscreenControl');
+                        myMap.controls.remove('rulerControl');
+                        myMap.controls.remove('geolocationControl');
+                        myMap.controls.remove('routeEditor');
+                        myMap.controls.remove('typeSelector');
+                        myMap.controls.remove('zoomControl');
 
-                        myMap.geoObjects.add(myPlacemark);
+                        // disable zoom ?
+                        if ( !_zoomable ){
+                          myMap.behaviors.disable('scrollZoom');
+                        }
+
+                        // GeoObjects
+                        if ( _placemark ){
+                          var myPlacemark = new ymaps.Placemark(_centerMap, {
+                            hintContent: 'Название'
+                          },
+                          {
+                            // iconLayout: 'default#image',
+                            // iconImageHref: 'img/el/marker.png',
+                            // iconImageSize: [50, 70],
+                            // iconImageOffset: [-10, -50]
+                          });
+                          myMap.geoObjects.add(myPlacemark);
+
+                        }
+
+                        // build route
+                        if ( _route ){
+                          $.getJSON( _route )
+                            .always(function(res){
+                              _route = res;
+                              buildRoute();
+                            });
+
+                          // опции
+                          // https://tech.yandex.ru/maps/jsbox/2.1/multiroute_view_options
+
+                          // multiRoute не даст задать конкретные точки Остановок
+                          // var multiRoute = new ymaps.multiRouter.MultiRoute({
+                          //     referencePoints: [
+                          //         [59.939095, 30.315868],
+                          //         "Санкт-Питербург, КАД"
+                          //     ],
+                          //     params: {
+                          //         routingMode: 'masstransit'
+                          //     }
+                          // }, {
+                          //     boundsAutoApply: true
+                          // });
+                          //
+                          // myMap.geoObjects.add(multiRoute);
+
+                          function buildRoute(){
+                            var wayPoints = [];
+                            $.each(_route, function(i, route){
+                              wayPoints.push(route.cord)
+                            });
+
+                            // возможно точки прийдется скейлить
+                            // https://tech.yandex.ru/maps/jsbox/2.1/scalable_placemarks
+
+                            ymaps.route(wayPoints, {
+                                // options
+                                // multiRoute: true,
+                                mapStateAutoApply: true,
+                                routingMode: "masstransit",
+
+                            }).then(function (route) {
+                                var points = route.getWayPoints(),
+                                    lastPoint = points.getLength() - 1;
+
+                                points.options.set({
+                                  // preset: 'islands#redStretchyIcon'
+                                  iconLayout: 'default#image',
+                                  iconImageHref: 'img/icons/IMG_20180307_145737_116.png',
+                                  iconImageSize: [35, 35],
+                                  iconImageOffset: [-17, -17]
+                                });
+                                points.get(0).properties.set('iconContent', 'Точка отправления');
+                                points.get(lastPoint).properties.set('iconContent', 'Точка прибытия');
+
+                                route.getPaths().options.set({
+                                    balloonContentLayout: ymaps.templateLayoutFactory.createClass('{{ properties.humanJamsTime }}'),
+                                    strokeColor: '0000ffff',
+                                    opacity: 0.7
+                                });
+                                // добавляем маршрут на карту
+                                myMap.geoObjects.add(route);
+                            });
+                          }
+
+
+                        }
+
                     });
                 } catch (err) {
                     console.error(err);
