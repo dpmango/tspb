@@ -68,6 +68,28 @@
     line-height: 1;
     text-align: center;
 
+    &_clone {
+
+      .sidebar__item {
+
+        > .submenu {
+          display: block;
+          position: fixed;
+          left: 110px;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        &.hover {
+
+          > .submenu {
+            opacity:1;
+            pointer-events: fill;
+          }
+        }
+      }
+    }
+
     &__item {
       display: block;
       position: relative;
@@ -76,10 +98,7 @@
       transition: color $duration $easing, background $duration $easing;
 
       > .submenu {
-        position: fixed;
-        left: 110px;
-        opacity: 0;
-        pointer-events: none;
+        display: none;
       }
 
       &.selected {
@@ -114,14 +133,9 @@
         }
       }
 
-      &:hover {
+      &.hover {
         background-color: #fe4535;
         color: #fff;
-
-        > .submenu {
-          opacity:1;
-          pointer-events: fill;
-        }
 
         .sidebar__icon {
 

@@ -48,7 +48,7 @@
             new Sign($(this));
         });
 
-        $('.sidebar').each(function () {
+        $('.site > .sidebar').each(function () {
             new Sidebar($(this));
         });
 
@@ -221,16 +221,41 @@
 
         //private properties
         var _obj = obj,
-            _item = _obj.find('.sidebar__item');
+            _item = _obj.find('.sidebar__item'),
+            _cloneWrap = $('<div class="sidebar sidebar_clone"></div>');
 
         //private methods
         var _onEvents = function()  {
+
+                _item.on( {
+                    mouseenter: function() {
+                        var curElem = $(this),
+                            curIndex = curElem.index(),
+                            cloneElem = _cloneWrap.find('.sidebar__item').eq(curIndex);
+
+                        _cloneWrap.find('.sidebar__item').removeClass('hover');
+                        _item.removeClass('hover');
+
+                        cloneElem.addClass('hover');
+                        curElem.addClass('hover');
+                    }
+                } );
 
                 $(window).on( {
                     resize: function() {
                         _obj.getNiceScroll().resize();
                         _setSidebarHeight();
                         _setTopSubmenu();
+                    },
+                    mousemove: function(e) {
+                        var cloneItems = _cloneWrap.find('.sidebar__item');
+
+                        if (!_checkTarget(e.target, 'submenu')) {
+                            if (!_checkTarget(e.target, 'sidebar__item')) {
+                                cloneItems.removeClass('hover');
+                                _item.removeClass('hover');
+                            }
+                        }
                     }
                 } );
 
@@ -241,14 +266,38 @@
                 } );
 
             },
+            _checkTarget = function(target, className) {
+
+                if ($(target).hasClass(className)) {
+                    return true;
+                } else {
+                    if (target.parentNode) {
+                        return _checkTarget(target.parentNode, className);
+                    } else {
+                        return false;
+                    }
+                }
+            },
+            _cloneSidebar = function() {
+
+                _item.each(function () {
+                    var curElem = $(this);
+
+                   _cloneWrap.append(curElem.clone());
+                });
+
+                $('.site').prepend(_cloneWrap);
+            },
             _setTopSubmenu = function() {
 
                 _item.each(function () {
                     var curElem = $(this),
-                        curSubmenu = curElem.find(' > .submenu');
+                        curSubmenu = curElem.find(' > .submenu'),
+                        cloneCurElem = _cloneWrap.find('.sidebar__item').eq(curElem.index()),
+                        cloneSubmenu = cloneCurElem.find(' > .submenu');
 
                     if (curSubmenu.length) {
-                        curSubmenu.css({ 'top': curElem.offset().top - $(window).scrollTop() + 'px' });
+                        cloneSubmenu.css({ 'top': curElem.offset().top - $(window).scrollTop() + 'px' });
                     }
                 });
             },
@@ -263,18 +312,21 @@
 
             },
             _init = function() {
+                _cloneSidebar();
                 _onEvents();
                 _setSidebarHeight();
                 _setTopSubmenu();
-                _obj.niceScroll({
-                    autohidemode: true,
-                    railalign: 'left',
-                    cursorcolor: 'rgb(217, 217, 217)',
-                    cursoropacitymin: 1,
-                    cursorwidth: '6px',
-                    cursorborderradius: '3px',
-                    cursorborder: '0'
-                });
+                if (!_obj.hasClass('sidebar_clone')) {
+                    _obj.niceScroll({
+                        autohidemode: true,
+                        railalign: 'left',
+                        cursorcolor: 'rgb(217, 217, 217)',
+                        cursoropacitymin: 1,
+                        cursorwidth: '6px',
+                        cursorborderradius: '3px',
+                        cursorborder: '0'
+                    });
+                }
             };
 
         _init();
