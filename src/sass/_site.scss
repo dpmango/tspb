@@ -84,6 +84,11 @@ body {
 @media (min-width: $tablet-landscape) {
   .site {
 
+  }
+}
+@media (min-width: $min-desktop) {
+  .site {
+
     &__aside {
       width: 350px;
     }

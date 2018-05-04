@@ -46,6 +46,14 @@
     position: relative;
     margin-bottom: 18px;
 
+    &.in-focus {
+
+      &:before {
+        transform: translate(0, -100%);
+        opacity: 0;
+      }
+    }
+
     &:before {
       overflow: hidden;
       position: absolute;
@@ -58,6 +66,7 @@
       color: rgb(154, 154, 154);
       line-height: 1.182;
       content: attr(data-placeholder);
+      transition: transform $duration $easing, opacity $duration $easing;
     }
 
     &.form__field_icon {

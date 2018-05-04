@@ -125,6 +125,10 @@
             });
         });
 
+        $('.form').each(function () {
+            new Form($(this));
+        });
+
         $('.datepicker-here').each(function () {
             $(this).datepicker();
         });
@@ -600,6 +604,36 @@
                             }
                         });
 
+                    }
+                } );
+
+            },
+            _init = function() {
+                _onEvents();
+            };
+
+        _init();
+    };
+
+    var Form = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _inputs = _obj.find('input');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _inputs.on( {
+                    focus: function() {
+                        var curParent = $(this).parent();
+
+                        if (curParent.data('placeholder')) curParent.addClass('in-focus');
+                    },
+                    blur: function() {
+                        var curParent = $(this).parent();
+
+                        if (curParent.hasClass('in-focus')) curParent.removeClass('in-focus');
                     }
                 } );
 
