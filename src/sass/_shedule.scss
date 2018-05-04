@@ -1,6 +1,7 @@
 .shedule {
 
   &__item {
+    position: relative;
     padding: 10px 0;
     border-bottom: 2px solid #ebebeb;
 
@@ -20,6 +21,20 @@
           content: '-';
         }
       }
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      pointer-events: none;
+      background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+      content: '';
     }
   }
 
@@ -58,7 +73,7 @@
     position: relative;
     width: 100%;
     white-space: nowrap;
-    padding: 5px 0;
+    padding: 5px 10% 5px 0;
     font-size: 12px;
     font-family: 'Solomon-Sans-Normal', sans-serif;
     color: rgb(154, 154, 154);
@@ -68,20 +83,6 @@
       font-size: 9px;
       line-height: 24px;
       content: 'Часы';
-    }
-
-    &:after {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      pointer-events: none;
-      background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
-      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
-      content: '';
     }
 
     &-item {
@@ -131,6 +132,10 @@
       &.open {
 
       }
+
+      &:after {
+        display: none;
+      }
     }
 
     &__title {
@@ -144,9 +149,20 @@
     &__hours {
       overflow: auto;
       width: 72%;
+      padding: 5px 0;
 
       &:after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
         width: 10%;
+        height: 100%;
+        pointer-events: none;
+        background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
+        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+        content: '';
       }
 
       &-item {
