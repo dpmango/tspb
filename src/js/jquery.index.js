@@ -420,6 +420,7 @@
             _centerMap = _map.data('center') || [59.939095, 30.315868],
             _zoom = _map.data('zoom') || 9,
             _placemark = _map.data('placemark'),
+            _placemarkContent = _map.data('placemark-content')
             _route = _map.data('route'),
             _zoomable = _map.data('zoom') || true,
             _fullsize = _obj.find('.map__fullsize'),
@@ -446,7 +447,7 @@
                 _fullsize.on({
                     'click': function () {
                         var curWindowSize = $(window).width();
-                        
+
                         if (_points.length && curWindowSize > 767) {
                             _points.niceScroll({
                                 cursorcolor: 'rgb(217, 217, 217)',
@@ -493,20 +494,60 @@
                           myMap.behaviors.disable('scrollZoom');
                         }
 
+
                         // GeoObjects
+
+
+                        ////////
+                        // PLACEMARK
+                        ////////
                         if ( _placemark ){
-                          var myPlacemark = new ymaps.Placemark(_centerMap, {
-                            hintContent: 'Название'
+
+                          var myBalloonLayout = ymaps.templateLayoutFactory.createClass(
+                            '<div class="map-balloon"><div class="map-balloon-wrapper"><div class="map-balloon-content"><img src="{{properties.icon}}" /><span>{{properties.name}}</span></div><div class="map-balloon-close"><img src="img/close.png" /></div></div><div class="map-balloon-tail"</div></div>', {
+                              build: function() {
+                                 myBalloonLayout.superclass.build.call(this);
+                                 $('.map-balloon-close').bind('click', $.proxy(this.onCloseClick, this));
+                               },
+                               clear: function() {
+                                 $('.map-balloon-close').unbind('click', $.proxy(this.onCloseClick, this));
+                                 myBalloonLayout.superclass.clear.call(this);
+                               },
+                               onCloseClick: function() {
+                                 this.getData().geoObject.balloon.close();
+                               }
+
+                          });
+
+                          // параметры плейсмарка
+                          var myPlacemark = new ymaps.Placemark(_placemark, {
+                            // properties
+                            // balloonContent: "", // не подходит из-за необходимости стилизации
+                            icon: 'img/icons/IMG_20180307_145731_396.png',
+                            name: _placemarkContent,
+                            balloonPanelMaxMapArea: 0,
                           },
                           {
-                            // iconLayout: 'default#image',
-                            // iconImageHref: 'img/el/marker.png',
-                            // iconImageSize: [50, 70],
-                            // iconImageOffset: [-10, -50]
+                            // options
+                            iconLayout: 'default#image',
+                            iconImageHref: 'img/marker.png',
+                            iconImageSize: [27, 37],
+                            // iconImageOffset: [-13, -0],
+                            hideIconOnBalloonOpen: false,
+                            balloonLayout: myBalloonLayout,
+                            balloonShadow: true,
+                            // balloonContentBodyLayout: myBalloonContentBodyLayout,
+                            // balloonContentLayout: myBalloonContentLayout,
+                            // balloonCloseButtonLayout: myBalloonCloseButtonLayout,
+                            balloonPanelMaxMapArea: 0
                           });
                           myMap.geoObjects.add(myPlacemark);
 
                         }
+
+                        ////////
+                        // ROUTE
+                        ////////
 
                         // build route
                         if ( _route ){
