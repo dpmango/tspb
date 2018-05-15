@@ -2,23 +2,23 @@ ProjectTitle: tSpb
 
 PageList:
 - file: trains_results.html
-  ready: 80
+  ready: 90
 - file: avia_results.html
-  ready: 80
+  ready: 90
 - file: city_bus_results.html
-  ready: 80
+  ready: 90
 - file: train_results.html
-  ready: 80
+  ready: 90
 - file: header-login.html
-  ready: 80
+  ready: 90
 - file: transportspb.html
-  ready: 70
+  ready: 90
 - file: find.html
-  ready: 80
+  ready: 90
 - file: station.html
-  ready: 80
+  ready: 90
 - file: tram.html
-  ready: 80
+  ready: 90
 
 - file: extra.html
   ready: 0

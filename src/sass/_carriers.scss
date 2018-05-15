@@ -26,7 +26,7 @@
       color: rgb(33, 33, 33);
       transition: opacity $duration $easing;
 
-      &:hover {
+      &:hover, &.active {
         opacity: 1;
       }
     }
@@ -49,7 +49,7 @@
     padding: 10px 15px;
     color: rgb(33, 33, 33);
     transition: background $duration $easing;
-    
+
     &:before {
       position: absolute;
       top: 0;
@@ -135,4 +135,3 @@
 
   }
 }
-

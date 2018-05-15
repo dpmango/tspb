@@ -525,7 +525,7 @@
                           var myPlacemark = new ymaps.Placemark(_placemark, {
                             // properties
                             // balloonContent: "", // не подходит из-за необходимости стилизации
-                            icon: 'img/icons/IMG_20180307_145731_396.png',
+                            icon: 'img/icons/bus.png',
                             name: _placemarkContent,
                             balloonPanelMaxMapArea: 0,
                           },
@@ -552,54 +552,38 @@
                         ////////
 
                         // build route
+                        var _routeRes;
                         if ( _route ){
                           $.getJSON( _route )
                             .always(function(res){
-                              _route = res;
+                              _routeRes = res;
                               buildRoute();
                             });
 
-                          _revert
-                            .on('click', function(){
-                              if ( _revert.is('.active') ){
-                                $.getJSON( _routeReverse )
+                          _document
+                            .on('click', '.map__revert, .carriers__revert', function(){
+                              var _this = $(this);
+                              if ( _this.is('.active') ){
+                                $.getJSON( _route )
                                   .always(function(res){
-                                    _route = res;
+                                    _routeRes = res;
                                     buildRoute();
 
-                                    _revert.removeClass('active');
+                                    _this.removeClass('active');
                                     return false;
                                   });
                               } else {
                                 $.getJSON( _routeReverse )
                                   .always(function(res){
-                                    _route = res;
+                                    _routeRes = res;
                                     buildRoute();
 
-                                    _revert.addClass('active');
+                                    _this.addClass('active');
                                     return false;
                                   });
                               }
 
                             })
-
-                          // опции
-                          // https://tech.yandex.ru/maps/jsbox/2.1/multiroute_view_options
-
-                          // multiRoute не даст задать конкретные точки Остановок
-                          // var multiRoute = new ymaps.multiRouter.MultiRoute({
-                          //     referencePoints: [
-                          //         [59.939095, 30.315868],
-                          //         "Санкт-Питербург, КАД"
-                          //     ],
-                          //     params: {
-                          //         routingMode: 'masstransit'
-                          //     }
-                          // }, {
-                          //     boundsAutoApply: true
-                          // });
-                          //
-                          // myMap.geoObjects.add(multiRoute);
 
                           // обьект удаления
                           var cachedRoute;
@@ -610,12 +594,9 @@
                             myMap.geoObjects.remove(cachedRoute);
 
                             var wayPoints = [];
-                            $.each(_route, function(i, route){
+                            $.each(_routeRes, function(i, route){
                               wayPoints.push(route.cord)
                             });
-
-                            // возможно точки прийдется скейлить
-                            // https://tech.yandex.ru/maps/jsbox/2.1/scalable_placemarks
 
                             ymaps.route(wayPoints, {
                                 // options
@@ -627,15 +608,44 @@
                                 var points = route.getWayPoints(),
                                     lastPoint = points.getLength() - 1;
 
+                                // LAYOUT для точки
+                                var myBalloonLayout = ymaps.templateLayoutFactory.createClass(
+                                  '<div class="map-balloon map-balloon--route"><div class="map-balloon-wrapper"><div class="map-balloon-content"><img src="{{properties.icon}}" /><span>{{properties.name}}</span></div><div class="map-balloon-close"><img src="img/close.png" /></div></div><div class="map-balloon-tail"</div></div>', {
+                                    build: function() {
+                                       myBalloonLayout.superclass.build.call(this);
+                                       $('.map-balloon-close').bind('click', $.proxy(this.onCloseClick, this));
+                                     },
+                                     clear: function() {
+                                       $('.map-balloon-close').unbind('click', $.proxy(this.onCloseClick, this));
+                                       myBalloonLayout.superclass.clear.call(this);
+                                     },
+                                     onCloseClick: function() {
+                                       this.getData().geoObject.balloon.close();
+                                     }
+                                });
+
+                                // add properties for each point
+                                for (i=0; i < points.getLength(); ++i){
+                                  points.get(i).properties.set({
+                                    icon: 'img/icons/electr.png',
+                                    name: _routeRes[i].adress,
+                                    balloonPanelMaxMapArea: 0,
+                                  })
+                                }
+
                                 points.options.set({
                                   // preset: 'islands#redStretchyIcon'
                                   iconLayout: 'default#image',
-                                  iconImageHref: 'img/icons/IMG_20180307_145737_116.png',
+                                  iconImageHref: 'img/icons/electr.png',
                                   iconImageSize: [35, 35],
-                                  iconImageOffset: [-17, -17]
+                                  iconImageOffset: [-17, -17],
+                                  hideIconOnBalloonOpen: false,
+                                  balloonLayout: myBalloonLayout,
+                                  balloonShadow: true,
+                                  balloonPanelMaxMapArea: 0
                                 });
-                                points.get(0).properties.set('iconContent', 'Точка отправления');
-                                points.get(lastPoint).properties.set('iconContent', 'Точка прибытия');
+                                // points.get(0).properties.set('iconContent', 'Точка отправления');
+                                // points.get(lastPoint).properties.set('iconContent', 'Точка прибытия');
 
                                 route.getPaths().options.set({
                                     balloonContentLayout: ymaps.templateLayoutFactory.createClass('{{ properties.humanJamsTime }}'),
@@ -645,6 +655,29 @@
                                 cachedRoute = route;
                                 // добавляем маршрут на карту
                                 myMap.geoObjects.add(cachedRoute);
+
+
+                                // открытие балуна по клику в .carriers__item
+                                _document
+                                  .on('click', '.carriers__item', function(e){
+                                    var dataId = $(this).data('id') - 1;
+
+                                    if ( dataId ){
+                                      var targetPoint = points.get(dataId);
+
+                                      if (targetPoint) {
+                                        var coord = targetPoint.geometry.getCoordinates();
+                                        myMap.setCenter(coord, 14);
+                                        targetPoint.balloon.open();
+                                        e.preventDefault();
+
+                                        $(this).siblings().removeClass('active');
+                                        $(this).addClass('active')
+                                      }
+
+                                    }
+
+                                  })
                             });
                           }
 
