@@ -422,8 +422,10 @@
             _placemark = _map.data('placemark'),
             _placemarkContent = _map.data('placemark-content')
             _route = _map.data('route'),
+            _routeReverse = _map.data('route-reverse'),
             _zoomable = _map.data('zoom') || true,
             _fullsize = _obj.find('.map__fullsize'),
+            _revert = obj.find('.map__revert'),
             _fullMap = $('.map_full'),
             _close = _fullMap.find('.map__close'),
             _points = _fullMap.find('.map__column_points');
@@ -557,6 +559,30 @@
                               buildRoute();
                             });
 
+                          _revert
+                            .on('click', function(){
+                              if ( _revert.is('.active') ){
+                                $.getJSON( _routeReverse )
+                                  .always(function(res){
+                                    _route = res;
+                                    buildRoute();
+
+                                    _revert.removeClass('active');
+                                    return false;
+                                  });
+                              } else {
+                                $.getJSON( _routeReverse )
+                                  .always(function(res){
+                                    _route = res;
+                                    buildRoute();
+
+                                    _revert.addClass('active');
+                                    return false;
+                                  });
+                              }
+
+                            })
+
                           // опции
                           // https://tech.yandex.ru/maps/jsbox/2.1/multiroute_view_options
 
@@ -575,7 +601,14 @@
                           //
                           // myMap.geoObjects.add(multiRoute);
 
+                          // обьект удаления
+                          var cachedRoute;
+
                           function buildRoute(){
+
+                            // очищаем
+                            myMap.geoObjects.remove(cachedRoute);
+
                             var wayPoints = [];
                             $.each(_route, function(i, route){
                               wayPoints.push(route.cord)
@@ -609,8 +642,9 @@
                                     strokeColor: '0000ffff',
                                     opacity: 0.7
                                 });
+                                cachedRoute = route;
                                 // добавляем маршрут на карту
-                                myMap.geoObjects.add(route);
+                                myMap.geoObjects.add(cachedRoute);
                             });
                           }
 
