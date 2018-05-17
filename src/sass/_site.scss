@@ -14,10 +14,6 @@ body {
   display: none !important;
 }
 
-.hide-on-tablet {
-  display: none !important;
-}
-
 .blue-text {
   color: rgb(61, 145, 193) !important;
 }
@@ -36,7 +32,7 @@ body {
   font-family: 'Solomon-Sans-Normal', sans-serif;
 
   &__container {
-    padding: 20px 10px 0;
+    padding: 85px 10px 0;
   }
 
   &__social {
@@ -54,6 +50,10 @@ body {
   }
 }
 @media (min-width: $tablet-portrait) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+
   .site {
     display: flex;
     flex-wrap: wrap;
