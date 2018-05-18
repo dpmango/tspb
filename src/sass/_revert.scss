@@ -1,0 +1,23 @@
+.revert {
+    display: flex;
+    align-items: center;
+    opacity: .5;
+    font-size: 14px;
+    color: rgb(33, 33, 33);
+    transition: opacity $duration $easing;
+
+    &:hover, &.active {
+        opacity: 1;
+    }
+
+    svg {
+        display: block;
+        position: relative;
+        top: -2px;
+        margin-right: 10px;
+    }
+
+    a,
+    a:visited {
+    }
+}

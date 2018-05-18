@@ -427,6 +427,7 @@
             _fullsize = _obj.find('.map__fullsize'),
             _revert = obj.find('.map__revert'),
             _fullMap = $('.map_full'),
+            _fullMapWrap = $('.map__wrap'),
             _close = _fullMap.find('.map__close'),
             _points = _fullMap.find('.map__column_points');
 
@@ -459,6 +460,7 @@
                                 cursorborder: '0'
                             });
                         }
+                        _fullMapWrap.css({ 'height': $(window).height() - $('.header').outerHeight() - $('.breadcrumbs').outerHeight() });
                         _fullMap.addClass('active');
                         return false;
                     }

@@ -18,17 +18,26 @@
     transition: opacity $duration $easing, visibility $duration $easing;
     pointer-events: none;
 
+    .revert {
+      height: 35px;
+      padding: 20px 20px 0;
+    }
+
     .map__wrap {
       position: relative;
-      height: calc(100vh - 85px);
+      height: calc(100vh - 120px);
       border-radius: 5px;
       background-color: rgb(255, 255, 255);
       box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
 
       .map__column {
-        height: calc((100vh - 85px)/2);
+        height: calc(100vh - 85px);
         overflow-y: scroll;
         padding: 20px 0;
+
+        &_points {
+          display: none;
+        }
       }
     }
 
@@ -106,16 +115,22 @@
     &.map_full {
       min-height: 0;
 
+      .revert {
+        display: none;
+      }
+
       .map__wrap {
         height: 550px;
 
         .map__column {
-          height: 550px;
+          height: inherit;
           width: calc(100% - 350px);
           overflow: auto;
           padding: 0;
 
-          &:first-child {
+          &_points {
+            display: block;
+            height: inherit;
             width: 350px;
           }
         }
