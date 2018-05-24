@@ -44,6 +44,14 @@ body {
   }
 }
 
+.social-comments {
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: $phone-landscape) {
   .site {
 
