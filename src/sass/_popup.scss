@@ -1,5 +1,7 @@
 .popup {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   overflow-y: scroll;
   position: fixed;
@@ -8,10 +10,18 @@
   width: 0;
   height: 0;
   z-index: 10000;
-  padding-top: 40px;
-  //background: $popup-back;
+  padding: 20px;
+  background: $popup-back;
   text-align: center;
   transition: opacity 500ms ease-in-out;
+  font-size: 13px;
+  font-family: 'Solomon-Sans-Normal', sans-serif;
+  color: rgb(154, 154, 154);
+  line-height: 1.385;
+
+  p {
+    margin-bottom: 15px;
+  }
 
   &_opened {
     opacity: 1;
@@ -28,9 +38,15 @@
   &__wrap {
     position: relative;
     z-index: 2;
-    width: 527px;
-    margin: 0 auto;
-    padding-bottom: 40px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+    overflow-y: auto;
+    max-height: 100%;
   }
 
   &__content {
@@ -71,7 +87,7 @@
     height: 100px;
   }
 
-  &__map {
+  &__information {
 
   }
 }
