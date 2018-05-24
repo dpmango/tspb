@@ -132,6 +132,17 @@
         $('.datepicker-here').each(function () {
             $(this).datepicker();
         });
+
+        $('.action-buttons__item.favorite').on({
+            'click': function () {
+                $(this).toggleClass('active');
+            }
+        });
+
+        $('.user').each(function () {
+            new User($(this));
+        });
+
     });
 
     var Tab = function(obj) {
@@ -331,6 +342,53 @@
                         cursorborder: '0'
                     });
                 }
+            };
+
+        _init();
+    };
+
+    var User = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _icon = _obj.find('.user__icon'),
+            _popup = $('.user-popup');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _icon.on( {
+                    click: function() {
+                        _popup.toggleClass('open');
+                    }
+                } );
+
+                $(window).on( {
+                    'click': function(e) {
+
+                        if (!_checkTarget(e.target, 'user-popup')) {
+                            if (!_checkTarget(e.target, 'user__icon')) {
+                                _popup.removeClass('open');
+                            }
+                        }
+                    }
+                } );
+
+            },
+            _checkTarget = function(target, className) {
+
+                if ($(target).hasClass(className)) {
+                    return true;
+                } else {
+                    if (target.parentNode) {
+                        return _checkTarget(target.parentNode, className);
+                    } else {
+                        return false;
+                    }
+                }
+            },
+            _init = function() {
+                _onEvents();
             };
 
         _init();

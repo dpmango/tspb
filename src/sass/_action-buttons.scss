@@ -14,6 +14,15 @@
     margin: 0 5px;
     transition: opacity $duration $easing;
 
+    &.favorite {
+      fill: transparent;
+      stroke: rgb(254, 204, 53);
+      transition: fill $duration $easing;
+
+      &.active {
+        fill: rgb(254, 204, 53);
+      }
+    }
     &:hover {
       opacity: .8;
     }
