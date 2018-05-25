@@ -143,6 +143,10 @@
             new User($(this));
         });
 
+        $('.show-more').each(function () {
+            new ShowMore($(this));
+        });
+
     });
 
     var Tab = function(obj) {
@@ -342,6 +346,33 @@
                         cursorborder: '0'
                     });
                 }
+            };
+
+        _init();
+    };
+
+    var ShowMore = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _id = _obj.data('id'),
+            _wrapper = $('#' + _id),
+            _hiddenElems = _wrapper.find('.hidden');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _obj.on( {
+                    click: function() {
+                       _hiddenElems.removeClass('hidden');
+                        _obj.remove();
+                        return false;
+                    }
+                } );
+
+            },
+            _init = function() {
+                _onEvents();
             };
 
         _init();

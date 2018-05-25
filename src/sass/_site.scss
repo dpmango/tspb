@@ -18,6 +18,10 @@ body {
   color: rgb(61, 145, 193) !important;
 }
 
+.hidden {
+  display: none !important;
+}
+
 &.justify {
   display: flex !important;
   flex-wrap: wrap !important;
