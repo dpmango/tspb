@@ -10,32 +10,37 @@ html.mfp-helper
     height: 100%
     -webkit-transform: translateZ(0)
 
-#small-dialog
+.modal-holder
   background: white
   padding: 20px 30px
   text-align: left
   max-width: 600px
   margin: 40px auto
   position: relative
+  font-family: 'Solomon-Sans-Normal', sans-serif
+  h2
+    margin: 1em 0
+  p
+    line-height: 1.4
 
 
 // Fade-zoom animation for first dialog
 
 .popup-buble
-  .popup-dialog
+  .mfp-content
     opacity: 0
     transition: all 0.2s ease-in-out
     transform: scale(0.8)
-  &.mfp-ready .popup-dialog
+  &.mfp-ready .mfp-content
     opacity: 1
     transform: scale(1)
-  &.mfp-removing .popup-dialog
+  &.mfp-removing .mfp-content
     transform: scale(0.8)
     opacity: 0
   &.mfp-bg
-    background: $colorGreen
+    background: rgba(black, .22)
     opacity: 0
-    transition: opacity 0.3s $ease
+    transition: opacity 0.3s ease
   &.mfp-ready.mfp-bg
     opacity: 1
   &.mfp-removing.mfp-bg

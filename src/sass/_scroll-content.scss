@@ -8,6 +8,14 @@
 
   p {
     margin-bottom: 15px;
+    transition: color .25s ease;
+    &[js-popup]{
+      cursor: pointer;
+      &:hover{
+        color: #212121
+      }
+    }
+
   }
 }
 .nicescroll-rails {
@@ -39,4 +47,3 @@
 
   }
 }
-
