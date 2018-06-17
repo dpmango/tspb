@@ -108,7 +108,9 @@
     }
 
     &__wrap {
-      display: block;
+      //display: block;
+      height: 100%;
+      flex-grow: 1;
 
       .wrapper {
         width: 100%;

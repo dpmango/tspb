@@ -15,6 +15,14 @@ PageList:
   ready: 90
 - file: transportspb_transport.html
   ready: 90
+- file: transportspb_metro.html
+  ready: 90
+- file: transportspb_metro_time.html
+  ready: 90
+- file: transportspb_metro_station.html
+  ready: 90
+- file: transportspb_map_station.html
+  ready: 90
 - file: find.html
   ready: 90
 - file: station.html

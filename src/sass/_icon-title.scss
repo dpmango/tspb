@@ -1,0 +1,35 @@
+.icon-title {
+  display: flex;
+  align-items: center;
+
+  i {
+    position: relative;
+    top: -2px;
+    margin-right: 10px;
+    
+    img,
+    svg {
+      display: block;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .icon-title {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .icon-title {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .icon-title {
+
+  }
+}
+@media (min-width: $desktop) {
+  .icon-title {
+
+  }
+}

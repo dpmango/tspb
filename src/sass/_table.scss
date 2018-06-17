@@ -4,6 +4,44 @@
   color: rgb(167, 167, 167);
   line-height: 1.083;
 
+  &_timetable {
+    font-size: 10px;
+    color: rgb(178, 177, 177);
+
+    p {
+      margin-bottom: 5px;
+    }
+    
+    .table__row {
+
+      &:hover,
+      &.active {
+        background-color: inherit;
+
+        .table__item:first-child {
+          border-left-color: transparent;
+        }
+      }
+    }
+  }
+
+  &_no-spacing {
+
+    & .table {
+
+      &__item {
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
   &__title {
     display: block;
     margin-bottom: 5px;
@@ -70,6 +108,29 @@
   &__item {
     width: calc(50% - 10px);
     padding: 15px 0;
+
+    &_header {
+      width: 100%;
+
+      a,
+      a:visited {
+        font-size: 15px;
+        color: rgb(33, 33, 33);
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      div {
+        margin-bottom: 5px;
+      }
+    }
+
+    &_double {
+      width: 100%;
+    }
 
     time {
       display: block;
@@ -150,6 +211,27 @@
     font-size: 16px;
     color: rgb(33, 33, 33);
     line-height: 1.083;
+
+    &_route {
+
+      & .table {
+
+        &__row {
+
+          &.sent {
+            background-color: transparent;
+          }
+
+          &:hover {
+            background-color: transparent;
+
+            .table__item:first-child {
+              border-left-color: transparent;
+            }
+          }
+        }
+      }
+    }
 
     &__head {
       display: table-row;

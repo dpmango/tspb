@@ -13,6 +13,17 @@
     font-size: 14px;
   }
 
+  &__link {
+    line-height: 1.714;
+    font-size: 14px;
+    color: rgb(254, 254, 254);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &.search-path_tab {
     padding-top: 0;
   }
@@ -23,6 +34,14 @@
     margin-bottom: 20px;
     font-size: 16px;
     font-family: 'Solomon-Sans-Bold', sans-serif;
+    color: rgb(254, 254, 254);
+  }
+
+  h3 {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
     color: rgb(254, 254, 254);
   }
 
@@ -83,6 +102,15 @@
       justify-content: space-between;
       align-items: center;
       padding-top: 15px;
+
+      &.left {
+        justify-content: flex-start;
+        padding-top: 0;
+
+        .icon-link {
+          margin-right: 20px;
+        }
+      }
     }
   }
 }

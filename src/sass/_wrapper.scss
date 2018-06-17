@@ -258,6 +258,38 @@
 @media (min-width: $desktop) {
   .wrapper {
 
+    &_arrow {
+
+      &.vertical {
+
+        .arrow-link {
+          display: block;
+          padding: 0;
+          text-align: center;
+          font-family: 'Solomon-Sans-Bold', sans-serif;
+
+          &__icon {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 20px;
+            transform: translate(0,0);
+          }
+
+          &__arrow {
+            display: block;
+            position: relative;
+            top: 0;
+            right: 0;
+            margin: 20px auto 0;
+            transform: translate(0,0);
+          }
+        }
+
+      }
+    }
   }
 }
 

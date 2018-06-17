@@ -1,0 +1,159 @@
+.line-info {
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 15px;
+  }
+
+  &__night {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+    color: rgb(33, 33, 33);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: rgb(33, 33, 33);
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+
+    i {
+      position: relative;
+      top: -2px;
+      margin-right: 10px;
+
+      img,
+      svg {
+        display: block;
+        width: 34px;
+      }
+    }
+  }
+
+  &__table {
+    display: table;
+    font-size: 14px;
+    color: rgb(33, 33, 33);
+    line-height: 1.286;
+
+    &-head {
+      display: table-row;
+      font-size: 12px;
+      color: rgb(190, 190, 190);
+      line-height: 1.5;
+
+      .time {
+        padding-left: 26px;
+      }
+    }
+
+    &-row {
+      display: table-row;
+    }
+
+    &-item {
+      display: table-cell;
+      padding: 3px 40px 3px 0;
+
+      time {
+        display: block;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Solomon-Sans-Bold', sans-serif;
+    line-height: 0.722;
+
+    svg {
+      position: relative;
+      top: -2px;
+      margin-right: 7px;
+      width: 19px;
+    }
+
+    &.red {
+      color: rgb(254, 69, 53);
+    }
+
+    &.green {
+      color: rgb(44, 181, 93);
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(33, 33, 33);
+    border-bottom: 2px solid #ebebeb;
+
+    &.no-border {
+      border-bottom-color: transparent;
+    }
+
+    &-double {
+      display: flex;
+      flex-wrap: wrap;
+
+      dl {
+        width: 50%;
+      }
+    }
+
+    dl {
+      display: block;
+      padding: 5px 0;
+
+      dt {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: rgb(178, 177, 177);
+      }
+
+      dd {
+
+      }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .line-info {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .line-info {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .line-info {
+
+  }
+}
+@media (min-width: $desktop) {
+  .line-info {
+
+  }
+}

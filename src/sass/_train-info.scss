@@ -1,0 +1,58 @@
+.train-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(33, 33, 33);
+  line-height: 0.929;
+  transition: color $duration $easing;
+
+  &_underline {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+
+    svg {
+      fill: rgb(209, 209, 209);
+      transition: fill $duration $easing;
+    }
+  }
+
+  &:hover,
+  &.active {
+    color: rgb(80, 164, 212);
+
+    .train-info__icon {
+
+      svg {
+        fill: rgb(80, 164, 212);
+      }
+    }
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .train-info {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .train-info {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .train-info {
+
+  }
+}
+@media (min-width: $desktop) {
+  .train-info {
+
+  }
+}
