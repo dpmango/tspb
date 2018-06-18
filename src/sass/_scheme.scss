@@ -1,0 +1,29 @@
+.scheme {
+  display: block;
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .scheme {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .scheme {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .scheme {
+
+  }
+}
+@media (min-width: $desktop) {
+  .scheme {
+
+  }
+}
