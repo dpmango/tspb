@@ -1,6 +1,7 @@
 .map {
   position: relative;
   width: 100%;
+  height: 265px;
   z-index: 1;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -96,6 +97,31 @@
     box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.15);
     cursor: pointer;
 
+    &.white {
+      top: 20px;
+      right: 20px;
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+      box-shadow: none;
+
+      &:before {
+        top: 8px;
+        left: 1px;
+        width: 15px;
+        height: 1px;
+        background-color: rgb(255, 255, 255);
+      }
+
+      &:after {
+        top: 8px;
+        right: 1px;
+        width: 15px;
+        height: 1px;
+        background-color: rgb(255, 255, 255);
+      }
+    }
+
     &:before {
       position: absolute;
       top: 11px;
@@ -116,6 +142,44 @@
       transform: rotate(45deg);
       background-color: rgb(254, 69, 53);
       content: '';
+    }
+  }
+
+  &__alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    z-index: 5;
+    border-radius: 5px;
+    background-color: rgba(33, 33, 33, 0.6);
+    font-size: 16px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+    color: rgb(254, 254, 254);
+    line-height: 1.2;
+    text-align: center;
+
+    &-title {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-family: 'Solomon-Sans-Bold', sans-serif;
+      color: rgb(254, 254, 254);
+      line-height: 1.2;
+    }
+
+    &-wrap {
+
+    }
+
+    &-icon {
+      display: block;
+      margin: 0 auto 20px;
     }
   }
 
