@@ -1,5 +1,39 @@
 .tab {
 
+  &.tab_transport {
+
+    .transport__head {
+      border-bottom: 2px solid #e6e6e6;
+    }
+
+    .transport__title {
+      font-size: 15px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .tab__controls {
+
+      &-itme {
+        padding: 15px;
+      }
+
+      &.wrapper {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .tab__content {
+
+      &.wrapper {
+        padding-top: 0;
+      }
+    }
+  }
+
   &__controls {
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +71,76 @@
         &:before {
           background-color: #fe4535;
         }
+
+        .tab__controls-icon {
+          opacity: 1;
+        }
       }
+
+      &.fiolet {
+        flex-grow: 1;
+
+        &.active:before {
+          background-color: rgb(202, 39, 120);
+        }
+
+        .tab__controls-icon {
+          fill: rgb(202, 39, 120);
+        }
+      }
+
+      &.red {
+        flex-grow: 1;
+
+        &.active:before {
+          background-color: rgb(254, 69, 53);
+        }
+        fill: rgb(254, 69, 53);
+      }
+
+      &.green {
+        flex-grow: 1;
+
+        &.active:before {
+          background-color: rgb(53, 148, 53);
+        }
+
+        .tab__controls-icon {
+          fill: rgb(53, 148, 53);
+        }
+      }
+
+      &.blue {
+        flex-grow: 1;
+
+        &.active:before {
+          background-color: rgb(90, 166, 209);
+        }
+
+        .tab__controls-icon {
+          fill: rgb(90, 166, 209);
+        }
+      }
+
+      &.yellow {
+        flex-grow: 1;
+
+        &.active:before {
+          background-color: rgb(254, 204, 53);
+        }
+
+        .tab__controls-icon {
+          fill: rgb(254, 204, 53);
+        }
+      }
+    }
+
+    &-icon {
+      display: block;
+      margin: 0 auto;
+      opacity: .5;
+      width: auto;
+      height: 35px;
     }
   }
 

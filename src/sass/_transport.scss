@@ -275,6 +275,29 @@
     flex-wrap: wrap;
   }
 }
+
+.transport-icon {
+
+  &.fiolet {
+    fill: rgb(202, 39, 120);
+  }
+
+  &.red {
+    fill: rgb(254, 69, 53);
+  }
+
+  &.green {
+    fill: rgb(53, 148, 53);
+  }
+
+  &.blue {
+    fill: rgb(90, 166, 209);
+  }
+
+  &.yellow {
+    fill: rgb(254, 204, 53);
+  }
+}
 @media (min-width: $phone-landscape) {
   .transport {
 
