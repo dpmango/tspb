@@ -6,7 +6,8 @@
   &__col-4,
   &__col-half,
   &__col-one,
-  &__col-four{
+  &__col-four,
+  &__col-third {
     display: block;
     width: 100%;
     margin-bottom: 15px;
@@ -36,7 +37,8 @@
     &__col-4,
     &__col-half,
     &__col-one,
-    &__col-four {
+    &__col-four,
+    &__col-third {
       margin-bottom: 24px;
     }
 
@@ -106,6 +108,10 @@
 
     &__col-four {
       width: calc(100% - 293px - 24px);
+    }
+
+    &__col-third {
+      width: calc(100%/3 - 48px/3);
     }
 
     &__wrap {

@@ -68,6 +68,16 @@
             });
         }
 
+        if ($('.transport__list').length) {
+            $('.transport__list').niceScroll({
+                cursorcolor: 'rgb(217, 217, 217)',
+                cursoropacitymin: 1,
+                cursorwidth: '6px',
+                cursorborderradius: '3px',
+                cursorborder: '0'
+            });
+        }
+
         $('.shedule').each(function () {
             new Shedule($(this));
         });
