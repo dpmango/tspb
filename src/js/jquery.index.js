@@ -82,6 +82,10 @@
             new Shedule($(this));
         });
 
+        $('.route').each(function () {
+            new Route($(this));
+        });
+
         $('.sign').each(function () {
             new Sign($(this));
         });
@@ -878,6 +882,30 @@
                         var curParent = $(this).parent();
 
                         if (curParent.hasClass('in-focus')) curParent.removeClass('in-focus');
+                    }
+                } );
+
+            },
+            _init = function() {
+                _onEvents();
+            };
+
+        _init();
+    };
+
+    var Route = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _btn = _obj.find('.plus-minus-btn');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _btn.on( {
+                    'click': function() {
+                        _obj.toggleClass('open');
+                        _btn.toggleClass('opened');
                     }
                 } );
 

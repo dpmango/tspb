@@ -1,21 +1,70 @@
+.route-list {
+
+    .route {
+      border-top: 2px solid #ebebeb;
+
+      &:first-child {
+        border-top-color: transparent;
+      }
+    }
+}
+
 .route {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px 0;
+
+  &.open {
+
+    & .route {
+
+      &__head {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          top: 0;
+          left: -10px;
+          height: 100%;
+          width: 2px;
+          background-color: rgb(254, 69, 53);
+          content: '';
+        }
+      }
+
+      &__content {
+
+        &-preview {
+          display: none;
+        }
+
+        &-full {
+          display: block;
+        }
+      }
+    }
+  }
 
   &__head {
     display: flex;
     flex-wrap: wrap;
-  }
+    margin-bottom: 20px;
 
-  &__way {
+    &-wrap {
+      width: 40%;
+    }
 
+    &-notes {
+      width: 60%;
+    }
   }
 
   &__footer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    .plus-minus-btn {
+      margin-left: 36px;
+    }
   }
 
   &__info {
@@ -25,15 +74,12 @@
     color: rgb(33, 33, 33);
   }
 
-  &__price {
-    //line-height: 0.542;
-  }
-
   &__time {
     position: relative;
     display: block;
-    padding-left: 29px;
-    font-size: 18px;
+    padding-left: 20px;
+    margin-right: 14px;
+    font-size: 12px;
     color: rgb(80, 164, 212);
     line-height: 1.2;
 
@@ -41,14 +87,15 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
       background: url("../img/time.png") no-repeat;
+      background-size: contain;
       content: '';
     }
 
     strong {
-      font-size: 24px;
+      font-size: 14px;
       font-family: 'Solomon-Sans-Bold', sans-serif;
     }
   }
@@ -61,8 +108,7 @@
     li {
       display: flex;
       align-items: center;
-      width: 100px;
-      margin: 0 30px 0 0;
+      width: 50%;
       font-size: 10px;
       line-height: 1;
 
@@ -91,11 +137,24 @@
     }
   }
 
+  &__content {
+    margin-bottom: 20px;
+
+    &-full {
+      display: none;
+    }
+
+    &-preview {
+      display: block;
+    }
+  }
+
   &__fast {
     position: relative;
     display: block;
+    margin-top: 15px;
     padding-left: 29px;
-    font-size: 14px;
+    font-size: 12px;
     color: rgb(255, 147, 0);
     line-height: 1.2;
 
@@ -108,6 +167,66 @@
       background: url("../img/speed.png") no-repeat;
       background-size: contain;
       content: '';
+    }
+  }
+
+  &__description {
+    flex-grow: 1;
+    display: table;
+    width: 100%;
+    font-size: 12px;
+    color: rgb(154, 154, 154);
+
+    &-row {
+      display: table-row;
+    }
+
+    &-item {
+      display: table-cell;
+      vertical-align: top;
+      padding: 0 10px 10px 0;
+      line-height: 2;
+
+      strong {
+        color: rgb(33, 33, 33);
+        font-family: 'Solomon-Sans-Bold', sans-serif;
+      }
+    }
+
+    &-inline {
+      display: flex;
+      align-items: flex-start;
+
+      > div {
+        width: calc(100% - 44px);
+      }
+    }
+
+    &-icon {
+      display: block;
+      width: 28px;
+      height: 28px;
+      margin-right: 16px;
+
+      img,
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-link {
+      color: rgb(33, 33, 33);
+
+      a,
+      a:visited {
+        color: rgb(33, 33, 33);
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 }
@@ -128,83 +247,227 @@
 }
 @media (min-width: $desktop) {
   .route {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;
 
-  }
-}
+    &.open {
 
-.way {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 428px;
+      & .route {
 
-  &:before {
-    position: absolute;
-    top: 12px;
-    left: 15px;
-    right: 15px;
-    height: 6px;
-    background-color: rgb(230, 230, 230);
-    content: '';
-  }
+        &__head {
+          position: relative;
 
-  &__item {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    font-size: 14px;
-    color: rgb(154, 154, 154);
-    line-height: 0.929;
-  }
+          &:after {
+            position: absolute;
+            top: 0;
+            left: -20px;
+            height: 100%;
+            width: 3px;
+            background-color: rgb(254, 69, 53);
+            content: '';
+          }
+        }
 
-  &__icon {
-    display: block;
-    height: 29px;
-    width: auto;
-    margin: 0 auto 3px;
-  }
+        &__content {
 
-  &__tooltip {
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 10px);
-    transform: translate(0, -50%);
-    padding: 5px 7px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 6px 14px 0 rgba(0, 0, 1, 0.19);
-    font-size: 14px;
-    color: #b2b2b2;
-    border-radius: 4px;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
+          &-preview {
+            display: none;
+          }
 
-    &:before {
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      transform: translate(0, -50%);
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 8px 8px 8px 0;
-      border-color: transparent #fff transparent transparent;
-      content: '';
+          &-full {
+            display: block;
+          }
+        }
+      }
     }
 
-    span {
+    &__head {
+      width: 240px;
+      padding-right: 40px;
+
+      &-wrap {
+        width: 100%;
+      }
+
+      &-notes {
+        display: none;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+
+      .plus-minus-btn {
+        margin-left: 36px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      align-items: baseline;
+      font-size: 14px;
+      color: rgb(33, 33, 33);
+    }
+
+    &__price {
+      //line-height: 0.542;
+    }
+
+    &__time {
+      position: relative;
       display: block;
-      color: rgb(33, 33, 33);
+      padding-left: 29px;
+      margin-right: 20px;
+      font-size: 18px;
+      color: rgb(80, 164, 212);
+      line-height: 1.2;
+
+      &:before {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: url("../img/time.png") no-repeat;
+        background-size: contain;
+        content: '';
+      }
+
+      strong {
+        font-size: 24px;
+        font-family: 'Solomon-Sans-Bold', sans-serif;
+      }
     }
 
-    a,
-    a:visited {
-      color: rgb(33, 33, 33);
-      text-decoration: underline;
+    &__notes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
 
-      &:hover {
-        text-decoration: none;
+      li {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        margin: 0 30px 0 0;
+        font-size: 10px;
+        line-height: 1;
+
+        img,
+        svg {
+          width: 18px;
+          height: auto;
+          margin-right: 13px;
+        }
+
+        &.red {
+          color: rgb(254, 69, 53);
+
+          svg {
+            fill: rgb(254, 69, 53);
+          }
+        }
+
+        &.green {
+          color: rgb(50, 173, 67);
+
+          svg {
+            fill: rgb(50, 173, 67);
+          }
+        }
+      }
+    }
+
+    &__content {
+      flex-grow: 1;
+
+      &-full {
+        display: none;
+      }
+
+      &-preview {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &__fast {
+      position: relative;
+      display: block;
+      padding-left: 29px;
+      font-size: 14px;
+      color: rgb(255, 147, 0);
+      line-height: 1.2;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 19px;
+        background: url("../img/speed.png") no-repeat;
+        background-size: contain;
+        content: '';
+      }
+    }
+
+    &__description {
+      flex-grow: 1;
+      display: table;
+      width: 100%;
+      font-size: 14px;
+      color: rgb(154, 154, 154);
+
+      &-row {
+        display: table-row;
+      }
+
+      &-item {
+        display: table-cell;
+        vertical-align: top;
+        padding: 0 20px 20px 0;
+        line-height: 2;
+
+        strong {
+          color: rgb(33, 33, 33);
+          font-family: 'Solomon-Sans-Bold', sans-serif;
+        }
+      }
+
+      &-inline {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      &-icon {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin-right: 16px;
+
+        img,
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &-link {
+        color: rgb(33, 33, 33);
+
+        a,
+        a:visited {
+          color: rgb(33, 33, 33);
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
     }
   }
