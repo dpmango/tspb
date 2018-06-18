@@ -1,0 +1,58 @@
+// vars
+$easing: ease-in-out;
+$duration: .2s;
+
+body {
+  background-color: #f5f5f5;
+}
+
+.on-mobile {
+  display: block !important;
+}
+
+.on-desktop {
+  display: none !important;
+}
+
+.blue-text {
+  color: rgb(61, 145, 193) !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.justify {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.pt0 {
+  padding-top: 0 !important;
+}
+
+.pl30 {
+  padding-left: 30px !important;
+}
+
+.black {
+  color: rgb(33, 33, 33) !important;
+}
+
+.link,
+a.link {
+  color: rgb(33, 33, 33);
+  text-decoration: underline;
+  transition: color $duration $easing;
+
+  &:hover,
+  &.active {
+    color: rgb(254, 69, 53);
+  }
+}

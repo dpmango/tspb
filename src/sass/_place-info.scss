@@ -77,8 +77,17 @@
     }
   }
 
+  &__link {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &__icon {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
     width: 20px;
     padding-top: 10px;
@@ -87,6 +96,10 @@
     svg,
     img {
       max-width: 100%;
+    }
+
+    img {
+      height: auto;
     }
 
     & + .place-info__item {

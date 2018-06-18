@@ -54,6 +54,13 @@
       }
     }
 
+    &.standart {
+
+      input {
+        padding: 10px;
+      }
+    }
+
     &:before {
       overflow: hidden;
       position: absolute;
@@ -285,6 +292,26 @@
       }
     }
 
+    &_station {
+      display: flex;
+      justify-content: space-between;
+
+      .form__row {
+        flex-grow: 1;
+        margin-right: 20px;
+      }
+    }
+
+    &__justify {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .form__field {
+        margin-bottom: 0;
+      }
+    }
+
     &__row {
       display: flex;
       flex-wrap: wrap;
@@ -311,6 +338,13 @@
 
       .datepicker-here {
         width: 160px;
+      }
+
+      &.standart {
+
+        input {
+          padding: 10px 20px;
+        }
       }
     }
   }

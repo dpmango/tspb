@@ -4,6 +4,21 @@
 
   }
 
+  &__carrier {
+    font-size: 16px;
+    color: rgb(167, 167, 167);
+
+    a,
+    a:visited {
+      color: rgb(33, 33, 33);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
   &__title {
     display: block;
     font-size: 16px;
@@ -22,6 +37,10 @@
       align-items: baseline;
       font-size: 16px;
       color: rgb(33, 33, 33);
+
+      &.centering {
+        align-items: center;
+      }
 
       dt {
         margin: 0 5px 0 0;
@@ -51,6 +70,11 @@
           a:visited {
             color: rgb(187, 187, 187);
           }
+        }
+
+        .icon-title {
+          margin-left: 40px;
+          color: rgb(154, 154, 154);
         }
       }
     }
@@ -145,7 +169,8 @@
       .nice-toggle {
         margin: 0 34px;
 
-        &:first-child {
+        &:first-child,
+        &.first-in-filter {
           margin-left: 0;
         }
 

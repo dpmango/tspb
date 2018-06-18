@@ -5,6 +5,10 @@
   color: rgb(154, 154, 154);
   transition: color $duration $easing;
 
+  &.inline {
+    display: inline-flex;
+  }
+
   &_black {
     color: rgb(33, 33, 33);
   }
@@ -32,6 +36,9 @@
       // or fill: #333 if color is not taking from parent
       display: block;
       width: 20px;
+    }
+
+    img {
       height: auto;
     }
   }

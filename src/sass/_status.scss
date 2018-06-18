@@ -10,6 +10,11 @@
   .waiting & {
     color: rgb(85, 186, 74);
   }
+
+  &.big {
+    font-size: 14px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+  }
 }
 @media (min-width: $phone-landscape) {
   .status {

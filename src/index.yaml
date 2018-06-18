@@ -23,6 +23,16 @@ PageList:
   ready: 90
 - file: transportspb_map_station.html
   ready: 90
+- file: transportspb_54.html
+  ready: 90
+- file: transportspb_path_avia.html
+  ready: 90
+- file: transportspb_path_bus.html
+  ready: 90
+- file: transportspb_path_train.html
+  ready: 90
+- file: transportspb_path_trains.html
+  ready: 90
 - file: find.html
   ready: 90
 - file: station.html
