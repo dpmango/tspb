@@ -1,5 +1,19 @@
 .metro-line {
 
+  &.open {
+
+    & .metro-line {
+
+      &__content {
+        display: block;
+      }
+
+      &__footer {
+        display: block;
+      }
+    }
+  }
+
   &__head {
     display: flex;
     align-items: center;
@@ -54,10 +68,11 @@
   }
 
   &__content {
-
+    display: none;
   }
 
   &__footer {
+    display: none;
     padding: 15px;
     text-align: center;
     border-top: 2px solid #e7e7e7;

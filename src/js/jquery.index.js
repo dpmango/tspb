@@ -86,6 +86,10 @@
             new Route($(this));
         });
 
+        $('.metro-line').each(function () {
+            new MetroLine($(this));
+        });
+
         $('.sign').each(function () {
             new Sign($(this));
         });
@@ -894,6 +898,30 @@
     };
 
     var Route = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _btn = _obj.find('.plus-minus-btn');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _btn.on( {
+                    'click': function() {
+                        _obj.toggleClass('open');
+                        _btn.toggleClass('opened');
+                    }
+                } );
+
+            },
+            _init = function() {
+                _onEvents();
+            };
+
+        _init();
+    };
+
+    var MetroLine = function(obj) {
 
         //private properties
         var _obj = obj,
