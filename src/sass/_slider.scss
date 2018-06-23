@@ -1,0 +1,50 @@
+.slider {
+  margin-bottom: 15px;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    z-index: 10;
+    cursor: pointer;
+    background: url("../img/arrow.png") no-repeat center;
+  }
+
+  .swiper-button-next {
+    transform: matrix(-1,0,0,1,0,0);
+  }
+
+  .swiper-slide {
+    padding-top: 73%;
+    background: {
+      position: center;
+      size: cover;
+      repeat: no-repeat;
+    };
+  }
+}
+@media (min-width: $phone-landscape) {
+  .slider {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .slider {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .slider {
+    padding: 0 40px;
+    margin-bottom: 22px;
+  }
+}
+@media (min-width: $desktop) {
+  .slider {
+
+  }
+}
+

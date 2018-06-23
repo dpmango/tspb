@@ -193,6 +193,13 @@
             new ShowMore($(this));
         });
 
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
     });
 
     var Tab = function(obj) {
@@ -266,9 +273,9 @@
                         var path = e.originalEvent.path,
                             canClose = true;
 
-                        path.forEach(function (item) {
-                            if ( item.className == 'sign__modal' ) canClose = false;
-                        });
+                        for (var i = 0; i < path.length; i++) {
+                            if ( path[i].className == 'sign__modal' ) canClose = false;
+                        }
 
                         if (canClose) _obj.removeClass('open');
                     }

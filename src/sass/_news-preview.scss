@@ -9,6 +9,11 @@
     line-height: 1.2;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+    transition: box-shadow $duration $easing;
+
+    &:hover {
+      box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.35);
+    }
   }
 
   &__pic {

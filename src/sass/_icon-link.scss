@@ -25,6 +25,21 @@
     }
   }
 
+  &_cabinet {
+
+    svg {
+      fill: rgb(254, 69, 53);
+      transition: fill $duration $easing;
+    }
+
+    &:hover {
+
+      svg {
+        fill: #212121;
+      }
+    }
+  }
+
   i {
     position: relative;
     top: -2px;

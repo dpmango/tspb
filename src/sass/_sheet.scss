@@ -108,6 +108,14 @@
     }
   }
 
+  &--result {
+
+    .table {
+      width: calc(100% + 30px);
+      margin: 0 -15px;
+    }
+  }
+
   &__footer {
     padding: 15px;
     text-align: center;
