@@ -2,16 +2,39 @@ ProjectTitle: tSpb
 
 PageList:
 - file: trains_results.html
-  ready: 90
+  ready: 100
 - file: avia_results.html
-  ready: 90
+  ready: 100
 - file: city_bus_results.html
-  ready: 90
+  ready: 100
 - file: train_results.html
-  ready: 90
+  ready: 100
 - file: header-login.html
-  ready: 90
+  ready: 100
 - file: transportspb.html
+  ready: 100
+- file: find.html
+  ready: 100
+- file: station.html
+  ready: 100
+- file: tram.html
+  ready: 100
+
+- file: secound-round.html
+  ready: 0
+- file: homepage.html
+  ready: 90
+- file: txt_template.html
+  ready: 90
+- file: avtovokzal.html
+  ready: 90
+- file: ladozhskiy.html
+  ready: 90
+- file: path_A_to_B.html
+  ready: 90
+- file: all_news.html
+  ready: 90
+- file: news.html
   ready: 90
 - file: transportspb_transport.html
   ready: 90
@@ -35,26 +58,3 @@ PageList:
   ready: 90
 - file: transportspb_cabinet.html
   ready: 90
-- file: find.html
-  ready: 90
-- file: station.html
-  ready: 90
-- file: tram.html
-  ready: 90
-
-- file: extra.html
-  ready: 0
-- file: homepage.html
-  ready: 50
-- file: txt_template.html
-  ready: 50
-- file: avtovokzal.html
-  ready: 50
-- file: ladozhskiy.html
-  ready: 50
-- file: path_A_to_B.html
-  ready: 50
-- file: all_news.html
-  ready: 50
-- file: news.html
-  ready: 50
