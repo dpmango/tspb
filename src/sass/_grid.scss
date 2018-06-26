@@ -1,36 +1,5 @@
 .grid {
 
-  &__col,
-  &__col-2,
-  &__col-3,
-  &__col-4,
-  &__col-half,
-  &__col-one,
-  &__col-four,
-  &__col-third {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-
-    > .wrapper {
-      height: 100%;
-      margin-bottom: 0;
-    }
-  }
-
-  .search-path {
-    margin-bottom: 0;
-    height: 100%;
-  }
-}
-@media (min-width: $phone-landscape) {
-  .grid {
-
-  }
-}
-@media (min-width: $tablet-portrait) {
-  .grid {
-
     &__col,
     &__col-2,
     &__col-3,
@@ -39,94 +8,134 @@
     &__col-one,
     &__col-four,
     &__col-third {
-      margin-bottom: 24px;
-    }
-
-    &__wrap {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      .wrapper {
-        width: calc(50% - 12px);
-        margin-bottom: 0;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      &_three {
-
-        .wrapper {
-          margin-bottom: 24px;
-
-          &:last-child {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .grid {
-
-  }
-}
-@media (min-width: $desktop) {
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    &__col {
-      width: calc((100% - 4*24px)/5);
-      margin-bottom: 24px;
-    }
-
-    &__col-2 {
-      width: calc(2*(100% - 4*24px)/5 + 24px);
-      margin-bottom: 24px;
-    }
-
-    &__col-3 {
-      width: calc(3*(100% - 4*24px)/5 + 2*24px);
-    }
-
-    &__col-4 {
-      width: calc(4*(100% - 4*24px)/5 + 3*24px);
-    }
-
-    &__col-half {
-      width: calc(50% - 12px);
-    }
-
-    &__col-one {
-      width: 293px;
-    }
-
-    &__col-four {
-      width: calc(100% - 293px - 24px);
-    }
-
-    &__col-third {
-      width: calc(100%/3 - 48px/3);
-    }
-
-    &__wrap {
-      //display: block;
-      height: 100%;
-      flex-grow: 1;
-
-      .wrapper {
+        display: block;
         width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: 15px;
 
-        &:last-child {
-          margin-bottom: 0;
+        > .wrapper {
+            height: 100%;
+            margin-bottom: 0;
         }
-      }
     }
-  }
+
+    .search-path {
+        margin-bottom: 0;
+        height: 100%;
+    }
+}
+
+@media (min-width: $phone-landscape) {
+    .grid {
+
+    }
+}
+
+@media (min-width: $tablet-portrait) {
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__col,
+        &__col-2,
+        &__col-3,
+        &__col-4,
+        &__col-half,
+        &__col-one,
+        &__col-four,
+        &__col-third {
+            margin-bottom: 24px;
+            width: 100%;
+        }
+
+        &__col-md-half {
+            width: calc(50% - 12px);
+        }
+
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .wrapper {
+                width: calc(50% - 12px);
+                margin-bottom: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &_three {
+
+                .wrapper {
+                    margin-bottom: 24px;
+
+                    &:last-child {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-landscape) {
+    .grid {
+
+    }
+}
+
+@media (min-width: $desktop) {
+    .grid {
+
+        &__col {
+            width: calc((100% - 4 * 24px) / 5);
+            margin-bottom: 24px;
+        }
+
+        &__col-2 {
+            width: calc(2 * (100% - 4 * 24px) / 5 + 24px);
+            margin-bottom: 24px;
+        }
+
+        &__col-3 {
+            width: calc(3 * (100% - 4 * 24px) / 5 + 2 * 24px);
+        }
+
+        &__col-4 {
+            width: calc(4 * (100% - 4 * 24px) / 5 + 3 * 24px);
+        }
+
+        &__col-half {
+            width: calc(50% - 12px);
+        }
+
+        &__col-one {
+            width: 293px;
+        }
+
+        &__col-four {
+            width: calc(100% - 293px - 24px);
+        }
+
+        &__col-third {
+            width: calc(100% / 3 - 48px / 3);
+        }
+
+        &__wrap {
+            //display: block;
+            height: 100%;
+            flex-grow: 1;
+
+            .wrapper {
+                width: 100%;
+                margin-bottom: 24px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }

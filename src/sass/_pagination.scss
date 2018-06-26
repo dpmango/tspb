@@ -8,6 +8,11 @@
 }
 @media (min-width: $tablet-portrait) {
   .pagination {
+
+  }
+}
+@media (min-width: $min-desktop) {
+  .pagination {
     display: flex;
     align-items: center;
     padding: 10px 0;
@@ -53,11 +58,6 @@
         box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
       }
     }
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .pagination {
-
   }
 }
 @media (min-width: $desktop) {

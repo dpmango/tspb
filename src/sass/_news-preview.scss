@@ -60,6 +60,10 @@
     }
   }
 
+  .on-mobile {
+    width: 100%;
+  }
+
   &__more {
     display: block;
     padding: 13px 10px 15px;
@@ -70,6 +74,11 @@
     box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
     font-size: 13px;
     color: rgb(183, 183, 183);
+    transition: color $duration $easing;
+
+    &:hover {
+      color: #000;
+    }
   }
 }
 @media (min-width: $phone-landscape) {

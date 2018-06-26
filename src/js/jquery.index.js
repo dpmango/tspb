@@ -82,6 +82,10 @@
             new Shedule($(this));
         });
 
+        $('.change').each(function () {
+            new ChangeText($(this));
+        });
+
         $('.route').each(function () {
             new Route($(this));
         });
@@ -246,12 +250,64 @@
         _init();
     };
 
+    var ChangeText = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _btn = _obj.find('.change__btn'),
+            _wrap = _obj.find('.change__field'),
+            _hidden = _obj.find('.change__field-hidden'),
+            _field = _obj.find('.change__field input');
+
+        //private methods
+        var _onEvents = function()  {
+
+                $(window).on({
+                    'load': function () {
+                        _setFieldWidth();
+                    }
+                });
+
+                _btn.on( {
+                    click: function() {
+                        _field.focus();
+
+                        return false;
+                    }
+                } );
+
+                _field.on( {
+                    'keydown': function() {
+                        _setFieldWidth();
+                    }
+                } );
+
+            },
+            _setFieldWidth = function() {
+                var curValue = _field.val();
+
+                _hidden.text(curValue);
+                _field.css({ 'width': _hidden.width + 5 });
+            },
+            _init = function() {
+                _onEvents();
+                _setFieldWidth();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
+    };
+
     var Sign = function(obj) {
 
         //private properties
         var _obj = obj,
             _item = _obj.find('.sign__item'),
-            _tab = _obj.find('.tab');
+            _tab = _obj.find('.tab'),
+            _site = $('.site');
 
         //private methods
         var _onEvents = function()  {
@@ -264,20 +320,27 @@
 
                         _obj.addClass('open');
 
+                        _site.addClass('sign-in-open');
+
                         return false;
                     }
                 } );
 
                 $(window).on( {
                     click: function(e) {
-                        var path = e.originalEvent.path,
-                            canClose = true;
+                        var canClose = true;
 
-                        for (var i = 0; i < path.length; i++) {
-                            if ( path[i].className == 'sign__modal' ) canClose = false;
+                        if (e.originalEvent) {
+                            var path = e.originalEvent.path;
+                            for (var i = 0; i < path.length; i++) {
+                                if ( path[i].className == 'sign__modal' ) canClose = false;
+                            }
                         }
 
-                        if (canClose) _obj.removeClass('open');
+                        if (canClose) {
+                            _obj.removeClass('open');
+                            _site.removeClass('sign-in-open');
+                        }
                     }
                 } );
 
@@ -393,6 +456,7 @@
                         autohidemode: true,
                         railalign: 'left',
                         cursorcolor: 'rgb(217, 217, 217)',
+                        background: 'rgb(182, 180, 180)',
                         cursoropacitymin: 1,
                         cursorwidth: '6px',
                         cursorborderradius: '3px',

@@ -97,6 +97,11 @@
 }
 @media (min-width: $tablet-landscape) {
   .text-content {
+
+  }
+}
+@media (min-width: $desktop) {
+  .text-content {
     font-size: 14px;
 
     h1 {
@@ -129,11 +134,6 @@
     table + table {
       margin-top: -40px;
     }
-  }
-}
-@media (min-width: $desktop) {
-  .text-content {
-
   }
 }
 
