@@ -28,13 +28,18 @@
     padding-top: 0;
   }
 
-  h2,
   &__title {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
     margin-bottom: 20px;
     font-size: 16px;
     font-family: 'Solomon-Sans-Bold', sans-serif;
     color: rgb(254, 254, 254);
+
+    h1 {
+      margin-right: 5px;
+    }
   }
 
   h3 {
