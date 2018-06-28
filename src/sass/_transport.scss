@@ -158,6 +158,12 @@
     margin-right: 15px;
     font-size: 14px;
     color: rgb(33, 33, 33);
+    cursor: pointer;
+
+    &.active {
+      color: rgba(33, 33, 33, 0.5);
+
+    }
 
     span {
       display: flex;
@@ -193,6 +199,14 @@
     height: 152px;
     margin-bottom: 10px;
     padding-right: 30px;
+
+    &-content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
 
     &-item {
       display: flex;

@@ -83,6 +83,9 @@
 @media (min-width: $tablet-landscape) {
     .grid {
 
+        &__col-lg-half {
+            width: calc(50% - 12px);
+        }
     }
 }
 

@@ -106,6 +106,10 @@
             new Tab($(this));
         });
 
+        $('.transport').each(function () {
+            new Transport($(this));
+        });
+
         $('.dropdown').each(function () {
             new Dropdown($(this));
         });
@@ -246,6 +250,50 @@
         _self.setActive = function (index) {
             _controlsItem.eq(index).trigger('click');
         };
+
+        _init();
+    };
+
+    var Transport = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _controlsItem = _obj.find('.transport__count'),
+            _contentItem = _obj.find('.transport__list-content');
+
+        //private methods
+        var _onEvents = function()  {
+
+                _controlsItem.on( {
+                    click: function() {
+                        var curElem = $(this),
+                            curIndex = curElem.index();
+
+                        _controlsItem.each(function (i) {
+                            _controlsItem.eq(i).removeClass('active');
+                            _contentItem.eq(i).removeClass('active');
+                        });
+
+                        curElem.addClass('active');
+                        _contentItem.eq(curIndex).addClass('active');
+
+                        return false;
+                    }
+                } );
+
+            },
+            _setFirstActive = function() {
+                var firstElem = _controlsItem.eq(0);
+                firstElem.trigger('click');
+            },
+            _init = function() {
+                _onEvents();
+                _setFirstActive();
+            };
+
+        //public properties
+
+        //public methods
 
         _init();
     };
