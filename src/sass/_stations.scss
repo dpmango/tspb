@@ -1,0 +1,53 @@
+.stations {
+    font-size: 13px;
+    font-family: 'Solomon-Sans-Normal', sans-serif;
+    color: #9a9a9a;
+
+    &__title {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #212121;
+        font-family: 'Solomon-Sans-Bold', sans-serif;
+    }
+
+    &__subtitle {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.2;
+        font-family: 'Solomon-Sans-Bold', sans-serif;
+    }
+}
+@media (min-width: $phone-landscape) {
+  .stations {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .stations {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 14px;
+      line-height: 1.714;
+
+      &__column {
+          width: calc(50% - 10px);
+      }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .stations {
+
+  }
+}
+@media (min-width: $desktop) {
+  .stations {
+
+  }
+}
+

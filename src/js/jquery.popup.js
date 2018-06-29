@@ -75,7 +75,7 @@
                         return false;
                     }
                 } );
-                _wrap.on( {
+                _contents.on( {
                     click: function( e ){
                         e.stopPropagation();
                     }

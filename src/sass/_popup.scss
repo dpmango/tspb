@@ -1,7 +1,4 @@
 .popup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 0;
   overflow-y: scroll;
   position: fixed;
@@ -36,20 +33,16 @@
   }
 
   &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
-    max-width: 1200px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: white;
-    -webkit-box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
-    box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
-    overflow-y: auto;
-    max-height: 100%;
+    min-height: 100%;
   }
 
   &__content {
+    position: relative;
     display: none;
     text-align: left;
     padding: 20px 0;
@@ -60,13 +53,13 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     width: 35px;
     height: 35px;
     z-index: 2;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    background: url("../img/close.png") no-repeat center;
     box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.25);
     transition: opacity $duration $easing;
 
@@ -88,6 +81,26 @@
   }
 
   &__information {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+    overflow-y: auto;
+    max-height: 100%;
+  }
 
+  &__stations {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 1, 0.05);
+    overflow-y: auto;
+    max-height: 100%;
   }
 }
