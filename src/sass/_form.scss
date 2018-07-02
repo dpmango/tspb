@@ -12,22 +12,16 @@
   &_points {
 
     .form__row {
-      display: flex;
-      flex-wrap: wrap;
 
-      .form__field {
-        width: 100%;
+      &_revert {
+        position: relative;
+        padding-right: 77px;
 
-        &_separator {
-          width: calc(100% - 57px);
-
-          input {
-            border-radius: 5px 0 0 5px;
-          }
-        }
-
-        &_separator + .separator {
-          border-radius: 0 5px 5px 0;
+        .separator {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0, -50%);
         }
       }
     }
@@ -252,6 +246,16 @@
       .form__row {
         margin-right: 20px;
 
+        &_revert {
+          padding-right: 0;
+
+          .separator {
+            position: relative;
+            top: 0;
+            transform: translate(0,0);
+          }
+        }
+
         &:first-child {
 
           .form__field {
@@ -262,20 +266,6 @@
         .separator + .form__field {
           margin-left: 28px;
           width: 337px;
-        }
-
-        .form__field {
-
-          &_separator {
-
-            input {
-              border-radius: 5px;
-            }
-          }
-
-          &_separator + .separator {
-            border-radius: 0;
-          }
         }
       }
 
