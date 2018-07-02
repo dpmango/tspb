@@ -8,12 +8,17 @@
   border-color: #dfdfdf;
   border-width: 0 1px;
   border-style: solid;
+  transition: background $duration $easing;
 
   svg,
   img {
     display: block;
     width: 20px;
     height: 20px;
+  }
+
+  &:hover {
+    background-color: #fe4535;
   }
 }
 @media (min-width: $phone-landscape) {
