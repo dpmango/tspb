@@ -374,16 +374,14 @@
                     }
                 } );
 
-                $(window).on( {
+                $(document).on( {
                     click: function(e) {
                         var canClose = true;
 
-                        if (e.originalEvent) {
-                            var path = e.originalEvent.path;
-                            for (var i = 0; i < path.length; i++) {
-                                if ( path[i].className == 'sign__modal' ) canClose = false;
-                            }
+                        if ( !$(e.target).closest('.sign__modal') ){
+                            canClose = false;
                         }
+
 
                         if (canClose) {
                             _obj.removeClass('open');
