@@ -102,6 +102,12 @@
                 } );
                 _obj.addClass( 'popup_opened' );
 
+                if (className == 'success-added') {
+                    setTimeout(function () {
+                        _hide();
+                    }, 2000);
+                }
+
             },
             _setPopupContent = function( className ){
                 var curContent = _contents.filter( '.popup__' + className );
