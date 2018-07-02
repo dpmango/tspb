@@ -9,6 +9,30 @@
     }
   }
 
+  &_points {
+
+    .form__row {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form__field {
+        width: 100%;
+
+        &_separator {
+          width: calc(100% - 57px);
+
+          input {
+            border-radius: 5px 0 0 5px;
+          }
+        }
+
+        &_separator + .separator {
+          border-radius: 0 5px 5px 0;
+        }
+      }
+    }
+  }
+
   &__icon {
     display: flex;
     align-items: center;
@@ -238,6 +262,20 @@
         .separator + .form__field {
           margin-left: 28px;
           width: 337px;
+        }
+
+        .form__field {
+
+          &_separator {
+
+            input {
+              border-radius: 5px;
+            }
+          }
+
+          &_separator + .separator {
+            border-radius: 0;
+          }
         }
       }
 

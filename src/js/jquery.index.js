@@ -355,7 +355,8 @@
         var _obj = obj,
             _item = _obj.find('.sign__item'),
             _tab = _obj.find('.tab'),
-            _site = $('.site');
+            _site = $('.site'),
+            _closeBtn = _obj.find('.sign__close');
 
         //private methods
         var _onEvents = function()  {
@@ -387,6 +388,16 @@
                             _obj.removeClass('open');
                             _site.removeClass('sign-in-open');
                         }
+                    }
+                } );
+
+
+                _closeBtn.on( {
+                    click: function() {
+                        _obj.removeClass('open');
+                        _site.removeClass('sign-in-open');
+
+                        return false;
                     }
                 } );
 
